@@ -56,11 +56,11 @@
         const IconCheckCircle = ({size=20, className=""}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>;
         const IconTrash2 = ({size=18}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>;
         const IconPrinter = ({size=16}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>;
-        const IconSettings = ({size=16}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>;
+        const IconSettings = ({size=16, className=""}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>;
         const IconLayout = ({size=16}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>;
 
         const GHS_SVG = {
-            bomb: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M43.7 51.5c-4.6-2.5-8.2-1.7-8.2-1.7.3-1.6 3.1-4 3.1-4s-3.7-.6-5.8 2c0 0 1.2-3.1 3.7-4.3 0 0-4.6 0-6.1 4-1.2 5.5 1.5 8.9 1.5 8.9s-3.1-1.2-5.5-4C21.5 45.4 20 38 20 38s1.5 4.6 6.1 8c0 0-2.8-.6-6.1-5.2-1.2-1.8-1.5-2.8-1.5-2.8s1.2 2.8 5.2 6.1c0 0-4-1.2-7.1-4-1.5-1.5-2.1-1.8-2.1-1.8s1.5 1.8 6.4 4.9c4 2.8 7.4 3.7 7.4 3.7s-3.7-.3-8-3.1C18.1 42 16 38.6 16 38.6s2.5 4 7.1 8c3.1 2.5 6.4 2.8 6.4 2.8s-3.4-1.2-6.1-4c-2.1-2.1-2.8-3.4-2.8-3.4s2.5 3.4 6.7 6.4c5.2 3.4 10.4 4.3 10.4 4.3s-4.6-1.5-8.6-5.8c-2.8-3.1-4-5.5-4-5.5s3.4 4 8.6 7.7c4 2.8 8.6 3.4 8.6 3.4s-3.7-1.5-7.4-4.6c0 0 3.7 2.1 8 4.3 0 0-4.3-3.4-4.9-8-.3-2.5.3-5.2.3-5.2s-1.8 3.7-1.2 7.4c0 0-1.8-3.7-1.2-8.3.6-4.6 2.5-6.7 2.5-6.7s-1.5 4-.6 8.3c1.2 5.8 3.7 6.7 3.7 6.7s-1.5-3.4-1.2-6.7c.3-2.8 2.1-4.9 2.1-4.9s-2.1 4-1.5 8c.6 3.1 2.5 5.2 2.5 5.2s-2.1-4-1.2-7.4c.6-2.5 2.1-4.3 2.1-4.3s-1.8 3.4-1.2 6.7c.6 3.4 2.8 4.9 2.8 4.9s-1.5-2.8-1.2-5.5c.3-1.8 1.5-3.4 1.5-3.4s-1.2 2.8-.6 5.5c.6 3.4 2.1 4.6 2.1 4.6l-2.1-4.6c-.6-2.1 0-3.7 0-3.7s-.6 2.1 0 4.6c.3 1.8 1.2 3.1 1.2 3.1s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4v-4.6c0-1.8.6-2.8.6-2.8s-.6 1.8-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4v-4.6c0-1.8.6-2.8.6-2.8s-.6 1.8-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4zM47.7 57.3c2.5-3.4 10.4-3.1 10.4-3.1-3.4.6-5.8 4-5.8 4s2.8-1.5 6.1-.6c0 0-4.6 1.8-4.9 6.4 4.3-3.4 8.6-4.6 8.6-4.6s-3.7 2.1-4.9 6.1C60.6 69.9 65.5 66.8 65.5 66.8s-4 4.3-5.2 8.3c0 0 5.2-1.5 8.9-6.4-1.8 2.8-2.5 4.3-2.5 4.3s2.8-1.2 6.1-4.3c0 0-1.8 2.8-2.1 5.8 3.4-3.4 4.3-5.2 4.3-5.2s-1.8 3.7-1.5 7.4c0 0 3.4-1.2 5.5-2.8-.3 1.5-.6 2.5-.6 2.5s2.5-1.5 5.2-3.7c0 0-2.1 2.8-3.1 6.1 2.5-1.8 3.4-2.8 3.4-2.8s-1.5 2.5-2.5 5.5c0 0 3.1-.6 4.9-1.8-.3 1.5-.6 2.1-.6 2.1s2.1-1.2 4-2.5c0 0-1.2 2.5-2.1 4.6 1.8-1.2 2.8-1.8 2.8-1.8s-.6 2.1-1.5 4.3c0 0 2.5-.3 3.7-1.2-.3 1.2-.3 1.5-.3 1.5s1.5-.6 2.8-1.5c0 0-.6 1.8-1.2 3.1 1.2-.6 1.5-.6 1.5-.6s-.3 1.2-.6 2.8c0 0 1.5-.3 2.1-.6-.3.6-.3.6-.3.6s.6-.3 1.5-.6l-.6 1.5 1.5-.6s-.3.6-.6 1.5c0 0 .6-.3 1.2-.3-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2z"/></svg>,
+            bomb: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M43.7 51.5c-4.6-2.5-8.2-1.7-8.2-1.7.3-1.6 3.1-4 3.1-4s-3.7-.6-5.8 2c0 0 1.2-3.1 3.7-4.3 0 0-4.6 0-6.1 4-1.2 5.5 1.5 8.9 1.5 8.9s-3.1-1.2-5.5-4C21.5 45.4 20 38 20 38s1.5 4.6 6.1 8c0 0-2.8-.6-6.1-5.2-1.2-1.8-1.5-2.8-1.5-2.8s1.2 2.8 5.2 6.1c0 0-4-1.2-7.1-4-1.5-1.5-2.1-1.8-2.1-1.8s1.5 1.8 6.4 4.9c4 2.8 7.4 3.7 7.4 3.7s-3.7-.3-8-3.1C18.1 42 16 38.6 16 38.6s2.5 4 7.1 8c3.1 2.5 6.4 2.8 6.4 2.8s-3.4-1.2-6.1-4c-2.1-2.1-2.8-3.4-2.8-3.4s2.5 3.4 6.7 6.4c5.2 3.4 10.4 4.3 10.4 4.3s-4.6-1.5-8.6-5.8c-2.8-3.1-4-5.5-4-5.5s3.4 4 8.6 7.7c4 2.8 8.6 3.4 8.6 3.4s-3.7-1.5-7.4-4.6c0 0 3.7 2.1 8 4.3 0 0-4.3-3.4-4.9-8-.3-2.5.3-5.2.3-5.2s-1.8 3.7-1.2 7.4c0 0-1.8-3.7-1.2-8.3.6-4.6 2.5-6.7 2.5-6.7s-1.5 4-.6 8.3c1.2 5.8 3.7 6.7 3.7 6.7s-1.5-3.4-1.2-6.7c.3-2.8 2.1-4.9 2.1-4.9s-2.1 4-1.5 8c.6 3.1 2.5 5.2 2.5 5.2s-2.1-4-1.2-7.4c.6-2.5 2.1-4.3 2.1-4.3s-1.8 3.4-1.2 6.7c.6 3.4 2.8 4.9 2.8 4.9s-1.5-2.8-1.2-5.5c.3-1.8 1.5-3.4 1.5-3.4s-1.2 2.8-.6 5.5c.6 3.4 2.1 4.6 2.1 4.6l-2.1-4.6c-.6-2.1 0-3.7 0-3.7s-.6 2.1 0 4.6c.3 1.8 1.2 3.1 1.2 3.1s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4v-4.6c0-1.8.6-2.8.6-2.8s-.6 1.8-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4zM47.7 57.3c2.5-3.4 10.4-3.1 10.4-3.1-3.4.6-5.8 4-5.8 4s2.8-1.5 6.1-.6c0 0-4.6 1.8-4.9 6.4 4.3-3.4 8.6-4.6 8.6-4.6s-3.7 2.1-4.9 6.1C60.6 69.9 65.5 66.8 65.5 66.8s-4 4.3-5.2 8.3c0 0 5.2-1.5 8.9-6.4-1.8 2.8-2.5 4.3-2.5 4.3s2.8-1.2 6.1-4.3c0 0-1.8 2.8-2.1 5.8 3.4-3.4 4.3-5.2 4.3-5.2s-1.8 3.7-1.5 7.4c0 0 3.4-1.2 5.5-2.8-.3 1.5-.6 2.5-.6 2.5s2.5-1.5 5.2-3.7c0 0-2.1 2.8-3.1 6.1 2.5-1.8 3.4-2.8 3.4-2.8s-1.5 2.5-2.5 5.5c0 0 3.1-.6 4.9-1.8-.3 1.5-.6 2.1-.6 2.1s2.1-1.2 4-2.5c0 0-1.2 2.5-2.1 4.6 1.8-1.2 2.8-1.8 2.8-1.8s-.6 2.1-1.5 4.3c0 0 2.5-.3 3.7-1.2-.3 1.2-.3 1.5-.3 1.5s1.5-.6 2.8-1.5c0 0-.6 1.8-1.2 3.1 1.2-.6 1.5-.6 1.5-.6s-.3 1.2-.6 2.8c0 0 1.5-.3 2.1-.6-.3.6-.3.6-.3.6s.6-.3 1.5-.6l-.6 1.5 1.5-.6s-.3.6-.6 1.5c0 0 .6-.3 1.2-.3-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2z"/></svg>,
             flame: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M50 16.5c-4 5.5-7.7 13.8-9.8 21.2-1.5 5.5-2.1 11.4-1.2 17.2-2.8-5.8-2.5-12.9 1.5-18.1C35.5 41.7 30 50.3 30 58.3c0 11.7 8.9 21.2 20 21.2s20-9.5 20-21.2c0-8-5.5-16.6-10.4-21.5 4 5.2 4.3 12.3 1.5 18.1.9-5.8.3-11.7-1.2-17.2-2.1-7.4-5.8-15.7-9.8-21.2zM28.8 79.5v5.5h42.4v-5.5H28.8z"/></svg>,
             flame_over_circle: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M50 44c6.1 0 11.4 4.9 11.4 11s-5.2 11-11.4 11c-6.1 0-11.4-4.9-11.4-11s5.2-11 11.4-11zm0 6.4c-2.5 0-4.6 2.1-4.6 4.6s2.1 4.6 4.6 4.6 4.6-2.1 4.6-4.6-2.1-4.6-4.6-4.6zm-17.8-8c1.5-4 4-8.3 4-8.3S33.4 38 31.8 43s1.2 8.3 1.2 8.3-2.5-4-3.1-6.1c-.6-2.1-1.2-5.5-.3-8.6 1.2-4.3 3.4-7.4 3.4-7.4S31.2 32.5 33 37.1c1.8 4.6 5.8 6.4 5.8 6.4s-2.1-3.4-1.8-6.1c.3-2.8 1.5-6.1 4.3-9.5 2.8-3.4 6.1-5.5 6.1-5.5s-2.8 4.9-2.1 8.9c.6 4 3.1 6.7 3.1 6.7s0-3.4.6-6.4c.6-3.1 3.4-6.4 3.4-6.4s-1.8 3.1-1.2 6.1c.6 3.1 2.8 5.8 4 7.4 1.2 1.5 2.1 3.4 2.1 3.4s-.3-2.8 0-4.6c.3-1.8 2.1-3.7 2.1-3.7s-1.2 2.5-.9 4c.3 1.5 1.5 3.4 2.8 4.9 1.2 1.5 2.5 3.7 2.5 3.7s-1.5-2.8-1.5-4c0-1.2.6-2.5.6-2.5s-1.2 1.5-1.2 2.8c0 1.2.6 3.1 2.1 4.3 1.5 1.2 3.1 3.1 3.4 5.5.3 2.5.3 5.5-.6 8.3-.9 2.8-1.8 4-1.8 4s1.2-2.1 1.2-4c0-1.8-.3-4-1.8-6.1-1.5-2.1-3.4-3.1-3.4-3.1s1.5 2.5 1.5 5.2c0 2.8-1.5 6.1-2.8 7.4-1.2 1.2-2.8 2.8-4.9 3.7 2.5-1.5 4.3-3.7 5.5-6.1s.6-4.9-.3-6.7c-.9-1.8-2.5-3.4-3.4-4-1.2-.6-2.5-1.8-2.5-1.8s1.5 1.5 1.5 3.1c0 1.5-1.2 4-2.8 5.8-1.5 1.8-4 3.7-4 3.7s2.5-1.5 3.7-4.3c1.2-2.8 0-6.1-1.2-8.3-1.2-2.1-3.1-3.4-3.1-3.4s1.5 2.1 1.8 4.3c.3 2.1-.3 4.3-.9 5.8-.6 1.5-2.5 3.7-2.5 3.7s1.8-1.8 2.1-4c.3-2.1-.6-4.6-1.5-6.1-.9-1.5-2.8-2.5-2.8-2.5s.9 1.8 1.2 3.4c.3 1.5 0 3.7-.9 4.9-.9 1.2-2.8 2.8-2.8 2.8s1.5-1.2 1.8-2.8c.3-1.5 0-3.4-.6-4.9s-2.1-2.5-2.1-2.5.9 1.5.9 2.8c0 1.2-1.2 3.1-2.1 4.6-1.2 1.5-2.8 2.8-2.8 2.8s1.2-1.2 1.5-3.1c.3-1.8-.3-4.3-.9-5.5-.6-1.2-2.5-2.5-2.5-2.5s.9 1.5.9 3.1c0 1.5-.6 3.1-1.5 4.6-1.2 1.5-3.1 3.4-3.1 3.4s1.8-1.8 2.1-4.3c.3-2.5-1.2-5.5-1.8-6.7-.6-1.2-2.1-2.1-2.1-2.1s1.2 1.8 1.5 3.7c.3 1.8 0 4-1.2 5.8s-3.7 3.7-3.7 3.7 2.1-1.8 2.8-4c.6-2.1.3-4.6-.3-5.8zM28.8 79.5v5.5h42.4v-5.5H28.8z"/></svg>,
             gas_cylinder: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M72.1 42.6L29.1 55.5s-2.5 1.5-3.7 0c-1.2-1.5-1.8-3.4-1.8-3.4l1.8-4.9 39.9-12s1.5-2.8 3.7-3.4c2.1-.6 4 .9 4 .9l4 10s1.8 1.2 2.8.9c.9-.3 2.1-1.2 2.1-1.2L83.1 45s1.2.9.6 1.8c-.6.9-2.1.6-2.1.6l-5.2-1.5s-1.8 2.5-4.3 3.4v-6.7z"/></svg>,
@@ -72,15 +72,15 @@
         };
 
         const PPE_ICONS = {
-            '301': { name: '보안경', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M25 45c0-10 10-15 25-15s25 5 25 15v10c0 10-10 15-25 15s-25-5-25-15V45z" fill="#fff" opacity="0.2"/><path d="M20 40h60v10c0 15-10 20-30 20s-30-5-30-20V40z" fill="#fff" opacity="0.3"/><path d="M30 40c0-5 5-10 15-10h10c10 0 15 5 15 10v10c0 5-5 10-15 10H45c-10 0-15-5-15-10V40z" fill="none" stroke="#fff" strokeWidth="4"/><path d="M45 45c0-3 3-5 5-5s5 2 5 5v5c0 3-3 5-5 5s-5-2-5-5v-5z" fill="#fff"/><path d="M20 50h10M70 50h10" stroke="#fff" strokeWidth="4"/></svg> },
-            '302': { name: '방독마스크', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M30 30c0-10 10-15 20-15s20 5 20 15v20c0 15-10 25-20 25s-20-10-20-25V30z" fill="#fff"/><circle cx="40" cy="40" r="8" fill="#0052cc"/><circle cx="60" cy="40" r="8" fill="#0052cc"/><path d="M35 60h30v15H35z" fill="#0052cc"/><path d="M40 60v15M50 60v15M60 60v15" stroke="#fff" strokeWidth="2"/></svg> },
-            '303': { name: '방진마스크', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M35 40l15-20 15 20v30l-15 15-15-15V40z" fill="#fff"/><circle cx="50" cy="55" r="10" fill="#0052cc"/><path d="M35 40h30M35 50h30M35 60h30" stroke="#0052cc" strokeWidth="3"/></svg> },
-            '304': { name: '보안면', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M25 25h50v40c0 15-10 25-25 25s-25-10-25-25V25z" fill="#fff"/><path d="M30 35h40v20H30z" fill="#0052cc"/><path d="M45 65h10v10H45z" fill="#0052cc"/></svg> },
-            '305': { name: '안전모', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M25 50c0-15 10-25 25-25s25 10 25 25v10H25V50z" fill="#fff"/><path d="M20 60h60v5H20z" fill="#fff"/><path d="M45 25v25h10V25z" fill="#0052cc" opacity="0.2"/></svg> },
-            '306': { name: '귀마개', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M35 25c-8 0-15 7-15 15v20c0 8 7 15 15 15h30c8 0 15-7 15-15V40c0-8-7-15-15-15H35z" fill="#fff" opacity="0.2"/><circle cx="30" cy="50" r="15" fill="#fff"/><circle cx="70" cy="50" r="15" fill="#fff"/><path d="M30 35c0-15 10-20 20-20s20 5 20 20" fill="none" stroke="#fff" strokeWidth="6"/></svg> },
-            '307': { name: '안전화', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M40 20h20v40h15c5 0 5 5 5 10v10H35V30c0-5 5-10 5-10z" fill="#fff"/><path d="M60 60h15v10H60z" fill="#0052cc" opacity="0.2"/></svg> },
-            '308': { name: '안전장갑', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M35 70V40c0-3 2-5 5-5s5 2 5 5v10c0-3 2-5 5-5s5 2 5 5v5c0-3 2-5 5-5s5 2 5 5v5c0-3 2-5 5-5s5 2 5 5v20H35z" fill="#fff"/><path d="M35 70v10h35V70" fill="none" stroke="#fff" strokeWidth="4"/></svg> },
-            '309': { name: '안전복', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M30 30h40l10 20-10 5-5-15v40H35V40l-5 15-10-5 10-20z" fill="#fff"/><path d="M40 30V20c0-5 5-10 10-10s10 5 10 10v10" fill="none" stroke="#fff" strokeWidth="6"/></svg> }
+            '301': { name: '보안경 착용', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M25 45c0-10 10-15 25-15s25 5 25 15v10c0 10-10 15-25 15s-25-5-25-15V45z" fill="#fff" opacity="0.2"/><path d="M20 40h60v10c0 15-10 20-30 20s-30-5-30-20V40z" fill="#fff" opacity="0.3"/><path d="M30 40c0-5 5-10 15-10h10c10 0 15 5 15 10v10c0 5-5 10-15 10H45c-10 0-15-5-15-10V40z" fill="none" stroke="#fff" strokeWidth="4"/><path d="M45 45c0-3 3-5 5-5s5 2 5 5v5c0 3-3 5-5 5s-5-2-5-5v-5z" fill="#fff"/><path d="M20 50h10M70 50h10" stroke="#fff" strokeWidth="4"/></svg> },
+            '302': { name: '방독마스크 착용', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M30 30c0-10 10-15 20-15s20 5 20 15v20c0 15-10 25-20 25s-20-10-20-25V30z" fill="#fff"/><circle cx="40" cy="40" r="8" fill="#0052cc"/><circle cx="60" cy="40" r="8" fill="#0052cc"/><path d="M35 60h30v15H35z" fill="#0052cc"/><path d="M40 60v15M50 60v15M60 60v15" stroke="#fff" strokeWidth="2"/></svg> },
+            '303': { name: '방진마스크 착용', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M35 40l15-20 15 20v30l-15 15-15-15V40z" fill="#fff"/><circle cx="50" cy="55" r="10" fill="#0052cc"/><path d="M35 40h30M35 50h30M35 60h30" stroke="#0052cc" strokeWidth="3"/></svg> },
+            '304': { name: '보안면 착용', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M25 25h50v40c0 15-10 25-25 25s-25-10-25-25V25z" fill="#fff"/><path d="M30 35h40v20H30z" fill="#0052cc"/><path d="M45 65h10v10H45z" fill="#0052cc"/></svg> },
+            '305': { name: '안전모 착용', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M25 50c0-15 10-25 25-25s25 10 25 25v10H25V50z" fill="#fff"/><path d="M20 60h60v5H20z" fill="#fff"/><path d="M45 25v25h10V25z" fill="#0052cc" opacity="0.2"/></svg> },
+            '306': { name: '귀마개 착용', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M35 25c-8 0-15 7-15 15v20c0 8 7 15 15 15h30c8 0 15-7 15-15V40c0-8-7-15-15-15H35z" fill="#fff" opacity="0.2"/><circle cx="30" cy="50" r="15" fill="#fff"/><circle cx="70" cy="50" r="15" fill="#fff"/><path d="M30 35c0-15 10-20 20-20s20 5 20 20" fill="none" stroke="#fff" strokeWidth="6"/></svg> },
+            '307': { name: '안전화 착용', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M40 20h20v40h15c5 0 5 5 5 10v10H35V30c0-5 5-10 5-10z" fill="#fff"/><path d="M60 60h15v10H60z" fill="#0052cc" opacity="0.2"/></svg> },
+            '308': { name: '안전장갑 착용', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M35 70V40c0-3 2-5 5-5s5 2 5 5v10c0-3 2-5 5-5s5 2 5 5v5c0-3 2-5 5-5s5 2 5 5v5c0-3 2-5 5-5s5 2 5 5v20H35z" fill="#fff"/><path d="M35 70v10h35V70" fill="none" stroke="#fff" strokeWidth="4"/></svg> },
+            '309': { name: '안전복 착용', svg: <svg viewBox="0 0 100 100" className="w-full h-full"><circle cx="50" cy="50" r="45" fill="#0052cc"/><path d="M30 30h40l10 20-10 5-5-15v40H35V40l-5 15-10-5 10-20z" fill="#fff"/><path d="M40 30V20c0-5 5-10 10-10s10 5 10 10v10" fill="none" stroke="#fff" strokeWidth="6"/></svg> }
         };
 
         const MOEL_NOTICE_MAPPING = {
@@ -114,36 +114,32 @@
             'P501': '관련 법령에 따라 내용물/용기를 폐기하시오.', 'P502': '재활용/회수 관련 정보는 제조자/공급자에게 문의하시오.'
         };
 
-        // --- [설정] 외부 이미지(Github 등) 연동 기능 ---
-        // 깃허브에 이미지를 업로드한 후, 해당 이미지의 'Raw(원본)' 주소를 아래에 붙여넣으세요.
-        // 주소를 모두 입력한 뒤, 아래 값을 true 로 변경하면 인라인 SVG 대신 외부 이미지를 불러옵니다.
         const USE_GITHUB_IMAGES = true; 
         
         const GITHUB_GHS_URLS = {
-            bomb: 'https://github.com/mirboy17-svg/Warning-sign/blob/main/bomb.png?raw=true',
-            flame: 'https://github.com/mirboy17-svg/Warning-sign/blob/main/flame.png?raw=true',
-            flame_over_circle: 'https://github.com/mirboy17-svg/Warning-sign/blob/main/flame_over_circle.png?raw=true',
-            gas_cylinder: 'https://github.com/mirboy17-svg/Warning-sign/blob/main/flame_over_circle.png?raw=true',
-            corrosion: 'https://github.com/mirboy17-svg/Warning-sign/blob/main/corrosion.png?raw=true',
-            skull: 'https://github.com/mirboy17-svg/Warning-sign/blob/main/skull.png?raw=true',
-            exclamation: 'https://github.com/mirboy17-svg/Warning-sign/blob/main/exclamation.png?raw=true',
-            health_hazard: 'https://github.com/mirboy17-svg/Warning-sign/blob/main/health_hazard.png?raw=true',
-            environment: 'https://github.com/mirboy17-svg/Warning-sign/blob/main/environment.png?raw=true'
+            bomb: 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/bomb.png',
+            flame: 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/flame.png',
+            flame_over_circle: 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/flame_over_circle.png',
+            gas_cylinder: 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/gas_cylinder.png',
+            corrosion: 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/corrosion.png',
+            skull: 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/skull.png',
+            exclamation: 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/exclamation.png',
+            health_hazard: 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/health_hazard.png',
+            environment: 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/environment.png'
         };
 
         const GITHUB_PPE_URLS = {
-            '301': 'https://github.com/mirboy17-svg/Warning-sign/blob/main/301.png?raw=true',
-            '302': 'https://github.com/mirboy17-svg/Warning-sign/blob/main/302.png?raw=true',
-            '303': 'https://github.com/mirboy17-svg/Warning-sign/blob/main/303.png?raw=true',
-            '304': 'https://github.com/mirboy17-svg/Warning-sign/blob/main/304.png?raw=true',
-            '305': 'https://github.com/mirboy17-svg/Warning-sign/blob/main/305.png?raw=true',
-            '306': 'https://github.com/mirboy17-svg/Warning-sign/blob/main/306.png?raw=true',
-            '307': 'https://github.com/mirboy17-svg/Warning-sign/blob/main/307.png?raw=true',
-            '308': 'https://github.com/mirboy17-svg/Warning-sign/blob/main/308.png?raw=true',
-            '309': 'https://github.com/mirboy17-svg/Warning-sign/blob/main/309.png?raw=true'
+            '301': 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/301.png',
+            '302': 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/302.png',
+            '303': 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/303.png',
+            '304': 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/304.png',
+            '305': 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/305.png',
+            '306': 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/306.png',
+            '307': 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/307.png',
+            '308': 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/308.png',
+            '309': 'https://raw.githubusercontent.com/mirboy17-svg/Warning-sign/main/309.png'
         };
 
-        // 이미지 렌더링 헬퍼 함수
         const renderGHS = (pic) => {
             return (USE_GITHUB_IMAGES && GITHUB_GHS_URLS[pic])
                 ? <img src={GITHUB_GHS_URLS[pic]} alt={pic} className="w-full h-full object-contain" />
@@ -155,16 +151,11 @@
                 ? <img src={GITHUB_PPE_URLS[id]} alt={PPE_ICONS[id].name} className="w-full h-full object-contain" />
                 : PPE_ICONS[id].svg;
         };
-        // -----------------------------------------------
 
         const parseTextToMSDS = (fullText, fileName) => {
-            let revisionDate = "2026.08.31"; // 현재 날짜 기준
+            let revisionDate = "2026.08.31";
             const revMatch = fullText.match(/(?:최종\s*개정일자|개정일자|개정일|Revision\s*Date)\s*[:;]?\s*([0-9]{4}[.\-년]\s*[0-9]{1,2}[.\-월]\s*[0-9]{1,2})/i);
             if (revMatch && revMatch[1]) revisionDate = revMatch[1].replace(/[년월일\s]/g, '.').replace(/\.+$/, '');
-
-            let msdsNumber = "";
-            const msdsMatch = fullText.match(/(?:MSDS\s*번호|물질안전보건자료\s*번호|제품코드|Product\s*Code)\s*[:;]?\s*([A-Za-z0-9-]+)/i);
-            if (msdsMatch && msdsMatch[1]) msdsNumber = msdsMatch[1].trim();
 
             let productName = "";
             const strictNameRegex = /(?:가\.\s*제품명|제품명|명칭)\s*[:;|\s]*([^\n]+?)(?=\s*(?:나\.|권고용도|권고 용도|용도|다\.|사용상의|회사명|제조업체|공급자|$))/i;
@@ -173,7 +164,7 @@
                 productName = match[1].replace(/[\n\r]+/g, ' ').replace(/\s{2,}/g, ' ').trim();
             }
             if (!productName && fileName) productName = fileName.replace(/\.[^/.]+$/, "").replace(/[_ -]/g, " ").replace(/\([^)]*\)/g, '').trim();
-            if (msdsNumber) productName = `${productName} [${msdsNumber}]`;
+            // MSDS 번호는 의도적으로 제외(삭제)
 
             const introArea = fullText.substring(0, 3000);
             let supplierName = "";
@@ -190,13 +181,12 @@
                 if (num.length > 7 && !supplierTels.includes(num)) supplierTels.push(num);
             }
             const finalTels = supplierTels.slice(0, 2).join(", ");
-            const supplierInfo = `${supplierName}\n${finalTels ? 'TEL: ' + finalTels : ''}`.trim();
+            // 줄바꿈 제거, 한 줄로 표시
+            const supplierInfo = `${supplierName} ${finalTels ? 'TEL: ' + finalTels : ''}`.trim();
 
-            // 줄바꿈 등을 띄어쓰기로 치환하여 스캔 범위를 3만자로 대폭 늘려 단절 방지
             const singleLineText = fullText.substring(0, 30000).replace(/[\n\r]+/g, ' ');
             
             let allMatches = [];
-            // H 225, H-225, H225 등을 샅샅이 찾아내는 정규식
             const hRegex = /(?:^|[^a-zA-Z])H\s*[-_]?\s*([234]\d{2})(?=[^0-9]|$)/gi;
             let m;
             while ((m = hRegex.exec(singleLineText)) !== null) {
@@ -217,7 +207,6 @@
                 if (noSpaceText.includes(keyword)) allMatches.push(code);
             });
 
-            // 필터링 없이 고유값만 추출 (사전에 없더라도 일단 화면에 띄움)
             const uniqueCodes = [...new Set(allMatches)];
 
             let isDanger = false, isWarning = false;
@@ -232,7 +221,6 @@
                 }
             });
             pictograms = [...new Set(pictograms)];
-            if (pictograms.length > 4) pictograms = pictograms.slice(0, 4);
 
             let signalWord = "해당없음";
             if (isDanger) signalWord = "위험";
@@ -262,9 +250,7 @@
                 if (noSpaceText.includes(keyword)) allPMatches.push(code);
             });
 
-            // 필터링 없이 고유값만 추출
             const uniquePCodes = [...new Set(allPMatches)];
-            
             const getPDesc = (code) => P_CODE_DESCRIPTIONS[code] || "(세부 지침 참조)";
             
             const prevention = uniquePCodes.filter(c => c.startsWith('P2')).map(c => `- ${c} ${getPDesc(c)}`);
@@ -280,7 +266,6 @@
             const handlingText = [fmtPrev, fmtResp, fmtStor, fmtDisp].join('\n\n');
             const labelPrevention = prevention.length > 0 ? prevention.join('\n') : '해당 없음';
 
-            // 응급조치 스마트 융합 엔진 (정답 베이스 + 특이사항 추출)
             let eye = "- 불편함을 느끼면 의료기관(의사)의 진찰을 받으시오.\n- 20분 이상 다량의 물로 깨끗이 씻어낼 것. 필요시 의학적 조치";
             let skin = "- 불편함을 느끼면 의료기관(의사)의 진찰을 받으시오.\n- 오염된 의복과 신발을 제거한 후 비눗물로 씻을 것";
             let inhale = "- 신선한 곳으로 즉시 옮길 것, 의사의 조치를 받을 것";
@@ -289,7 +274,6 @@
             let extinguish = "내알콜성 포말, 이산화탄소, 물 분무, 분말소화약제 사용";
             let leakResponse = "적절한 보호구를 착용하고, 엎질러진 것을 흡수재로 닦아내어 수거할 것";
 
-            // 4번 섹션에서 특이사항 핀셋 추출
             const firstAidSection = fullText.substring(0, 15000).match(/4\.\s*응급조치\s*요령([\s\S]+?)(?:5\.\s*폭발\s*|\n5\.)/i);
             if (firstAidSection && firstAidSection[1]) {
                 const faText = firstAidSection[1];
@@ -320,8 +304,11 @@
             const fileInputRef = useRef(null);
             const [selectedPPE, setSelectedPPE] = useState(['301', '302', '309', '308']);
             
-            const [labelCopies, setLabelCopies] = useState(10);
-            const [labelLayout, setLabelLayout] = useState('horizontal'); // horizontal, vertical
+            // 회사 로고 업로드를 위한 상태 및 참조 변수 추가
+            const [companyLogo, setCompanyLogo] = useState(null);
+            const logoInputRef = useRef(null);
+
+            const [modalConfig, setModalConfig] = useState({ isOpen: false, type: '', title: '', content: '' });
 
             const handleFiles = async (files) => {
                 const file = files[0];
@@ -367,13 +354,141 @@
                 if (!extractedData) return;
                 setExtractedData(prev => {
                     let newPics = prev.pictograms.includes(type) ? prev.pictograms.filter(p => p !== type) : [...prev.pictograms, type];
-                    if (newPics.length > 4) newPics = newPics.slice(1);
                     return { ...prev, pictograms: newPics };
                 });
             };
 
             const togglePPE = (id) => {
                 setSelectedPPE(prev => prev.includes(id) ? prev.filter(ppeId => ppeId !== id) : [...prev, id]);
+            };
+
+            // 회사 로고 이미지 업로드 핸들러
+            const handleLogoUpload = (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                        setCompanyLogo(event.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            };
+
+            const openModal = (type, title, content) => setModalConfig({ isOpen: true, type, title, content });
+            const closeModal = () => setModalConfig({ ...modalConfig, isOpen: false });
+            const saveModal = (newContent) => {
+                if (modalConfig.type === 'hazards') setExtractedData({ ...extractedData, labelHazards: newContent });
+                else if (modalConfig.type === 'prevention') setExtractedData({ ...extractedData, labelPrevention: newContent });
+                closeModal();
+            };
+
+            const formatTruncatedText = (text, limit = 6) => {
+                if (!text) return '';
+                const lines = text.split('\n').filter(l => l.trim() !== '');
+                if (lines.length > limit) return lines.slice(0, limit).join('\n') + '\n... (이하 생략)';
+                return lines.join('\n');
+            };
+
+            const renderLabelContent = (data, isMaster = false) => {
+                const pics = data.pictograms.slice(0, 4);
+                
+                return (
+                    <div className={`w-full h-full border-[1.5px] border-black flex flex-col bg-white overflow-hidden ${isMaster ? 'shadow-sm rounded-md' : ''}`}>
+                        <div className="h-[18%] border-b-[1.5px] border-black flex bg-slate-50 shrink-0">
+                            {/* 명칭 영역 (좌측) */}
+                            <div className="flex-1 border-r-[1.5px] border-black flex flex-col items-center justify-center relative px-1">
+                                <span className="absolute left-1 top-0.5 text-[6px] font-bold text-slate-500">(명 칭)</span>
+                                {isMaster ? (
+                                    <input type="text" value={data.productName} onChange={e => setExtractedData({...extractedData, productName: e.target.value})} className="w-[90%] text-center text-[14px] font-extrabold bg-transparent outline-none border-b border-dashed border-blue-400 mt-2" />
+                                ) : (
+                                    <span className="text-[13px] font-extrabold truncate w-[90%] text-center tracking-tight leading-none mt-1">{data.productName}</span>
+                                )}
+                            </div>
+                            
+                            {/* 신호어 영역 (우측) */}
+                            <div className="w-[28%] flex flex-col items-center justify-center relative px-1 bg-white">
+                                <span className="absolute left-1 top-0.5 text-[6px] font-bold text-slate-500">(신호어)</span>
+                                {isMaster ? (
+                                    <input type="text" value={data.signalWord} onChange={e => setExtractedData({...extractedData, signalWord: e.target.value})} className="w-[90%] text-center text-[#c00000] font-black text-[13px] bg-transparent outline-none border-b border-dashed border-red-400 mt-2" />
+                                ) : (
+                                    <span className="text-[#c00000] font-black text-[13px] leading-none mt-1">{data.signalWord}</span>
+                                )}
+                            </div>
+                        </div>
+                        
+                        <div className="flex flex-1 min-h-0 flex-row">
+                            <div className="w-[30%] border-r-[1.5px] border-black flex flex-col items-center justify-center shrink-0 p-1 relative bg-white">
+                                <span className="absolute top-0.5 left-0.5 text-[6px] font-bold text-slate-500">(그림문자)</span>
+                                <div className="flex flex-col justify-center items-center w-full h-full flex-1 min-h-0 mt-2 gap-[1px]">
+                                    {pics.length === 2 ? (
+                                        <>
+                                            <div className="flex justify-center gap-[2px] w-full">
+                                                <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[0])}</div>
+                                                <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[1])}</div>
+                                            </div>
+                                            <div className="w-[45%] aspect-square opacity-0"></div>
+                                        </>
+                                    ) : pics.length === 3 ? (
+                                        <>
+                                            <div className="flex justify-center gap-[2px] w-full">
+                                                <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[0])}</div>
+                                                <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[1])}</div>
+                                            </div>
+                                            <div className="flex justify-center w-full">
+                                                <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[2])}</div>
+                                            </div>
+                                        </>
+                                    ) : pics.length === 1 ? (
+                                        <div className="flex justify-center w-full">
+                                            <div className="w-[60%] aspect-square flex items-center justify-center">{renderGHS(pics[0])}</div>
+                                        </div>
+                                    ) : (
+                                        <div className="grid grid-cols-2 gap-[1px] w-full place-items-center">
+                                            {pics.map((pic, idx) => (
+                                                <div key={idx} className="w-[85%] aspect-square flex items-center justify-center">{renderGHS(pic)}</div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                            
+                            <div className="w-[70%] p-1.5 flex flex-col gap-1 overflow-hidden bg-white">
+                                <div className="flex-1 overflow-hidden flex min-h-0 gap-1 group relative rounded border border-transparent hover:border-slate-200 transition-colors pt-1">
+                                    <div className="text-[8.5px] font-extrabold shrink-0 w-16 text-slate-800">유해·위험 문구:</div>
+                                    <div className="overflow-hidden flex-1 text-[7.5px] font-semibold leading-[1.2] whitespace-pre-wrap break-keep text-slate-700">
+                                        {formatTruncatedText(data.labelHazards, 6)}
+                                    </div>
+                                    {isMaster && (
+                                        <button onClick={() => openModal('hazards', '유해·위험 문구 편집', data.labelHazards)} className="absolute top-0 right-0 bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 text-[9px] rounded font-bold shadow-sm z-10 flex items-center gap-1 cursor-pointer hover:bg-blue-100 transition-colors">
+                                            <IconLayout size={10}/> 자세히 보기/편집
+                                        </button>
+                                    )}
+                                </div>
+
+                                <div className="flex-1 overflow-hidden flex min-h-0 gap-1 group relative rounded border border-transparent hover:border-slate-200 transition-colors pt-1">
+                                    <div className="text-[8.5px] font-extrabold shrink-0 w-16 text-slate-800">예방조치 문구:</div>
+                                    <div className="overflow-hidden flex-1 text-[7.5px] font-semibold leading-[1.2] whitespace-pre-wrap break-keep text-slate-700">
+                                        {formatTruncatedText(data.labelPrevention, 6)}
+                                    </div>
+                                    {isMaster && (
+                                        <button onClick={() => openModal('prevention', '예방조치 문구 편집', data.labelPrevention)} className="absolute top-0 right-0 bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 text-[9px] rounded font-bold shadow-sm z-10 flex items-center gap-1 cursor-pointer hover:bg-blue-100 transition-colors">
+                                            <IconLayout size={10}/> 자세히 보기/편집
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className="h-[14%] border-t-[1.5px] border-black flex items-center px-1.5 shrink-0 gap-1 bg-slate-50">
+                            <div className="text-[8.5px] font-extrabold shrink-0 text-slate-800">공급자 정보:</div>
+                            {isMaster ? (
+                                <input type="text" value={data.supplierInfo} onChange={e => setExtractedData({...extractedData, supplierInfo: e.target.value})} className="w-full text-[8px] font-bold bg-transparent outline-none border-b border-dashed border-blue-400 whitespace-nowrap" />
+                            ) : (
+                                <span className="text-[8px] font-bold leading-none whitespace-nowrap overflow-hidden text-ellipsis w-full text-left text-slate-700">{data.supplierInfo}</span>
+                            )}
+                        </div>
+                    </div>
+                );
             };
 
             return (
@@ -407,7 +522,6 @@
 
                         <div className="flex-1 overflow-auto p-6 bg-slate-200 flex justify-center print:p-0 print:overflow-visible">
                             
-                            {/* 1. Dashboard */}
                             {activeMenu === 'dashboard' && (
                                 <div className="max-w-4xl w-full flex flex-col gap-6">
                                     <div className="bg-white rounded-2xl shadow-sm border p-8">
@@ -435,134 +549,61 @@
                                 </div>
                             )}
 
-                            {/* 2. Warning Label (A4 1/10) */}
                             {activeMenu === 'label' && (
                                 <div className="flex flex-col items-center w-full pb-20">
-                                    <div className="w-full max-w-[210mm] flex flex-wrap justify-between items-end mb-4 no-print gap-4">
-                                        <div className="flex gap-4 items-end">
-                                            <div className="flex flex-col gap-1">
-                                                <span className="text-xs font-bold text-slate-500">인쇄 설정</span>
-                                                <div className="flex items-center gap-2 bg-white rounded-lg px-4 py-2 shadow-sm border">
-                                                    <span className="text-sm font-bold">출력 매수:</span>
-                                                    <input type="number" min="1" max="10" value={labelCopies} onChange={(e)=>setLabelCopies(Math.min(10, Math.max(1, Number(e.target.value))))} className="w-16 border rounded px-2 py-1 text-center font-bold bg-slate-50 outline-none" />
-                                                    <span className="text-sm font-medium text-slate-500">장 (A4 1/10 크기 고정)</span>
-                                                </div>
-                                            </div>
-                                            <div className="flex flex-col gap-1">
-                                                <span className="text-xs font-bold text-slate-500">레이아웃</span>
-                                                <div className="flex bg-white rounded-lg p-1 shadow-sm border">
-                                                    <button onClick={() => setLabelLayout('horizontal')} className={`px-4 py-1.5 rounded-md text-sm font-bold transition-all ${labelLayout === 'horizontal' ? 'bg-slate-800 text-white shadow' : 'text-slate-600 hover:bg-slate-100'}`}>가로형</button>
-                                                    <button onClick={() => setLabelLayout('vertical')} className={`px-4 py-1.5 rounded-md text-sm font-bold transition-all ${labelLayout === 'vertical' ? 'bg-slate-800 text-white shadow' : 'text-slate-600 hover:bg-slate-100'}`}>세로형</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button onClick={() => window.print()} className="flex items-center gap-2 px-6 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-bold"><IconPrinter /> 인쇄 및 PDF 저장</button>
+                                    <div className="w-full max-w-[210mm] flex justify-between items-center mb-4 no-print">
+                                        <span className="text-sm font-bold text-slate-600">A4 1/10 크기 가로형 표준 양식 (10장 배치)</span>
+                                        <button onClick={() => window.print()} className="flex items-center gap-2 px-6 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-bold shadow-md"><IconPrinter /> 인쇄 및 PDF 저장</button>
                                     </div>
 
                                     {extractedData ? (
-                                        <div className="flex flex-col w-full items-center">
-                                            {/* 대표(마스터) 라벨 편집 영역 */}
-                                            <div className="w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-md border p-6 mb-8 no-print relative">
-                                                <div className="absolute -top-3 -left-3 bg-blue-600 text-white px-3 py-1 rounded-lg text-xs font-bold shadow-md flex items-center gap-1"><IconSettings /> EDIT MODE</div>
-                                                <h3 className="text-lg font-bold text-slate-800 mb-1">대표 경고표지 (수기 수정 모드)</h3>
-                                                <p className="text-sm text-slate-500 mb-5">아래 대표 양식을 수정하면, 하단의 출력용 라벨에 일괄 적용됩니다. (가로/세로 레이아웃 토글 반영)</p>
+                                        <div className="flex flex-col w-full items-center relative">
+                                            <div className="w-full max-w-[210mm] mx-auto bg-white rounded-2xl shadow-sm border border-slate-200 p-8 mb-8 no-print relative">
+                                                <div className="absolute -top-3 -left-3 bg-blue-600 text-white px-4 py-1.5 rounded-lg text-xs font-bold shadow-md flex items-center gap-2"><IconSettings size={14}/> 마스터 편집 모드</div>
+                                                <div className="flex justify-between items-start mb-6">
+                                                    <div>
+                                                        <h3 className="text-xl font-bold text-slate-800 mb-2">대표 경고표지 (카드형 UI)</h3>
+                                                        <p className="text-sm text-slate-500">인쇄 시 안전한 레이아웃을 위해 문구 항목이 6개를 초과할 경우 자동 축약됩니다.<br/>내용 영역의 <b>'자세히 보기/편집'</b> 버튼을 눌러 전체 내용을 직관적으로 관리하세요.</p>
+                                                    </div>
+                                                </div>
                                                 
-                                                <div className={`w-full max-w-[105mm] border-[2px] border-black bg-white flex ${labelLayout === 'horizontal' ? 'flex-col aspect-[2]' : 'flex-col aspect-[0.7]'} mx-auto overflow-hidden`}>
-                                                    {/* 상단 명칭 공통 */}
-                                                    <div className={`${labelLayout === 'horizontal' ? 'h-[20%]' : 'h-[12%]'} border-b-[2px] border-black flex items-center justify-center bg-slate-50 px-2 shrink-0 relative`}>
-                                                        <span className="absolute left-2 text-[10px] font-bold text-slate-400">(명 칭)</span>
-                                                        <input type="text" value={extractedData.productName} onChange={e => setExtractedData({...extractedData, productName: e.target.value})} className="w-[80%] h-full text-center text-[clamp(14px,3vw,24px)] font-extrabold bg-transparent outline-none border-b border-dashed border-blue-400" />
-                                                    </div>
-                                                    
-                                                    {/* 중앙부 레이아웃 분기 */}
-                                                    <div className={`flex flex-1 min-h-0 ${labelLayout === 'horizontal' ? 'flex-row' : 'flex-col'}`}>
-                                                        {/* 그림문자 영역 */}
-                                                        <div className={`${labelLayout === 'horizontal' ? 'w-[30%] border-r-[2px]' : 'w-full border-b-[2px]'} border-black flex flex-col items-center justify-center p-2 shrink-0 relative`}>
-                                                            <span className="absolute top-1 left-1 text-[10px] font-bold text-slate-400">(그림문자)</span>
-                                                            <div className="flex flex-wrap justify-center content-center gap-1 w-full h-full flex-1 min-h-0 mt-4">
-                                                                {extractedData.pictograms.map((pic, idx) => (
-                                                                    <div key={idx} className={`${extractedData.pictograms.length > 2 ? 'w-[45%]' : 'w-[55%]'} aspect-square flex items-center justify-center cursor-pointer`} onClick={() => togglePictogram(pic)}>
-                                                                        {renderGHS(pic)}
-                                                                    </div>
-                                                                ))}
-                                                            </div>
-                                                        </div>
-                                                        
-                                                        {/* 텍스트 영역 */}
-                                                        <div className={`${labelLayout === 'horizontal' ? 'w-[70%]' : 'w-full'} p-2 flex flex-col gap-1 overflow-hidden relative`}>
-                                                            <div className="flex items-center gap-2 mb-2">
-                                                                <span className="text-[10px] font-bold text-slate-400">(신 호 어)</span>
-                                                                <input type="text" value={extractedData.signalWord} onChange={e => setExtractedData({...extractedData, signalWord: e.target.value})} className="flex-1 text-left text-[#c00000] font-black text-[clamp(12px,2vw,18px)] bg-transparent outline-none border-b border-dashed border-red-400" />
-                                                            </div>
-                                                            <div className="flex-1 flex min-h-0 gap-2">
-                                                                <div className="text-[12px] font-extrabold text-slate-800 shrink-0 w-24">유해·위험 문구 :</div>
-                                                                <textarea value={extractedData.labelHazards} onChange={e => setExtractedData({...extractedData, labelHazards: e.target.value})} className="flex-1 w-full bg-transparent text-[11px] font-semibold leading-[1.3] resize-none outline-none border border-dashed border-transparent hover:border-blue-300" />
-                                                            </div>
-                                                            <div className="flex-1 flex min-h-0 gap-2">
-                                                                <div className="text-[12px] font-extrabold text-slate-800 shrink-0 w-24">예방조치 문구 :</div>
-                                                                <textarea value={extractedData.labelPrevention} onChange={e => setExtractedData({...extractedData, labelPrevention: e.target.value})} className="flex-1 w-full bg-transparent text-[11px] font-semibold leading-[1.3] resize-none outline-none border border-dashed border-transparent hover:border-blue-300" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    {/* 하단 공급자 공통 */}
-                                                    <div className={`${labelLayout === 'horizontal' ? 'h-[15%]' : 'h-[12%]'} border-t-[2px] border-black flex items-center bg-slate-50 p-2 shrink-0 gap-2`}>
-                                                        <div className="text-[12px] font-extrabold text-slate-800 shrink-0">공급자 정보 :</div>
-                                                        <textarea value={extractedData.supplierInfo} onChange={e => setExtractedData({...extractedData, supplierInfo: e.target.value})} className="flex-1 h-full bg-transparent text-[11px] font-bold leading-tight resize-none outline-none border border-dashed border-transparent hover:border-blue-300 whitespace-pre-wrap pt-1" />
-                                                    </div>
+                                                <div className="w-full max-w-[150mm] h-[75mm] mx-auto transition-transform hover:scale-[1.02] duration-300">
+                                                    {renderLabelContent(extractedData, true)}
                                                 </div>
                                             </div>
 
-                                            {/* 출력용 복제 라벨 (A4 1/10) */}
-                                            <div className="w-full max-w-[210mm] no-print mb-2"><span className="text-sm font-bold text-slate-500">▼ 인쇄 미리보기 (A4 10장)</span></div>
+                                            <div className="w-full max-w-[210mm] no-print mb-2"><span className="text-sm font-bold text-slate-500">▼ 인쇄 미리보기 (A4 용지 내 10장 배치)</span></div>
                                             
                                             <div className="print-page w-[210mm] h-[297mm] flex flex-wrap content-start text-black box-border shadow-2xl bg-white shrink-0 print:w-full print:h-[297mm] print:shadow-none print:border-none print:m-0 print:p-0">
-                                                {Array.from({ length: labelCopies }).map((_, i) => (
+                                                {Array.from({ length: 10 }).map((_, i) => (
                                                     <div key={i} className="w-[50%] h-[20%] box-border p-[0.5mm]">
-                                                        <div className={`w-full h-full border-[1.5px] border-black flex ${labelLayout === 'horizontal' ? 'flex-col' : 'flex-col'} bg-white overflow-hidden`}>
-                                                            
-                                                            <div className={`${labelLayout === 'horizontal' ? 'h-[18%]' : 'h-[15%]'} border-b-[1.5px] border-black flex items-center justify-center shrink-0 px-1 relative`}>
-                                                                <span className="absolute left-1 top-0.5 text-[5px] font-bold text-slate-600">(명 칭)</span>
-                                                                <span className="text-[13px] font-extrabold truncate w-[80%] text-center tracking-tight leading-none mt-1">{extractedData.productName}</span>
-                                                            </div>
-                                                            
-                                                            <div className={`flex flex-1 min-h-0 ${labelLayout === 'horizontal' ? 'flex-row' : 'flex-col'}`}>
-                                                                
-                                                                <div className={`${labelLayout === 'horizontal' ? 'w-[30%] border-r-[1.5px]' : 'w-full border-b-[1.5px]'} border-black flex flex-col items-center justify-center shrink-0 p-1 relative`}>
-                                                                    <span className="absolute top-0.5 left-0.5 text-[5px] font-bold text-slate-600">(그림문자)</span>
-                                                                    <div className="flex flex-wrap justify-center content-center gap-[1px] w-full h-full flex-1 min-h-0 mt-2">
-                                                                        {extractedData.pictograms.map((pic, idx) => (
-                                                                            <div key={idx} className={`${extractedData.pictograms.length > 2 ? 'w-[45%]' : 'w-[50%]'} aspect-square flex items-center justify-center`}>
-                                                                                {renderGHS(pic)}
-                                                                            </div>
-                                                                        ))}
-                                                                    </div>
-                                                                </div>
-                                                                
-                                                                <div className={`${labelLayout === 'horizontal' ? 'w-[70%]' : 'w-full'} p-1 flex flex-col gap-0.5 overflow-hidden`}>
-                                                                    <div className="flex items-center gap-1 mb-0.5 shrink-0">
-                                                                        <span className="text-[5px] font-bold text-slate-600">(신 호 어)</span>
-                                                                        <span className="text-[#c00000] font-black text-[12px] leading-none">{extractedData.signalWord}</span>
-                                                                    </div>
-                                                                    <div className="flex-1 overflow-hidden flex min-h-0 gap-1">
-                                                                        <div className="text-[8px] font-extrabold shrink-0 w-16">유해·위험 문구:</div>
-                                                                        <div className="overflow-hidden flex-1 text-[7.5px] font-semibold leading-[1.1] whitespace-pre-wrap break-keep">{extractedData.labelHazards}</div>
-                                                                    </div>
-                                                                    <div className="flex-1 overflow-hidden flex min-h-0 gap-1">
-                                                                        <div className="text-[8px] font-extrabold shrink-0 w-16">예방조치 문구:</div>
-                                                                        <div className="overflow-hidden flex-1 text-[7.5px] font-semibold leading-[1.1] whitespace-pre-wrap break-keep">{extractedData.labelPrevention}</div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                            <div className={`${labelLayout === 'horizontal' ? 'h-[14%]' : 'h-[15%]'} border-t-[1.5px] border-black flex items-center px-1.5 shrink-0 gap-1`}>
-                                                                <div className="text-[8px] font-extrabold shrink-0">공급자 정보:</div>
-                                                                <span className="text-[7.5px] font-bold leading-[1.1] whitespace-pre-wrap break-keep w-full text-left">{extractedData.supplierInfo}</span>
-                                                            </div>
-                                                        </div>
+                                                        {renderLabelContent(extractedData, false)}
                                                     </div>
                                                 ))}
                                             </div>
+
+                                            {modalConfig.isOpen && (
+                                                <div className="fixed inset-0 bg-slate-900/60 flex items-center justify-center z-50 backdrop-blur-sm p-4 no-print">
+                                                    <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl flex flex-col overflow-hidden border border-slate-200">
+                                                        <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 flex justify-between items-center">
+                                                            <h3 className="text-lg font-bold text-slate-800 flex items-center gap-2"><IconFileText className="text-blue-600"/> {modalConfig.title}</h3>
+                                                            <button onClick={closeModal} className="text-slate-400 hover:text-slate-600 text-2xl leading-none">&times;</button>
+                                                        </div>
+                                                        <div className="p-6 bg-white">
+                                                            <p className="text-xs text-slate-500 mb-3">전체 항목을 편집할 수 있습니다. 인쇄용 경고표지에는 상위 6개 항목만 자동 표출됩니다.</p>
+                                                            <textarea 
+                                                                className="w-full h-64 p-4 border border-slate-300 rounded-xl text-sm leading-relaxed focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none resize-none bg-slate-50"
+                                                                value={modalConfig.content}
+                                                                onChange={(e) => setModalConfig({...modalConfig, content: e.target.value})}
+                                                            />
+                                                        </div>
+                                                        <div className="bg-slate-50 px-6 py-4 border-t border-slate-200 flex justify-end gap-3">
+                                                            <button onClick={closeModal} className="px-5 py-2 rounded-lg font-semibold text-slate-600 hover:bg-slate-200 transition-colors">취소</button>
+                                                            <button onClick={() => saveModal(modalConfig.content)} className="px-5 py-2 rounded-lg font-bold bg-blue-600 text-white hover:bg-blue-700 shadow-md transition-colors flex items-center gap-2"><IconCheckCircle size={16}/> 저장 및 적용</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            )}
                                         </div>
                                     ) : (
                                         <div className="w-full max-w-[210mm] aspect-[1/1.4] flex flex-col items-center justify-center bg-white border shadow-xl text-slate-400 space-y-4"><IconAlertTriangle size={48} className="opacity-30" /><p className="text-base font-medium">문서 데이터가 없습니다. 파일을 업로드해주세요.</p></div>
@@ -570,7 +611,6 @@
                                 </div>
                             )}
 
-                            {/* 3. MSDS Form (A4 세로 절대 고정 규격 & 완벽한 텐션) */}
                             {activeMenu === 'management' && (
                                 <div className="flex flex-col items-center w-full pb-20">
                                     <div className="w-full max-w-[210mm] flex justify-end items-center mb-4 no-print">
@@ -582,14 +622,13 @@
                                             <div className="flex flex-col h-full w-full p-[8mm] pb-[4mm]">
                                                 <div className="flex flex-col h-full w-full border-[2px] border-black">
                                                     
-                                                    {/* 상단 타이틀 */}
                                                     <div className="flex border-b-[2px] border-black shrink-0 h-[32px]">
-                                                        <div className="border-r-[2px] border-black px-2 font-bold text-[13px] w-[25%] flex items-center">
-                                                            공정명 : <input type="text" value={extractedData.processName} onChange={(e) => setExtractedData({...extractedData, processName: e.target.value})} className="ml-1 font-bold w-full bg-transparent border-b border-dashed border-blue-400 focus:outline-none"/>
+                                                        <div className="border-r-[2px] border-black px-2 font-bold text-[13px] w-[25%] flex items-center whitespace-nowrap overflow-hidden">
+                                                            공정명 : <input type="text" value={extractedData.processName} onChange={(e) => setExtractedData({...extractedData, processName: e.target.value})} className="ml-1 font-bold w-full bg-transparent border-b border-dashed border-blue-400 focus:outline-none truncate"/>
                                                         </div>
                                                         <div className="border-r-[2px] border-black px-2 text-center text-[19px] font-black tracking-tight w-[50%] flex items-center justify-center">유해화학물질 작업공정별 관리 요령</div>
-                                                        <div className="px-2 font-bold text-[13px] w-[25%] flex items-center justify-end">
-                                                            개정 : <input type="text" value={extractedData.revisionDate} onChange={(e) => setExtractedData({...extractedData, revisionDate: e.target.value})} className="ml-1 font-bold w-[75px] text-right bg-transparent border-b border-dashed border-blue-400 focus:outline-none"/>
+                                                        <div className="px-2 font-bold text-[13px] w-[25%] flex items-center justify-start whitespace-nowrap">
+                                                            개정 : <input type="text" value={extractedData.revisionDate} onChange={(e) => setExtractedData({...extractedData, revisionDate: e.target.value})} className="ml-1 font-bold w-[75px] text-left bg-transparent border-b border-dashed border-blue-400 focus:outline-none"/>
                                                         </div>
                                                     </div>
                                                     <div className="flex border-b-[2px] border-black shrink-0 h-[36px]">
@@ -599,7 +638,6 @@
                                                         </div>
                                                     </div>
 
-                                                    {/* 1번. 그림문자 (최소 높이 강제) */}
                                                     <div className="border-b-[2px] border-black p-1 shrink-0 h-auto">
                                                         <div className="flex justify-between items-end border-b-[1.5px] border-[#c00000] pb-0.5 mb-1">
                                                             <span className="text-[#c00000] font-bold text-[13px] tracking-tight">1. 그림문자</span>
@@ -626,7 +664,6 @@
                                                         </div>
                                                     </div>
 
-                                                    {/* 2번. 유해성 (가중치 0.9 적용 및 CSS Column 밸런스) */}
                                                     <div className="border-b-[2px] border-black p-1 flex flex-col flex-grow-[0.9] min-h-0 basis-0">
                                                         <div className="text-[#c00000] font-bold text-[13px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-1 w-max shrink-0">2. 건강 및 환경에 대한 유해성·물리적 위험성</div>
                                                         <div className="w-full flex-grow min-h-0 overflow-hidden">
@@ -634,15 +671,14 @@
                                                                 contentEditable
                                                                 suppressContentEditableWarning
                                                                 onBlur={(e) => setExtractedData({...extractedData, hazardsText: e.target.innerText})}
-                                                                className="w-full h-auto p-0.5 text-[11px] leading-[1.3] font-medium text-black bg-transparent outline-none cursor-text break-words"
-                                                                style={{ columnCount: 2, columnGap: '1rem', columnRule: '1px dashed #94a3b8', whiteSpace: 'pre-wrap', columnFill: 'balance' }}
+                                                                className="w-full h-auto p-0.5 text-[11px] leading-[1.3] font-medium text-black bg-transparent outline-none cursor-text"
+                                                                style={{ columnCount: 2, columnGap: '1rem', columnRule: '1px dashed #94a3b8', whiteSpace: 'pre-wrap', wordBreak: 'keep-all', overflowWrap: 'break-word', columnFill: 'balance' }}
                                                             >
                                                                 {extractedData.hazardsText}
                                                             </div>
                                                         </div>
                                                     </div>
 
-                                                    {/* 3번. 취급주의 (가중치 1.3 적용 및 CSS Column 밸런스) */}
                                                     <div className="border-b-[2px] border-black p-1 flex flex-col flex-grow-[1.3] min-h-0 basis-0">
                                                         <div className="text-[#c00000] font-bold text-[13px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-1 w-max shrink-0">3. 안전 및 보건상의 취급주의 사항</div>
                                                         <div className="w-full flex-grow min-h-0 overflow-hidden">
@@ -650,15 +686,14 @@
                                                                 contentEditable
                                                                 suppressContentEditableWarning
                                                                 onBlur={(e) => setExtractedData({...extractedData, handlingText: e.target.innerText})}
-                                                                className="w-full h-auto p-0.5 text-[11px] leading-[1.3] font-medium text-black bg-transparent outline-none cursor-text break-words"
-                                                                style={{ columnCount: 2, columnGap: '1rem', columnRule: '1px dashed #94a3b8', whiteSpace: 'pre-wrap', columnFill: 'balance' }}
+                                                                className="w-full h-auto p-0.5 text-[11px] leading-[1.3] font-medium text-black bg-transparent outline-none cursor-text"
+                                                                style={{ columnCount: 2, columnGap: '1rem', columnRule: '1px dashed #94a3b8', whiteSpace: 'pre-wrap', wordBreak: 'keep-all', overflowWrap: 'break-word', columnFill: 'balance' }}
                                                             >
                                                                 {extractedData.handlingText}
                                                             </div>
                                                         </div>
                                                     </div>
 
-                                                    {/* 4번. 보호구 (최소 높이 강제) */}
                                                     <div className="border-b-[2px] border-black p-1 shrink-0 h-auto">
                                                         <div className="text-[#c00000] font-bold text-[13px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-1 w-max shrink-0">4. 적절한 보호구</div>
                                                         <div className="flex justify-center items-center gap-4 py-0.5 flex-wrap min-h-[50px]">
@@ -680,42 +715,40 @@
                                                         </div>
                                                     </div>
 
-                                                    {/* 5번. 응급조치 (가중치 2.2 하향 조정으로 텅 빈 공간 최소화) */}
                                                     <div className="p-1 flex flex-col flex-grow-[2.2] min-h-0 basis-0">
                                                         <div className="text-[#c00000] font-bold text-[13px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-1 w-max shrink-0">5. 응급조치 요령 및 사고 시 대처방법</div>
                                                         <div className="flex flex-col flex-1 text-[11px] font-medium text-black border border-slate-300 min-h-0">
                                                             <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">가. 눈에 들어갔을 때</div>
-                                                                <textarea value={extractedData.firstAidData?.eye || ''} onChange={(e) => updateFirstAid('eye', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.eye || ''} onChange={(e) => updateFirstAid('eye', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
                                                             </div>
                                                             <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">나. 피부에 접촉했을 때</div>
-                                                                <textarea value={extractedData.firstAidData?.skin || ''} onChange={(e) => updateFirstAid('skin', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.skin || ''} onChange={(e) => updateFirstAid('skin', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
                                                             </div>
                                                             <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">다. 흡입했을 때</div>
-                                                                <textarea value={extractedData.firstAidData?.inhale || ''} onChange={(e) => updateFirstAid('inhale', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.inhale || ''} onChange={(e) => updateFirstAid('inhale', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
                                                             </div>
                                                             <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">라. 먹었을 때</div>
-                                                                <textarea value={extractedData.firstAidData?.ingest || ''} onChange={(e) => updateFirstAid('ingest', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.ingest || ''} onChange={(e) => updateFirstAid('ingest', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
                                                             </div>
                                                             <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">마. 기타 의사 주의사항</div>
-                                                                <textarea value={extractedData.firstAidData?.doctor || ''} onChange={(e) => updateFirstAid('doctor', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.doctor || ''} onChange={(e) => updateFirstAid('doctor', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
                                                             </div>
                                                             
-                                                            {/* 바. 사고시 대처방법 (flex-1로 자연스러운 텍스트 박스 확장) */}
-                                                            <div className="flex flex-1 min-h-0">
+                                                            <div className="flex flex-[1.5] min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">바. 사고 시 대처방법</div>
                                                                 <div className="w-[80%] p-1 flex flex-col h-full overflow-hidden justify-center">
                                                                     <div className="flex gap-1 w-full flex-1 min-h-0">
                                                                         <span className="font-bold text-slate-800 shrink-0 mt-1 ml-1">-</span>
-                                                                        <textarea value={extractedData.firstAidData?.extinguish || ''} onChange={(e) => updateFirstAid('extinguish', e.target.value)} className="w-full h-full p-0.5 bg-transparent resize-none leading-[1.4] font-semibold text-black overflow-hidden" />
+                                                                        <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.extinguish || ''} onChange={(e) => updateFirstAid('extinguish', e.target.value)} className="w-full h-full p-0.5 bg-transparent resize-none leading-[1.3] font-semibold text-black overflow-hidden" />
                                                                     </div>
                                                                     <div className="flex gap-1 w-full flex-1 min-h-0">
                                                                         <span className="font-bold text-slate-800 shrink-0 mt-1 ml-1">-</span>
-                                                                        <textarea value={extractedData.firstAidData?.leakResponse || ''} onChange={(e) => updateFirstAid('leakResponse', e.target.value)} className="w-full h-full p-0.5 bg-transparent resize-none leading-[1.4] font-semibold text-black overflow-hidden" />
+                                                                        <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.leakResponse || ''} onChange={(e) => updateFirstAid('leakResponse', e.target.value)} className="w-full h-full p-0.5 bg-transparent resize-none leading-[1.3] font-semibold text-black overflow-hidden" />
                                                                     </div>
                                                                     <div className="flex gap-1 w-full shrink-0 h-[18px]">
                                                                         <span className="w-full h-full px-1 leading-none font-bold text-black">- 즉시 119 및 관계기관에 신고할 것</span>
@@ -726,7 +759,20 @@
                                                     </div>
 
                                                 </div>
-                                                <div className="w-full text-center pt-1.5 font-black text-[13px] tracking-widest text-slate-700 shrink-0 h-[22px]">회사로고</div>
+                                                
+                                                {/* 회사 로고 업로드 및 렌더링 영역 */}
+                                                <div 
+                                                    className="w-full text-center mt-1.5 font-black text-[13px] tracking-widest text-slate-700 shrink-0 h-[28px] flex items-center justify-center cursor-pointer relative group border border-dashed border-transparent hover:border-slate-300 transition-colors"
+                                                    onClick={() => logoInputRef.current.click()}
+                                                    title="클릭하여 회사 로고 이미지를 업로드하세요"
+                                                >
+                                                    <input type="file" accept="image/*" ref={logoInputRef} onChange={handleLogoUpload} className="hidden" />
+                                                    {companyLogo ? (
+                                                        <img src={companyLogo} alt="회사로고" className="h-full object-contain" />
+                                                    ) : (
+                                                        <span className="opacity-40 group-hover:opacity-100 transition-opacity">회사로고 (클릭하여 이미지 등록)</span>
+                                                    )}
+                                                </div>
                                             </div>
                                         ) : (
                                             <div className="h-[297mm] flex flex-col items-center justify-center text-slate-400 space-y-4"><IconFileText size={48} className="opacity-30" /><p className="text-base font-medium">문서 데이터가 없습니다. 파일을 업로드해주세요.</p></div>
