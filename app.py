@@ -36,8 +36,9 @@ hide_streamlit_style = """
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# 3. index.html 파일 읽어서 렌더링하기
-html_file_path = "index.html"
+# 3. index.html 파일 절대 경로로 안전하게 찾아서 렌더링하기
+current_dir = os.path.dirname(os.path.abspath(__file__))
+html_file_path = os.path.join(current_dir, "index.html")
 
 if os.path.exists(html_file_path):
     with open(html_file_path, "r", encoding="utf-8") as f:
@@ -46,4 +47,4 @@ if os.path.exists(html_file_path):
     # HTML 컴포넌트를 사용하여 렌더링
     components.html(html_content, height=1200, scrolling=True)
 else:
-    st.error("⚠️ 'index.html' 파일을 찾을 수 없습니다. app.py와 같은 폴더에 index.html 파일이 있는지 확인해주세요.")
+    st.error(f"⚠️ '{html_file_path}' 경로에서 index.html 파일을 찾을 수 없습니다. 깃허브에 파일이름이 정확한지 확인해주세요.")
