@@ -58,13 +58,17 @@
         const IconPrinter = ({size=16}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>;
         const IconSettings = ({size=16, className=""}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>;
         const IconLayout = ({size=16}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>;
+        
+        /* 새로운 인포그래픽용 아이콘 추가 */
+        const IconArrowRight = ({size=24, className=""}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>;
+        const IconCpu = ({size=32, className=""}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>;
 
         const GHS_SVG = {
-            bomb: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M43.7 51.5c-4.6-2.5-8.2-1.7-8.2-1.7.3-1.6 3.1-4 3.1-4s-3.7-.6-5.8 2c0 0 1.2-3.1 3.7-4.3 0 0-4.6 0-6.1 4-1.2 5.5 1.5 8.9 1.5 8.9s-3.1-1.2-5.5-4C21.5 45.4 20 38 20 38s1.5 4.6 6.1 8c0 0-2.8-.6-6.1-5.2-1.2-1.8-1.5-2.8-1.5-2.8s1.2 2.8 5.2 6.1c0 0-4-1.2-7.1-4-1.5-1.5-2.1-1.8-2.1-1.8s1.5 1.8 6.4 4.9c4 2.8 7.4 3.7 7.4 3.7s-3.7-.3-8-3.1C18.1 42 16 38.6 16 38.6s2.5 4 7.1 8c3.1 2.5 6.4 2.8 6.4 2.8s-3.4-1.2-6.1-4c-2.1-2.1-2.8-3.4-2.8-3.4s2.5 3.4 6.7 6.4c5.2 3.4 10.4 4.3 10.4 4.3s-4.6-1.5-8.6-5.8c-2.8-3.1-4-5.5-4-5.5s3.4 4 8.6 7.7c4 2.8 8.6 3.4 8.6 3.4s-3.7-1.5-7.4-4.6c0 0 3.7 2.1 8 4.3 0 0-4.3-3.4-4.9-8-.3-2.5.3-5.2.3-5.2s-1.8 3.7-1.2 7.4c0 0-1.8-3.7-1.2-8.3.6-4.6 2.5-6.7 2.5-6.7s-1.5 4-.6 8.3c1.2 5.8 3.7 6.7 3.7 6.7s-1.5-3.4-1.2-6.7c.3-2.8 2.1-4.9 2.1-4.9s-2.1 4-1.5 8c.6 3.1 2.5 5.2 2.5 5.2s-2.1-4-1.2-7.4c.6-2.5 2.1-4.3 2.1-4.3s-1.8 3.4-1.2 6.7c.6 3.4 2.8 4.9 2.8 4.9s-1.5-2.8-1.2-5.5c.3-1.8 1.5-3.4 1.5-3.4s-1.2 2.8-.6 5.5c.6 3.4 2.1 4.6 2.1 4.6l-2.1-4.6c-.6-2.1 0-3.7 0-3.7s-.6 2.1 0 4.6c.3 1.8 1.2 3.1 1.2 3.1s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4v-4.6c0-1.8.6-2.8.6-2.8s-.6 1.8-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4zM47.7 57.3c2.5-3.4 10.4-3.1 10.4-3.1-3.4.6-5.8 4-5.8 4s2.8-1.5 6.1-.6c0 0-4.6 1.8-4.9 6.4 4.3-3.4 8.6-4.6 8.6-4.6s-3.7 2.1-4.9 6.1C60.6 69.9 65.5 66.8 65.5 66.8s-4 4.3-5.2 8.3c0 0 5.2-1.5 8.9-6.4-1.8 2.8-2.5 4.3-2.5 4.3s2.8-1.2 6.1-4.3c0 0-1.8 2.8-2.1 5.8 3.4-3.4 4.3-5.2 4.3-5.2s-1.8 3.7-1.5 7.4c0 0 3.4-1.2 5.5-2.8-.3 1.5-.6 2.5-.6 2.5s2.5-1.5 5.2-3.7c0 0-2.1 2.8-3.1 6.1 2.5-1.8 3.4-2.8 3.4-2.8s-1.5 2.5-2.5 5.5c0 0 3.1-.6 4.9-1.8-.3 1.5-.6 2.1-.6 2.1s2.1-1.2 4-2.5c0 0-1.2 2.5-2.1 4.6 1.8-1.2 2.8-1.8 2.8-1.8s-.6 2.1-1.5 4.3c0 0 2.5-.3 3.7-1.2-.3 1.2-.3 1.5-.3 1.5s1.5-.6 2.8-1.5c0 0-.6 1.8-1.2 3.1 1.2-.6 1.5-.6 1.5-.6s-.3 1.2-.6 2.8c0 0 1.5-.3 2.1-.6-.3.6-.3.6-.3.6s.6-.3 1.5-.6l-.6 1.5 1.5-.6s-.3.6-.6 1.5c0 0 .6-.3 1.2-.3-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2z"/></svg>,
+            bomb: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M43.7 51.5c-4.6-2.5-8.2-1.7-8.2-1.7.3-1.6 3.1-4 3.1-4s-3.7-.6-5.8 2c0 0 1.2-3.1 3.7-4.3 0 0-4.6 0-6.1 4-1.2 5.5 1.5 8.9 1.5 8.9s-3.1-1.2-5.5-4C21.5 45.4 20 38 20 38s1.5 4.6 6.1 8c0 0-2.8-.6-6.1-5.2-1.2-1.8-1.5-2.8-1.5-2.8s1.2 2.8 5.2 6.1c0 0-4-1.2-7.1-4-1.5-1.5-2.1-1.8-2.1-1.8s1.5 1.8 6.4 4.9c4 2.8 7.4 3.7 7.4 3.7s-3.7-.3-8-3.1C18.1 42 16 38.6 16 38.6s2.5 4 7.1 8c3.1 2.5 6.4 2.8 6.4 2.8s-3.4-1.2-6.1-4c-2.1-2.1-2.8-3.4-2.8-3.4s2.5 3.4 6.7 6.4c5.2 3.4 10.4 4.3 10.4 4.3s-4.6-1.5-8.6-5.8c-2.8-3.1-4-5.5-4-5.5s3.4 4 8.6 7.7c4 2.8 8.6 3.4 8.6 3.4s-3.7-1.5-7.4-4.6c0 0 3.7 2.1 8 4.3 0 0-4.3-3.4-4.9-8-.3-2.5.3-5.2.3-5.2s-1.8 3.7-1.2 7.4c0 0-1.8-3.7-1.2-8.3.6-4.6 2.5-6.7 2.5-6.7s-1.5 4-.6 8.3c1.2 5.8 3.7 6.7 3.7 6.7s-1.5-3.4-1.2-6.7c.3-2.8 2.1-4.9 2.1-4.9s-2.1 4-1.5 8c.6 3.1 2.5 5.2 2.5 5.2s-2.1-4-1.2-7.4c.6-2.5 2.1-4.3 2.1-4.3s-1.8 3.4-1.2 6.7c.6 3.4 2.8 4.9 2.8 4.9s-1.5-2.8-1.2-5.5c.3-1.8 1.5-3.4 1.5-3.4s-1.2 2.8-.6 5.5c.6 3.4 2.1 4.6 2.1 4.6l-2.1-4.6c-.6-2.1 0-3.7 0-3.7s-.6 2.1 0 4.6c.3 1.8 1.2 3.1 1.2 3.1s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4v-4.6c0-1.8.6-2.8.6-2.8s-.6 1.8-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4zM47.7 57.3c2.5-3.4 10.4-3.1 10.4-3.1-3.4.6-5.8 4-5.8 4s2.8-1.5 6.1-.6c0 0-4.6 1.8-4.9 6.4 4.3-3.4 8.6-4.6 8.6-4.6s-3.7 2.1-4.9 6.1C60.6 69.9 65.5 66.8 65.5 66.8s-4 4.3-5.2 8.3c0 0 5.2-1.5 8.9-6.4-1.8 2.8-2.5 4.3-2.5 4.3s2.8-1.2 6.1-4.3c0 0-1.8 2.8-2.1 5.8 3.4-3.4 4.3-5.2 4.3-5.2s-1.8 3.7-1.5 7.4c0 0 3.4-1.2 5.5-2.8-.3 1.5-.6 2.5-.6 2.5s2.5-1.5 5.2-3.7c0 0-2.1 2.8-3.1 6.1 2.5-1.8 3.4-2.8 3.4-2.8s-1.5 2.5-2.5 5.5c0 0 3.1-.6 4.9-1.8-.3 1.5-.6 2.1-.6 2.1s2.1-1.2 4-2.5c0 0-1.2 2.5-2.1 4.6 1.8-1.2 2.8-1.8 2.8-1.8s-.6 2.1-1.5 4.3c0 0 2.5-.3 3.7-1.2-.3 1.2-.3 1.5-.3 1.5s1.5-.6 2.8-1.5c0 0-.6 1.8-1.2 3.1 1.2-.6 1.5-.6 1.5-.6s-.3 1.2-.6 2.8c0 0 1.5-.3 2.1-.6-.3.6-.3.6-.3.6s.6-.3 1.5-.6l-.6 1.5 1.5-.6s-.3.6-.6 1.5c0 0 .6-.3 1.2-.3-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2z"/></svg>,
             flame: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M50 16.5c-4 5.5-7.7 13.8-9.8 21.2-1.5 5.5-2.1 11.4-1.2 17.2-2.8-5.8-2.5-12.9 1.5-18.1C35.5 41.7 30 50.3 30 58.3c0 11.7 8.9 21.2 20 21.2s20-9.5 20-21.2c0-8-5.5-16.6-10.4-21.5 4 5.2 4.3 12.3 1.5 18.1.9-5.8.3-11.7-1.2-17.2-2.1-7.4-5.8-15.7-9.8-21.2zM28.8 79.5v5.5h42.4v-5.5H28.8z"/></svg>,
             flame_over_circle: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M50 44c6.1 0 11.4 4.9 11.4 11s-5.2 11-11.4 11c-6.1 0-11.4-4.9-11.4-11s5.2-11 11.4-11zm0 6.4c-2.5 0-4.6 2.1-4.6 4.6s2.1 4.6 4.6 4.6 4.6-2.1 4.6-4.6-2.1-4.6-4.6-4.6zm-17.8-8c1.5-4 4-8.3 4-8.3S33.4 38 31.8 43s1.2 8.3 1.2 8.3-2.5-4-3.1-6.1c-.6-2.1-1.2-5.5-.3-8.6 1.2-4.3 3.4-7.4 3.4-7.4S31.2 32.5 33 37.1c1.8 4.6 5.8 6.4 5.8 6.4s-2.1-3.4-1.8-6.1c.3-2.8 1.5-6.1 4.3-9.5 2.8-3.4 6.1-5.5 6.1-5.5s-2.8 4.9-2.1 8.9c.6 4 3.1 6.7 3.1 6.7s0-3.4.6-6.4c.6-3.1 3.4-6.4 3.4-6.4s-1.8 3.1-1.2 6.1c.6 3.1 2.8 5.8 4 7.4 1.2 1.5 2.1 3.4 2.1 3.4s-.3-2.8 0-4.6c.3-1.8 2.1-3.7 2.1-3.7s-1.2 2.5-.9 4c.3 1.5 1.5 3.4 2.8 4.9 1.2 1.5 2.5 3.7 2.5 3.7s-1.5-2.8-1.5-4c0-1.2.6-2.5.6-2.5s-1.2 1.5-1.2 2.8c0 1.2.6 3.1 2.1 4.3 1.5 1.2 3.1 3.1 3.4 5.5.3 2.5.3 5.5-.6 8.3-.9 2.8-1.8 4-1.8 4s1.2-2.1 1.2-4c0-1.8-.3-4-1.8-6.1-1.5-2.1-3.4-3.1-3.4-3.1s1.5 2.5 1.5 5.2c0 2.8-1.5 6.1-2.8 7.4-1.2 1.2-2.8 2.8-4.9 3.7 2.5-1.5 4.3-3.7 5.5-6.1s.6-4.9-.3-6.7c-.9-1.8-2.5-3.4-3.4-4-1.2-.6-2.5-1.8-2.5-1.8s1.5 1.5 1.5 3.1c0 1.5-1.2 4-2.8 5.8-1.5 1.8-4 3.7-4 3.7s2.5-1.5 3.7-4.3c1.2-2.8 0-6.1-1.2-8.3-1.2-2.1-3.1-3.4-3.1-3.4s1.5 2.1 1.8 4.3c.3 2.1-.3 4.3-.9 5.8-.6 1.5-2.5 3.7-2.5 3.7s1.8-1.8 2.1-4c.3-2.1-.6-4.6-1.5-6.1-.9-1.5-2.8-2.5-2.8-2.5s.9 1.8 1.2 3.4c.3 1.5 0 3.7-.9 4.9-.9 1.2-2.8 2.8-2.8 2.8s1.5-1.2 1.8-2.8c.3-1.5 0-3.4-.6-4.9s-2.1-2.5-2.1-2.5.9 1.5.9 2.8c0 1.2-1.2 3.1-2.1 4.6-1.2 1.5-2.8 2.8-2.8 2.8s1.2-1.2 1.5-3.1c.3-1.8-.3-4.3-.9-5.5-.6-1.2-2.5-2.5-2.5-2.5s.9 1.5.9 3.1c0 1.5-.6 3.1-1.5 4.6-1.2 1.5-3.1 3.4-3.1 3.4s1.8-1.8 2.1-4.3c.3-2.5-1.2-5.5-1.8-6.7-.6-1.2-2.1-2.1-2.1-2.1s1.2 1.8 1.5 3.7c.3 1.8 0 4-1.2 5.8s-3.7 3.7-3.7 3.7 2.1-1.8 2.8-4c.6-2.1.3-4.6-.3-5.8zM28.8 79.5v5.5h42.4v-5.5H28.8z"/></svg>,
             gas_cylinder: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M72.1 42.6L29.1 55.5s-2.5 1.5-3.7 0c-1.2-1.5-1.8-3.4-1.8-3.4l1.8-4.9 39.9-12s1.5-2.8 3.7-3.4c2.1-.6 4 .9 4 .9l4 10s1.8 1.2 2.8.9c.9-.3 2.1-1.2 2.1-1.2L83.1 45s1.2.9.6 1.8c-.6.9-2.1.6-2.1.6l-5.2-1.5s-1.8 2.5-4.3 3.4v-6.7z"/></svg>,
-            corrosion: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M22.7 51.5h20.9v4.3H22.7v-4.3zm6.4-10.4c-.6-1.2-1.2-1.2-1.2-1.2s.6-1.5 1.8-2.5c1.2-.9 2.5-2.1 2.5-2.1s-1.8 1.2-2.1 2.5c-.3 1.2-.9 3.4-.9 3.4zm2.1-1.5c-1.2-1.2-1.5-2.1-1.5-2.1s1.2-1.2 2.8-2.1c1.5-.9 3.4-1.8 3.4-1.8s-2.1.9-2.8 2.1c-.6 1.2-1.8 4-1.8 4zm2.8 1.8c-1.2-1.8-1.5-3.1-1.5-3.1s1.5-.9 3.1-1.8c1.5-.9 3.4-1.5 3.4-1.5s-2.1 1.2-2.5 2.5c-.3 1.2-2.5 4-2.5 4zm3.1-2.1c-1.8-2.1-2.1-3.4-2.1-3.4s2.1-1.2 4-2.1c1.8-.9 4.3-1.8 4.3-1.8s-2.8 1.2-3.4 2.8c-.6 1.5-2.8 4.6-2.8 4.6zm-12 1.5s-.6-2.1.6-3.7c1.2-1.5 1.5-2.1 1.5-2.1s-1.5 1.5-1.8 3.1c-.3 1.5-.3 2.8-.3 2.8zm11 1.5c-1.5 0-2.8-1.5-2.8-1.5s.6.9 2.1 1.2c1.5.3 2.1-.3 2.1-.3s-.3.6-1.5.6zm-4-1.2c-1.8-1.2-2.5-2.1-2.5-2.1s1.2 1.2 2.8 1.8c1.5.6 2.5.3 2.5.3s-1.2 0-2.8 0zm-3.4-1.2s-2.1-.6-2.8-1.8c-.6-1.2-.6-2.1-.6-2.1s.6 1.5 1.8 2.1c1.2.6 1.5.9 1.5.9s-.3.9.3 1.2zm-2.8.3s-1.5 0-2.5-1.2c-.9-1.2-.9-2.1-.9-2.1s.6 1.5 1.8 2.1c1.2.6 1.5 1.2 1.5 1.2zM28.8 35h18.7v4.6H28.8V35zm-2.1-.6s.6-2.1 2.1-2.5c1.5-.3 2.5.6 2.5.6V39s-1.2.9-2.8.6c-1.5-.3-1.8-2.1-1.8-2.1l-1.5.9s.9 3.7 4 3.7c3.1 0 4.3-2.1 4.3-2.1v-6.7s-1.2-2.1-4-2.1c-2.8 0-4 1.8-4 1.8l1.2 1.8zm3.7 15.3l-.6 1.8s.6.6 1.2 1.5c.6.9.3 2.5.3 2.5l2.5-.6s0-1.5-1.2-2.5c-1.2-.9-2.1-2.8-2.1-2.8zm-1.8 5.8l-1.5 4.3v1.8h5.2v-1.8H30.3v-1.2l1.8-1.2-3.4-1.8zm23.9 1.8c1.5 0 2.5-.6 2.5-.6s-.6 0-1.5.6c-.9.6-2.1.6-2.1.6s.9-.6 1.2-.6zm-1.2-2.8c1.5-1.2 2.5-1.8 2.5-1.8s-1.2.6-2.1 1.8c-.9 1.2-1.5 1.8-1.5 1.8s-.3-1.2 1.2-1.8zm4.6 2.1c1.5-.6 2.5-1.5 2.5-1.5s-.9 1.2-2.5 1.5c-1.5.3-2.5.3-2.5.3s.9-.3 2.5-.3zm-1.2-3.4c1.2-1.5 2.5-2.1 2.5-2.1s-1.5 1.2-2.5 2.5c-.9 1.2-1.2 2.1-1.2 2.1s-.3-1.5 1.2-2.5zm-5.8 4c1.2-.3 2.1-1.2 2.1-1.2s-.9 1.2-2.1 1.8c-1.2.6-1.8.9-1.8.9s.3-.9 1.8-1.5zm.9-3.7c.9-1.5 1.8-2.5 1.8-2.5s-1.2 1.5-1.8 2.8c-.6 1.2-.6 2.1-.6 2.1s-.3-1.5.6-2.5zm4.9.9s1.2-.9 2.5-1.8c1.2-.9 2.5-2.1 2.5-2.1s-1.5 1.2-2.5 2.1c-.9.9-2.5 2.5-2.5 2.5s.3-.6.6-1.5c.3-.9 1.2-1.8 1.2-1.8s-.9 1.2-1.2 2.5c-.3 1.2.3 2.1.3 2.1s-.6-1.5-.9-2.5v-1.2zm6.1.6c.9-.9 1.8-1.8 1.8-1.8s-.9 1.2-1.8 2.1c-.9.9-1.8 1.5-1.8 1.5s0-.9 1.8-1.8zm11 4.6l-5.8 1.2c-1.5.3-2.5 2.1-2.5 2.1s-2.1-.6-4.9-.3c-2.8.3-5.2 2.1-5.2 2.1s-4.6-.3-7.7.9c-3.1 1.2-5.2 2.8-5.2 2.8h21.2v-2.1s-1.8-1.5-2.5-2.1c-.6-.6-.6-1.2-.6-1.2h12v-3.4s1.2-2.1 3.4-2.8c2.1-.6 3.1.6 3.1.6v2.8s-3.7.6-5.2 0c0 0-.3.3 0 .3zm-24.5-24.5h18.7v4.6H54.3v-4.6zm-2.1-.6s.6-2.1 2.1-2.5c1.5-.3 2.5.6 2.5.6v3.1s-1.2.9-2.8.6c-1.5-.3-1.8-2.1-1.8-2.1l-1.5.9s.9 3.7 4 3.7c3.1 0 4.3-2.1 4.3-2.1V31s-1.2-2.1-4-2.1c-2.8 0-4 1.8-4 1.8l1.2 1.8zm11.7 11.4l-.6 1.8s.6.6 1.2 1.5c.6.9.3 2.5.3 2.5l2.5-.6s0-1.5-1.2-2.5c-1.2-.9-2.1-2.8-2.1-2.8zm-1.8 5.8L60.6 44v1.8h5.2V44H62.2v-1.2l1.8-1.2-3.4-1.8z"/></svg>,
+            corrosion: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M22.7 51.5h20.9v4.3H22.7v-4.3zm6.4-10.4c-.6-1.2-1.2-1.2-1.2-1.2s.6-1.5 1.8-2.5c1.2-.9 2.5-2.1 2.5-2.1s-1.8 1.2-2.1 2.5c-.3 1.2-.9 3.4-.9 3.4zm2.1-1.5c-1.2-1.2-1.5-2.1-1.5-2.1s1.2-1.2 2.8-2.1c1.5-.9 3.4-1.8 3.4-1.8s-2.1.9-2.8 2.1c-.6 1.2-1.8 4-1.8 4zm2.8 1.8c-1.2-1.8-1.5-3.1-1.5-3.1s1.5-.9 3.1-1.8c1.5-.9 3.4-1.5 3.4-1.5s-2.1 1.2-2.5 2.5c-.3 1.2-2.5 4-2.5 4zm3.1-2.1c-1.8-2.1-2.1-3.4-2.1-3.4s2.1-1.2 4-2.1c1.8-.9 4.3-1.8 4.3-1.8s-2.8 1.2-3.4 2.8c-.6 1.5-2.8 4.6-2.8 4.6zm-12 1.5s-.6-2.1.6-3.7c1.2-1.5 1.5-2.1 1.5-2.1s-1.5 1.5-1.8 3.1c-.3 1.5-.3 2.8-.3 2.8zm11 1.5c-1.5 0-2.8-1.5-2.8-1.5s.6.9 2.1 1.2c1.5.3 2.1-.3 2.1-.3s-.3.6-1.5.6zm-4-1.2c-1.8-1.2-2.5-2.1-2.5-2.1s1.2 1.2 2.8 1.8c1.5.6 2.5.3 2.5.3s-1.2 0-2.8 0zm-3.4-1.2s-2.1-.6-2.8-1.8c-.6-1.2-.6-2.1-.6-2.1s.6 1.5 1.8 2.1c1.2.6 1.5 .9 1.5.9s-.3.9.3 1.2zm-2.8.3s-1.5 0-2.5-1.2c-.9-1.2-.9-2.1-.9-2.1s.6 1.5 1.8 2.1c1.2.6 1.5 1.2 1.5 1.2zM28.8 35h18.7v4.6H28.8V35zm-2.1-.6s.6-2.1 2.1-2.5c1.5-.3 2.5.6 2.5.6V39s-1.2.9-2.8.6c-1.5-.3-1.8-2.1-1.8-2.1l-1.5.9s.9 3.7 4 3.7c3.1 0 4.3-2.1 4.3-2.1v-6.7s-1.2-2.1-4-2.1c-2.8 0-4 1.8-4 1.8l1.2 1.8zm3.7 15.3l-.6 1.8s.6.6 1.2 1.5c.6.9.3 2.5.3 2.5l2.5-.6s0-1.5-1.2-2.5c-1.2-.9-2.1-2.8-2.1-2.8zm-1.8 5.8l-1.5 4.3v1.8h5.2v-1.8H30.3v-1.2l1.8-1.2-3.4-1.8zm23.9 1.8c1.5 0 2.5-.6 2.5-.6s-.6 0-1.5.6c-.9.6-2.1.6-2.1.6s.9-.6 1.2-.6zm-1.2-2.8c1.5-1.2 2.5-1.8 2.5-1.8s-1.2.6-2.1 1.8c-.9 1.2-1.5 1.8-1.5 1.8s-.3-1.2 1.2-1.8zm4.6 2.1c1.5-.6 2.5-1.5 2.5-1.5s-.9 1.2-2.5 1.5c-1.5.3-2.5.3-2.5.3s.9-.3 2.5-.3zm-1.2-3.4c1.2-1.5 2.5-2.1 2.5-2.1s-1.5 1.2-2.5 2.5c-.9 1.2-1.2 2.1-1.2 2.1s-.3-1.5 1.2-2.5zm-5.8 4c1.2-.3 2.1-1.2 2.1-1.2s-.9 1.2-2.1 1.8c-1.2.6-1.8.9-1.8.9s.3-.9 1.8-1.5zm.9-3.7c.9-1.5 1.8-2.5 1.8-2.5s-1.2 1.5-1.8 2.8c-.6 1.2-.6 2.1-.6 2.1s-.3-1.5.6-2.5zm4.9.9s1.2-.9 2.5-1.8c1.2-.9 2.5-2.1 2.5-2.1s-1.5 1.2-2.5 2.1c-.9.9-2.5 2.5-2.5 2.5s.3-.6.6-1.5c.3-.9 1.2-1.8 1.2-1.8s-.9 1.2-1.2 2.5c-.3 1.2.3 2.1.3 2.1s-.6-1.5-.9-2.5v-1.2zm6.1.6c.9-.9 1.8-1.8 1.8-1.8s-.9 1.2-1.8 2.1c-.9.9-1.8 1.5-1.8 1.5s0-.9 1.8-1.8zm11 4.6l-5.8 1.2c-1.5.3-2.5 2.1-2.5 2.1s-2.1-.6-4.9-.3c-2.8.3-5.2 2.1-5.2 2.1s-4.6-.3-7.7.9c-3.1 1.2-5.2 2.8-5.2 2.8h21.2v-2.1s-1.8-1.5-2.5-2.1c-.6-.6-.6-1.2-.6-1.2h12v-3.4s1.2-2.1 3.4-2.8c2.1-.6 3.1.6 3.1.6v2.8s-3.7.6-5.2 0c0 0-.3.3 0 .3zm-24.5-24.5h18.7v4.6H54.3v-4.6zm-2.1-.6s.6-2.1 2.1-2.5c1.5-.3 2.5.6 2.5.6v3.1s-1.2.9-2.8.6c-1.5-.3-1.8-2.1-1.8-2.1l-1.5.9s.9 3.7 4 3.7c3.1 0 4.3-2.1 4.3-2.1V31s-1.2-2.1-4-2.1c-2.8 0-4 1.8-4 1.8l1.2 1.8zm11.7 11.4l-.6 1.8s.6.6 1.2 1.5c.6.9.3 2.5.3 2.5l2.5-.6s0-1.5-1.2-2.5c-1.2-.9-2.1-2.8-2.1-2.8zm-1.8 5.8L60.6 44v1.8h5.2V44H62.2v-1.2l1.8-1.2-3.4-1.8z"/></svg>,
             skull: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M50 20c-11 0-20 8.6-20 19.3 0 7.4 4.3 13.8 10.4 17.2-.6 2.5-.9 5.2-.9 7.7h21c0-2.5-.3-5.2-.9-7.7 6.1-3.4 10.4-9.8 10.4-17.2C70 28.6 61 20 50 20zm-8.6 15.3c3.4 0 6.1 3.1 6.1 6.7 0 3.7-2.8 6.7-6.1 6.7-3.4 0-6.1-3.1-6.1-6.7 0-3.7 2.8-6.7 6.1-6.7zm17.2 0c3.4 0 6.1 3.1 6.1 6.7 0 3.7-2.8 6.7-6.1 6.7-3.4 0-6.1-3.1-6.1-6.7 0-3.7 2.8-6.7 6.1-6.7zm-8.6 15.3c2.5 0 4.6 2.8 4.6 6.1s-2.1 6.1-4.6 6.1c-2.5 0-4.6-2.8-4.6-6.1s2.1-6.1 4.6-6.1zM24.2 60.5l8 4.6-6.1 5.5c-2.1 1.8-1.5 4.9.9 6.4 2.5 1.5 5.8.9 8-1.5l6.4-6.7c3.1 1.5 6.4 2.5 10.1 2.5 3.7 0 7.1-.9 10.1-2.5l6.4 6.7c2.1 2.5 5.5 3.1 8 1.5 2.5-1.5 3.1-4.6.9-6.4l-6.1-5.5 8-4.6c2.8-1.5 3.1-4.9.6-6.7-2.5-1.8-6.1-1.2-8.3 1.2L64.3 62 50 67l-14.3-5-6.1-7.1c-2.1-2.5-5.8-3.1-8.3-1.2-2.5 1.8-2.1 5.2.6 6.7z"/></svg>,
             exclamation: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M43.3 25.5h13.5L53.7 58H46.3l-3-32.5zm1.5 42c0-2.8 2.1-5.2 5.2-5.2s5.2 2.5 5.2 5.2c0 3.1-2.1 5.5-5.2 5.5s-5.2-2.5-5.2-5.5z"/></svg>,
             health_hazard: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M50 18.5c-6.7 0-12 6.1-12 13.8s5.4 13.8 12 13.8 12-6.1 12-13.8-5.4-13.8-12-13.8zM24.2 52.3c0-4.9 6.1-9.2 14.1-10.4l1.2 5.5s3.1.6 3.1 1.2c0 0-4-3.1-4-3.1l2.5-3.1-3.4 3.7c0 0 1.2-3.1 1.2-3.1l3.1.6c0 0-1.8-5.5-1.8-5.5s7.4 1.5 7.4 1.5l-2.1 4c0 0 4.6.3 4.6.3l-2.8-3.1 3.4 2.8c0 0-.6 2.5-.6 2.5s2.8-1.2 2.8-1.2l-2.1-4.9c7.7 1.5 13.5 5.8 13.5 10.7v24.6l-10.4 11-4.6-9.8s1.8 4 1.8 4l-4.3-3.1 2.5 3.4c0 0-4.6 0-4.6 0l2.5 2.1c0 0-4-.9-4-.9l1.8 3.4s-3.7-2.8-3.7-2.8l-1.8 5.5-1.5-6.7s-1.8 1.8-1.8 1.8l-2.1-4.6s-.6 4-.6 4l-2.1-3.4c0 0 1.2 2.1 1.2 2.1s-2.1-1.2-2.1-1.2v3.7s-1.8-3.1-1.8-3.1l-1.5 1.5c0 0 .9-4.9.9-4.9l-3.4 1.8 2.5-4c0 0-4.9 1.2-4.9 1.2l4.3-4.3c0 0-3.4-1.2-3.4-1.2l2.5-1.2c0 0-3.1-2.1-3.1-2.1l2.5-1.2-4-2.8s4 1.2 4 1.2l-4-4.3 4.6 2.5c0 0-2.5-4-2.5-4l2.8 1.8s-.6-3.1-.6-3.1l4 2.8s-3.1-4.6-3.1-4.6l5.2 2.8c0 0-4.3-4.6-4.3-4.6l5.2 3.1-1.2-4.9s4.3 3.1 4.3 3.1l-1.8-4 5.5 3.4s.3-4.3.3-4.3l3.7 4.9c0 0 1.2-4 1.2-4l2.1 3.4s1.2-4 1.2-4l.9 3.4s1.2-3.4 1.2-3.4l.3 4s2.8-3.1 2.8-3.1l-1.2 4s3.7-1.8 3.7-1.8l-2.5 4 4.3-1.8c0 0-2.8 2.8-2.8 2.8l4-.9s-3.4 2.1-3.4 2.1l3.7-.3s-4.3 2.1-4.3 2.1l5.2 1.5s-5.2 2.1-5.2 2.1l6.1 1.8s-6.4 1.2-6.4 1.2l4.9 2.1c0 0-6.4.3-6.4.3l2.8 1.2c0 0-4.3.3-4.3.3l2.1 1.2s-2.8.9-2.8.9l1.2.9c0 0-2.1 1.2-2.1 1.2l.6 1.2c0 0-1.2 1.2-1.2 1.2l-.3 1.2c0 0-.6.9-.6.9l-.9.9s-.3.9-.3.9l-.9.9s-.3.6-.3.6l-1.2.9-4.3 8.3L24.2 77v-24.7z"/></svg>,
@@ -297,66 +301,131 @@
             const [activeMenu, setActiveMenu] = useState('dashboard');
             const [uploadedFiles, setUploadedFiles] = useState([]);
             const [isProcessing, setIsProcessing] = useState(false);
-            const [extractedData, setExtractedData] = useState(null);
             const [dragActive, setDragActive] = useState(false);
             const fileInputRef = useRef(null);
-            const [selectedPPE, setSelectedPPE] = useState(['301', '302', '309', '308']);
+            
+            // 다중 파일 관리를 위한 상태 정의 (activeFileId 에러 해결 부분)
+            const [fileDataMap, setFileDataMap] = useState({});
+            const [activeFileId, setActiveFileId] = useState(null);
             
             const [companyLogo, setCompanyLogo] = useState(null);
             const logoInputRef = useRef(null);
 
             const [modalConfig, setModalConfig] = useState({ isOpen: false, type: '', title: '', content: '' });
 
+            // 현재 선택된 탭의 파일 데이터
+            const activeData = fileDataMap[activeFileId] || null;
+
             const handleFiles = async (files) => {
-                const file = files[0];
-                if (!file) return;
-                const newFileEntry = { id: Math.random().toString(36).substring(7), name: file.name, size: (file.size / 1024 / 1024).toFixed(2) + ' MB', status: 'pending' };
-                setUploadedFiles([newFileEntry]);
+                if (!files || files.length === 0) return;
+                
+                const filesArray = Array.from(files).slice(0, 10);
+                
+                let newFileEntries = filesArray.map(f => ({
+                    id: Math.random().toString(36).substring(7), 
+                    name: f.name, 
+                    size: (f.size / 1024 / 1024).toFixed(2) + ' MB', 
+                    status: 'pending',
+                    file: f
+                }));
+
+                setUploadedFiles(prev => {
+                    const combined = [...prev, ...newFileEntries];
+                    return combined.slice(0, 10);
+                });
+                
                 setIsProcessing(true);
 
-                try {
-                    let extractedText = "";
-                    if (file.type === 'application/pdf' && window.pdfjsLib) {
-                        const arrayBuffer = await file.arrayBuffer();
-                        const pdf = await window.pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-                        for (let i = 1; i <= pdf.numPages; i++) {
-                            const page = await pdf.getPage(i);
-                            const textContent = await page.getTextContent();
-                            extractedText += textContent.items.map(item => item.str).join(" ") + "\n";
-                        }
-                    } else {
-                        extractedText = await file.text();
-                    }
-                    const parsed = parseTextToMSDS(extractedText, file.name);
-                    setExtractedData(parsed);
-                    setUploadedFiles([{ ...newFileEntry, status: 'complete' }]);
-                    setIsProcessing(false);
-                    setActiveMenu('management');
-                } catch (error) {
-                    setIsProcessing(false);
+                if (!activeFileId && newFileEntries.length > 0) {
+                    setActiveFileId(newFileEntries[0].id);
                 }
+
+                for (let fileEntry of newFileEntries) {
+                    const file = fileEntry.file;
+                    try {
+                        let extractedText = "";
+                        if (file.type === 'application/pdf' && window.pdfjsLib) {
+                            const arrayBuffer = await file.arrayBuffer();
+                            const pdf = await window.pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+                            for (let i = 1; i <= pdf.numPages; i++) {
+                                const page = await pdf.getPage(i);
+                                const textContent = await page.getTextContent();
+                                extractedText += textContent.items.map(item => item.str).join(" ") + "\n";
+                            }
+                        } else {
+                            extractedText = await file.text();
+                        }
+                        const parsed = parseTextToMSDS(extractedText, file.name);
+                        parsed.selectedPPE = ['301', '302', '309', '308']; // 기본 보호구 세팅
+
+                        setFileDataMap(prev => ({
+                            ...prev,
+                            [fileEntry.id]: parsed
+                        }));
+                        
+                        setUploadedFiles(prev => prev.map(f => f.id === fileEntry.id ? { ...f, status: 'complete' } : f));
+                    } catch (error) {
+                        console.error(error);
+                        setUploadedFiles(prev => prev.map(f => f.id === fileEntry.id ? { ...f, status: 'error' } : f));
+                    }
+                }
+                
+                setIsProcessing(false);
+                setActiveMenu(prev => prev === 'dashboard' ? 'management' : prev);
             };
 
             const handleDrag = (e) => { e.preventDefault(); e.stopPropagation(); setDragActive(e.type === "dragenter" || e.type === "dragover"); };
             const handleDrop = (e) => { e.preventDefault(); e.stopPropagation(); setDragActive(false); if (e.dataTransfer.files && e.dataTransfer.files.length > 0) handleFiles(e.dataTransfer.files); };
             const handleChange = (e) => { e.preventDefault(); if (e.target.files && e.target.files.length > 0) handleFiles(e.target.files); };
-            const removeFile = (id) => { setUploadedFiles(prev => prev.filter(f => f.id !== id)); setExtractedData(null); };
+            
+            const removeFile = (id) => { 
+                setUploadedFiles(prev => {
+                    const updated = prev.filter(f => f.id !== id);
+                    if (activeFileId === id) {
+                        setActiveFileId(updated.length > 0 ? updated[0].id : null);
+                    }
+                    return updated;
+                }); 
+                setFileDataMap(prev => {
+                    const newMap = { ...prev };
+                    delete newMap[id];
+                    return newMap;
+                });
+            };
+
+            const updateActiveFileData = (newData) => {
+                if (!activeFileId) return;
+                setFileDataMap(prev => ({
+                    ...prev,
+                    [activeFileId]: { ...prev[activeFileId], ...newData }
+                }));
+            };
 
             const updateFirstAid = (key, value) => {
-                if (!extractedData) return;
-                setExtractedData(prev => ({ ...prev, firstAidData: { ...prev.firstAidData, [key]: value } }));
+                if (!activeFileId) return;
+                setFileDataMap(prev => {
+                    const currentData = prev[activeFileId];
+                    return { ...prev, [activeFileId]: { ...currentData, firstAidData: { ...currentData.firstAidData, [key]: value } } };
+                });
             };
 
             const togglePictogram = (type) => {
-                if (!extractedData) return;
-                setExtractedData(prev => {
-                    let newPics = prev.pictograms.includes(type) ? prev.pictograms.filter(p => p !== type) : [...prev.pictograms, type];
-                    return { ...prev, pictograms: newPics };
+                if (!activeFileId) return;
+                setFileDataMap(prev => {
+                    const currentData = prev[activeFileId];
+                    let newPics = currentData.pictograms.includes(type) ? currentData.pictograms.filter(p => p !== type) : [...currentData.pictograms, type];
+                    return { ...prev, [activeFileId]: { ...currentData, pictograms: newPics } };
                 });
             };
 
             const togglePPE = (id) => {
-                setSelectedPPE(prev => prev.includes(id) ? prev.filter(ppeId => ppeId !== id) : [...prev, id]);
+                if (!activeFileId) return;
+                setFileDataMap(prev => {
+                    const currentData = prev[activeFileId];
+                    const ppeList = currentData.selectedPPE || [];
+                    let newPPE = ppeList.includes(id) ? ppeList.filter(ppeId => ppeId !== id) : [...ppeList, id];
+                    return { ...prev, [activeFileId]: { ...currentData, selectedPPE: newPPE } };
+                });
             };
 
             const handleLogoUpload = (e) => {
@@ -373,8 +442,8 @@
             const openModal = (type, title, content) => setModalConfig({ isOpen: true, type, title, content });
             const closeModal = () => setModalConfig({ ...modalConfig, isOpen: false });
             const saveModal = (newContent) => {
-                if (modalConfig.type === 'hazards') setExtractedData({ ...extractedData, labelHazards: newContent });
-                else if (modalConfig.type === 'prevention') setExtractedData({ ...extractedData, labelPrevention: newContent });
+                if (modalConfig.type === 'hazards') updateActiveFileData({ labelHazards: newContent });
+                else if (modalConfig.type === 'prevention') updateActiveFileData({ labelPrevention: newContent });
                 closeModal();
             };
 
@@ -385,16 +454,72 @@
                 return lines.join('\n');
             };
 
-            const renderLabelContent = (data, isMaster = false) => {
+            const renderLabelContent = (data, isMaster = false, isSmall = false) => {
                 const pics = data.pictograms.slice(0, 4);
                 
+                if (isSmall) {
+                    return (
+                        <div className={`w-full h-full border-[1.5px] border-black flex flex-col bg-white overflow-hidden ${isMaster ? 'shadow-sm rounded-md' : ''}`}>
+                            {/* 1. 명칭 및 신호어 영역 (상하 배치로 변경하여 가로 폭 잘림 원천 방지) */}
+                            <div className="flex flex-col h-[34%] shrink-0">
+                                <div className="h-[55%] border-b-[1.5px] border-black flex flex-col items-center justify-center relative px-1 bg-white">
+                                    <span className="absolute left-1 top-0.5 text-[5px] font-bold text-slate-600">(명 칭)</span>
+                                    {isMaster ? (
+                                        <input type="text" value={data.productName} onChange={e => updateActiveFileData({ productName: e.target.value })} className="w-[90%] text-center text-[11px] font-extrabold bg-transparent outline-none border-b border-dashed border-blue-400 mt-2" />
+                                    ) : (
+                                        <span className="text-[10px] font-extrabold truncate w-[95%] text-center tracking-tight leading-none mt-2">{data.productName}</span>
+                                    )}
+                                </div>
+                                <div className="h-[45%] border-b-[1.5px] border-black flex flex-col items-center justify-center relative px-1 bg-white">
+                                    <span className="absolute left-1 top-0.5 text-[5px] font-bold text-slate-600">(신호어)</span>
+                                    {isMaster ? (
+                                        <input type="text" value={data.signalWord} onChange={e => updateActiveFileData({ signalWord: e.target.value })} className="w-[90%] text-center text-[#c00000] font-black text-[11px] bg-transparent outline-none border-b border-dashed border-red-400 mt-1.5" />
+                                    ) : (
+                                        <span className="text-[#c00000] font-black text-[11px] leading-none mt-1.5">{data.signalWord}</span>
+                                    )}
+                                </div>
+                            </div>
+                            
+                            {/* 2. 그림문자 영역 (간격 및 크기 최대화) */}
+                            <div className="flex-1 border-b-[1.5px] border-black flex flex-col items-center justify-center shrink-0 p-1 relative bg-white min-h-0">
+                                <span className="absolute top-0.5 left-1 text-[5px] font-bold text-slate-600">(그림문자)</span>
+                                
+                                <div className="w-[90%] h-[85%] mt-3 grid grid-cols-2 grid-rows-2 gap-[2px] place-items-center">
+                                    {pics.map((pic, idx) => (
+                                        <div key={idx} className="w-full h-full flex items-center justify-center p-[1px]">
+                                            {renderGHS(pic)}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                            
+                            {/* 3. 공급자 정보 영역 */}
+                            <div className="h-[20%] w-full flex flex-row items-center justify-between relative px-1.5 shrink-0 bg-white">
+                                <span className="absolute left-1 top-0.5 text-[5px] font-bold text-slate-600 z-10">(공급자 정보)</span>
+                                <div className="flex-1 flex justify-center items-center h-full pt-1.5 overflow-hidden">
+                                    {isMaster ? (
+                                        <input type="text" value={data.supplierInfo} onChange={e => updateActiveFileData({ supplierInfo: e.target.value })} className="w-full text-center text-[7.5px] font-bold bg-transparent outline-none border-b border-dashed border-blue-400" />
+                                    ) : (
+                                        <span className="text-[7.5px] font-bold leading-tight text-center text-slate-800 overflow-hidden text-ellipsis whitespace-nowrap w-full">{data.supplierInfo}</span>
+                                    )}
+                                </div>
+                                {companyLogo && (
+                                    <div className="h-[60%] shrink-0 ml-1 pt-1.5 flex justify-end">
+                                        <img src={companyLogo} alt="logo" className="h-full max-w-[25px] object-contain object-right" />
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    );
+                }
+
                 return (
                     <div className={`w-full h-full border-[1.5px] border-black flex flex-col bg-white overflow-hidden ${isMaster ? 'shadow-sm rounded-md' : ''}`}>
                         <div className="h-[18%] border-b-[1.5px] border-black flex bg-slate-50 shrink-0">
                             <div className="flex-1 border-r-[1.5px] border-black flex flex-col items-center justify-center relative px-1">
                                 <span className="absolute left-1 top-0.5 text-[6px] font-bold text-slate-500">(명 칭)</span>
                                 {isMaster ? (
-                                    <input type="text" value={data.productName} onChange={e => setExtractedData({...extractedData, productName: e.target.value})} className="w-[90%] text-center text-[14px] font-extrabold bg-transparent outline-none border-b border-dashed border-blue-400 mt-2" />
+                                    <input type="text" value={data.productName} onChange={e => updateActiveFileData({ productName: e.target.value })} className="w-[90%] text-center text-[14px] font-extrabold bg-transparent outline-none border-b border-dashed border-blue-400 mt-2" />
                                 ) : (
                                     <span className="text-[13px] font-extrabold truncate w-[90%] text-center tracking-tight leading-none mt-1">{data.productName}</span>
                                 )}
@@ -403,7 +528,7 @@
                             <div className="w-[28%] flex flex-col items-center justify-center relative px-1 bg-white">
                                 <span className="absolute left-1 top-0.5 text-[6px] font-bold text-slate-500">(신호어)</span>
                                 {isMaster ? (
-                                    <input type="text" value={data.signalWord} onChange={e => setExtractedData({...extractedData, signalWord: e.target.value})} className="w-[90%] text-center text-[#c00000] font-black text-[13px] bg-transparent outline-none border-b border-dashed border-red-400 mt-2" />
+                                    <input type="text" value={data.signalWord} onChange={e => updateActiveFileData({ signalWord: e.target.value })} className="w-[90%] text-center text-[#c00000] font-black text-[13px] bg-transparent outline-none border-b border-dashed border-red-400 mt-2" />
                                 ) : (
                                     <span className="text-[#c00000] font-black text-[13px] leading-none mt-1">{data.signalWord}</span>
                                 )}
@@ -473,12 +598,19 @@
                             </div>
                         </div>
                         
-                        <div className="h-[14%] border-t-[1.5px] border-black flex items-center px-1.5 shrink-0 gap-1 bg-slate-50">
-                            <div className="text-[8.5px] font-extrabold shrink-0 text-slate-800">공급자 정보:</div>
-                            {isMaster ? (
-                                <input type="text" value={data.supplierInfo} onChange={e => setExtractedData({...extractedData, supplierInfo: e.target.value})} className="w-full text-[8px] font-bold bg-transparent outline-none border-b border-dashed border-blue-400 whitespace-nowrap" />
-                            ) : (
-                                <span className="text-[8px] font-bold leading-none whitespace-nowrap overflow-hidden text-ellipsis w-full text-left text-slate-700">{data.supplierInfo}</span>
+                        <div className="h-[14%] border-t-[1.5px] border-black flex items-center justify-between px-1.5 shrink-0 gap-1 bg-slate-50 w-full overflow-hidden">
+                            <div className="flex items-center gap-1 flex-1 overflow-hidden h-full">
+                                <div className="text-[8.5px] font-extrabold shrink-0 text-slate-800">공급자 정보:</div>
+                                {isMaster ? (
+                                    <input type="text" value={data.supplierInfo} onChange={e => updateActiveFileData({ supplierInfo: e.target.value })} className="w-full text-[8px] font-bold bg-transparent outline-none border-b border-dashed border-blue-400 whitespace-nowrap" />
+                                ) : (
+                                    <span className="text-[8px] font-bold leading-none whitespace-nowrap overflow-hidden text-ellipsis w-full text-left text-slate-700">{data.supplierInfo}</span>
+                                )}
+                            </div>
+                            {companyLogo && (
+                                <div className="h-[75%] shrink-0 ml-2 flex items-center justify-end">
+                                    <img src={companyLogo} alt="logo" className="h-full max-w-[40px] object-contain object-right" />
+                                </div>
                             )}
                         </div>
                     </div>
@@ -490,67 +622,172 @@
                     <aside className="w-72 bg-slate-900 text-slate-300 flex flex-col h-full shadow-2xl z-10 no-print shrink-0">
                         <div className="p-6 border-b border-slate-800">
                             <h2 className="text-xl font-bold text-white flex items-center gap-2"><IconAlertTriangle className="text-blue-500" /> <span>MSDS AI Center</span></h2>
-                            <p className="text-xs text-slate-500 mt-2">고용노동부고시 제2026-26호 표준 탑재</p>
+                            <p className="text-xs text-slate-500 mt-2">산업안전보건법 제114조 및 제115조 이행사항 </p>
                         </div>
                         <nav className="flex-1 py-6 px-3 space-y-1">
                             <button onClick={() => setActiveMenu('dashboard')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all ${activeMenu === 'dashboard' ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-white'}`}>
-                                <div className="flex items-center gap-3"><IconUploadCloud /><span className="font-medium">1. 관리요령 작성 (업로드)</span></div>
-                            </button>
-                            <button onClick={() => setActiveMenu('label')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all ${activeMenu === 'label' ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-white'}`}>
-                                <div className="flex items-center gap-3"><IconLayout size={20} /><span className="font-medium">2. 경고표지 작성 (A4 1/10)</span></div>
+                                <div className="flex items-center gap-3"><IconUploadCloud /><span className="font-medium">1. 파일 업로드 (홈)</span></div>
                             </button>
                             <button onClick={() => setActiveMenu('management')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all ${activeMenu === 'management' ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-white'}`}>
-                                <div className="flex items-center gap-3"><IconFileText /><span className="font-medium">3. 공정별 관리요령 양식 보기</span></div>
+                                <div className="flex items-center gap-3"><IconFileText /><span className="font-medium">2. 공정별 관리요령 작성</span></div>
+                            </button>
+                            <button onClick={() => setActiveMenu('label_large')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all ${activeMenu === 'label_large' ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-white'}`}>
+                                <div className="flex items-center gap-3"><IconLayout size={20} /><span className="font-medium">3. 경고표지 작성</span></div>
+                            </button>
+                            <button onClick={() => setActiveMenu('label_small')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all ${activeMenu === 'label_small' ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-white'}`}>
+                                <div className="flex items-center gap-3"><IconLayout size={20} /><span className="font-medium">4. 경고표지 작성(소형)</span></div>
                             </button>
                         </nav>
                     </aside>
 
                     <main className="flex-1 flex flex-col h-screen overflow-hidden">
-                        <header className="h-16 bg-white border-b border-slate-200 flex items-center px-8 no-print shrink-0">
+                        <header className="h-16 bg-white border-b border-slate-200 flex flex-col justify-center px-8 no-print shrink-0 relative">
                             <h1 className="text-lg font-bold">
-                                {activeMenu === 'dashboard' && '물질안전보건자료(MSDS) PDF 업로드 및 분석'}
-                                {activeMenu === 'label' && '경고표지 작성 (A4 1/10 마스터 편집 및 복제)'}
-                                {activeMenu === 'management' && '유해화학물질 작업공정별 관리 요령 (A4 자동맞춤)'}
+                                {activeMenu === 'dashboard' && '화학물질(MSDS) 공정별 관리요령 및 경고표지 자동 생성 플랫폼'}
+                                {activeMenu === 'management' && '2. 공정별 관리요령 작성 (A4 자동맞춤)'}
+                                {activeMenu === 'label_large' && '3. 경고표지 작성 - 100ml 이상 (A4 1/10 마스터 편집 및 복제)'}
+                                {activeMenu === 'label_small' && '4. 경고표지 작성 - 100ml 미만 (소형 마스터 편집 및 복제)'}
                             </h1>
                         </header>
+
+                        {/* 상단 탭: 업로드된 파일 이동기 */}
+                        {uploadedFiles.length > 0 && activeMenu !== 'dashboard' && (
+                            <div className="w-full bg-slate-50 border-b border-slate-200 px-6 py-2.5 flex gap-2 overflow-x-auto no-print shrink-0 items-center shadow-sm z-10 custom-scrollbar">
+                                <span className="text-xs font-bold text-slate-500 shrink-0 mr-2 flex items-center gap-1"><IconFileText size={14}/> 편집 중인 파일:</span>
+                                {uploadedFiles.map(file => (
+                                    <button 
+                                        key={file.id} 
+                                        onClick={() => setActiveFileId(file.id)}
+                                        className={`px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap transition-all shadow-sm border ${activeFileId === file.id ? 'bg-blue-600 text-white border-blue-700' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100'}`}
+                                    >
+                                        {file.name} {file.status === 'pending' && <IconLoader2 size={12} className="inline ml-1" />}
+                                    </button>
+                                ))}
+                            </div>
+                        )}
 
                         <div className="flex-1 overflow-auto p-6 bg-slate-200 flex justify-center print:p-0 print:overflow-visible">
                             
                             {activeMenu === 'dashboard' && (
-                                <div className="max-w-4xl w-full flex flex-col gap-6">
-                                    <div className="bg-white rounded-2xl shadow-sm border p-8">
-                                        <h3 className="text-lg font-semibold mb-2">MSDS 파일 업로드 (스마트 추출 모드)</h3>
-                                        <p className="text-sm text-slate-500 mb-6">PDF 문서를 업로드하면 관리요령 양식과 초소형 경고표지를 자동 생성합니다.</p>
-                                        <div className={`border-2 border-dashed rounded-xl p-10 text-center cursor-pointer ${dragActive ? 'border-blue-500 bg-blue-50' : 'border-slate-300'}`} onClick={() => fileInputRef.current.click()} onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop}>
-                                            <input ref={fileInputRef} type="file" className="hidden" accept=".pdf" onChange={handleChange} />
-                                            <div className="flex flex-col items-center justify-center space-y-4">
-                                                <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"><IconFileUp /></div>
-                                                <p className="text-lg font-medium">MSDS 파일을 여기에 드래그하거나 클릭하여 업로드</p>
-                                                <button className="px-6 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-bold shadow-md">파일 선택하기</button>
+                                <div className="max-w-5xl w-full flex flex-col gap-8">
+                                    {/* 인포그래픽 설명 영역 */}
+                                    <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 pt-10">
+                                        <div className="text-center mb-8">
+                                            <h2 className="text-2xl font-extrabold text-slate-800 mb-2">단 하나의 파일로, 완벽한 법적 서류 자동화</h2>
+                                            <p className="text-slate-500 font-medium text-sm">MSDS(물질안전보건자료) 문서를 업로드하면, AI 분석을 통해 <br/>현장에서 즉시 사용할 수 있는 맞춤형 관리요령과 경고표지를 자동 생성합니다.</p>
+                                        </div>
+                                        
+                                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 bg-slate-50 py-10 px-6 rounded-2xl border border-slate-100 relative">
+                                            
+                                            {/* Step 1: Upload */}
+                                            <div className="flex flex-col items-center bg-white p-6 rounded-2xl shadow-sm border border-slate-200 w-[220px] text-center z-10">
+                                                <div className="w-14 h-14 bg-blue-100 text-blue-600 flex justify-center items-center rounded-xl mb-4">
+                                                    <IconFileUp size={28}/>
+                                                </div>
+                                                <h3 className="font-bold text-slate-800 mb-1">MSDS 파일 다중 업로드</h3>
+                                                <p className="text-xs text-slate-500">PDF 또는 Excel 형태의<br/>물질안전보건자료 업로드 (최대 10개)</p>
+                                            </div>
+
+                                            {/* AI Processing Arrow */}
+                                            <div className="flex flex-col items-center justify-center text-blue-500 px-2 md:rotate-0 rotate-90">
+                                                <div className="bg-blue-100 rounded-full p-2 mb-1 animate-pulse">
+                                                    <IconCpu size={24} className="text-blue-600"/>
+                                                </div>
+                                                <span className="text-[10px] font-bold tracking-widest uppercase mb-1">AI 분석 중</span>
+                                                <IconArrowRight size={28}/>
+                                            </div>
+
+                                            {/* Step 2: Outputs */}
+                                            <div className="flex flex-col gap-4 z-10 w-[260px]">
+                                                {/* Output 1 */}
+                                                <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-blue-200 border-l-4 border-l-blue-500">
+                                                    <div className="bg-blue-50 p-2.5 rounded-lg text-blue-600">
+                                                        <IconFileText size={20}/>
+                                                    </div>
+                                                    <div>
+                                                        <h4 className="font-bold text-sm text-slate-800">1. 공정별 관리요령</h4>
+                                                        <p className="text-[11px] text-slate-500">A4 세로형 자동 서식 맞춤</p>
+                                                    </div>
+                                                </div>
+                                                {/* Output 2 */}
+                                                <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-orange-200 border-l-4 border-l-orange-500">
+                                                    <div className="bg-orange-50 p-2.5 rounded-lg text-orange-600">
+                                                        <IconLayout size={20}/>
+                                                    </div>
+                                                    <div>
+                                                        <h4 className="font-bold text-sm text-slate-800">2. 규정 기반 경고표지</h4>
+                                                        <p className="text-[11px] text-slate-500">대형 및 소형(100ml) 자동 매핑</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                    {/* 파일 업로드 존 */}
+                                    <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8">
+                                        <div className="flex items-center justify-between mb-8 mt-2 max-w-2xl mx-auto px-4">
+                                            <h3 className="text-2xl font-black text-slate-800">MSDS 파일 업로드하세요</h3>
+                                            <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[11px] font-bold tracking-tight">최대 10개 파일 동시 업로드 지원</span>
+                                        </div>
+                                        <div 
+                                            className={`border-2 border-dashed rounded-2xl p-12 flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-300 ${dragActive ? 'border-blue-500 bg-blue-50 scale-[1.01]' : 'border-slate-300 hover:border-blue-400 hover:bg-slate-50'}`} 
+                                            onClick={() => fileInputRef.current.click()} 
+                                            onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop}
+                                        >
+                                            <input ref={fileInputRef} type="file" className="hidden" accept=".pdf,.xlsx,.xls" multiple onChange={handleChange} />
+                                            <div className="w-20 h-20 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mb-6 shadow-inner">
+                                                <IconUploadCloud size={40} />
+                                            </div>
+                                            <p className="text-xl font-bold text-slate-700 mb-2">여기에 여러 MSDS 파일들을 드래그하여 놓거나</p>
+                                            <p className="text-sm text-slate-400 mb-8">클릭하여 내 PC에서 파일을 한 번에 다중 선택할 수 있습니다.</p>
+                                            <button className="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold shadow-lg shadow-blue-200 transition-all">파일 선택하기</button>
+                                            <p className="text-[11px] text-slate-400 font-medium mt-6">지원 형식: PDF, Excel / 총 최대 10개 지원</p>
+                                        </div>
+                                    </div>
+
+                                    {/* 업로드된 파일 리스트 */}
                                     {uploadedFiles.length > 0 && (
                                         <div className="bg-white rounded-2xl shadow-sm border p-6">
-                                            {uploadedFiles.map((file) => (
-                                                <div key={file.id} className="flex items-center justify-between p-4 border bg-slate-50 rounded-xl mb-4">
-                                                    <div className="flex items-center gap-3"><IconFileText className="text-blue-600" /><div><p className="text-sm font-bold">{file.name}</p><p className="text-xs text-slate-500">{file.size}</p></div></div>
-                                                    <div className="flex items-center gap-4">{isProcessing ? <IconLoader2 className="text-blue-500" /> : <IconCheckCircle className="text-green-500" />}<button onClick={() => removeFile(file.id)} className="text-slate-400 hover:text-red-500"><IconTrash2 /></button></div>
-                                                </div>
-                                            ))}
+                                            <div className="text-sm font-bold text-slate-600 mb-4 flex items-center justify-between">
+                                                <span>업로드된 파일 목록 ({uploadedFiles.length}/10)</span>
+                                                <button onClick={() => setActiveMenu('management')} className="text-blue-600 hover:text-blue-700 text-xs font-bold flex items-center gap-1"><IconFileText size={14}/> 결과 문서 확인하러 가기</button>
+                                            </div>
+                                            <div className="flex flex-col gap-3">
+                                                {uploadedFiles.map((file) => (
+                                                    <div key={file.id} className={`flex items-center justify-between p-4 border rounded-xl transition-all ${activeFileId === file.id ? 'bg-blue-50 border-blue-200' : 'bg-slate-50 border-slate-200'}`}>
+                                                        <div className="flex items-center gap-3"><IconFileText className="text-blue-600" /><div><p className="text-sm font-bold">{file.name}</p><p className="text-xs text-slate-500">{file.size}</p></div></div>
+                                                        <div className="flex items-center gap-4">{file.status === 'pending' ? <div className="flex items-center gap-2 text-blue-500 text-sm font-bold"><IconLoader2 /> 분석 중...</div> : <div className="flex items-center gap-2 text-green-500 text-sm font-bold"><IconCheckCircle /> 완료</div>}<button onClick={() => removeFile(file.id)} className="text-slate-400 hover:text-red-500"><IconTrash2 /></button></div>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
                                     )}
+
+                                    {/* 이용 안내 및 주의사항 */}
+                                    <div className="bg-amber-50 rounded-2xl shadow-sm border border-amber-200 p-7 flex gap-4 mt-2 mb-8">
+                                        <div className="text-amber-500 shrink-0 mt-0.5">
+                                            <IconAlertTriangle size={26} />
+                                        </div>
+                                        <div>
+                                            <h4 className="text-amber-800 font-bold text-lg mb-3 tracking-tight">이용 안내 및 주의사항</h4>
+                                            <ul className="list-disc list-inside text-amber-700 text-[13px] leading-relaxed space-y-1.5 font-medium">
+                                                <li>본 플랫폼에서 자동 생성된 관리요령 및 경고표지는 <strong>법적 효력을 지니는 대체 문서가 아니며</strong>, 실무 문서 작성을 돕기 위한 초안 제공 목적으로 운영됩니다.</li>
+                                                <li>생성된 문서는 문서 내 H-Code, P-Code 등 추출된 데이터 기반으로 자동 매핑된 결과물입니다. 따라서 작업장 상황에 맞게 <strong>사용자가 직접 내용을 확인하고 수정, 추가 또는 보완</strong>해야 합니다.</li>
+                                                <li>PDF의 양식 변형이나 누락에 의해 AI 추출 오류가 발생할 수 있습니다. 사업장에 게시 및 부착 전 반드시 <strong>공식 원본 MSDS 문서와 대조하여 교차 검증</strong>을 진행해 주시기 바랍니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             )}
 
-                            {activeMenu === 'label' && (
+                            {activeMenu === 'label_large' && (
                                 <div className="flex flex-col items-center w-full pb-20">
                                     <div className="w-full max-w-[210mm] flex justify-between items-center mb-4 no-print">
                                         <span className="text-sm font-bold text-slate-600">A4 1/10 크기 가로형 표준 양식 (10장 배치)</span>
                                         <button onClick={() => window.print()} className="flex items-center gap-2 px-6 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-bold shadow-md"><IconPrinter /> 인쇄 및 PDF 저장</button>
                                     </div>
 
-                                    {extractedData ? (
+                                    {activeData ? (
                                         <div className="flex flex-col w-full items-center relative">
                                             <div className="w-full max-w-[210mm] mx-auto bg-white rounded-2xl shadow-sm border border-slate-200 p-8 mb-8 no-print relative">
                                                 <div className="absolute -top-3 -left-3 bg-blue-600 text-white px-4 py-1.5 rounded-lg text-xs font-bold shadow-md flex items-center gap-2"><IconSettings size={14}/> 마스터 편집 모드</div>
@@ -562,7 +799,7 @@
                                                 </div>
                                                 
                                                 <div className="w-full max-w-[150mm] h-[75mm] mx-auto transition-transform hover:scale-[1.02] duration-300">
-                                                    {renderLabelContent(extractedData, true)}
+                                                    {renderLabelContent(activeData, true, false)}
                                                 </div>
                                             </div>
 
@@ -571,7 +808,7 @@
                                             <div className="print-page w-[210mm] h-[297mm] flex flex-wrap content-start text-black box-border shadow-2xl bg-white shrink-0 print:w-full print:h-[297mm] print:shadow-none print:border-none print:m-0 print:p-0">
                                                 {Array.from({ length: 10 }).map((_, i) => (
                                                     <div key={i} className="w-[50%] h-[20%] box-border p-[0.5mm]">
-                                                        {renderLabelContent(extractedData, false)}
+                                                        {renderLabelContent(activeData, false, false)}
                                                     </div>
                                                 ))}
                                             </div>
@@ -600,7 +837,46 @@
                                             )}
                                         </div>
                                     ) : (
-                                        <div className="w-full max-w-[210mm] aspect-[1/1.4] flex flex-col items-center justify-center bg-white border shadow-xl text-slate-400 space-y-4"><IconAlertTriangle size={48} className="opacity-30" /><p className="text-base font-medium">문서 데이터가 없습니다. 파일을 업로드해주세요.</p></div>
+                                        <div className="w-full max-w-[210mm] aspect-[1/1.4] flex flex-col items-center justify-center bg-white border shadow-xl text-slate-400 space-y-4"><IconAlertTriangle size={48} className="opacity-30" /><p className="text-base font-medium">선택된 파일이 없습니다.</p></div>
+                                    )}
+                                </div>
+                            )}
+
+                            {activeMenu === 'label_small' && (
+                                <div className="flex flex-col items-center w-full pb-20">
+                                    <div className="w-full max-w-[210mm] flex justify-between items-center mb-4 no-print">
+                                        <span className="text-sm font-bold text-slate-600">소형 경고표지 (A4 1/20 크기 절반형 - 20장 배치)</span>
+                                        <button onClick={() => window.print()} className="flex items-center gap-2 px-6 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-bold shadow-md"><IconPrinter /> 인쇄 및 PDF 저장</button>
+                                    </div>
+
+                                    {activeData ? (
+                                        <div className="flex flex-col w-full items-center relative">
+                                            <div className="w-full max-w-[210mm] mx-auto bg-white rounded-2xl shadow-sm border border-slate-200 p-8 mb-8 no-print relative">
+                                                <div className="absolute -top-3 -left-3 bg-blue-600 text-white px-4 py-1.5 rounded-lg text-xs font-bold shadow-md flex items-center gap-2"><IconSettings size={14}/> 마스터 편집 모드</div>
+                                                <div className="flex justify-between items-start mb-6">
+                                                    <div>
+                                                        <h3 className="text-xl font-bold text-slate-800 mb-2">소형 경고표지 (100ml 미만 용기용)</h3>
+                                                        <p className="text-sm text-slate-500">규정에 따라 명칭, 그림문자, 신호어, 공급자 정보 4가지 필수 요소만 포함됩니다.</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div className="w-full max-w-[75mm] h-[75mm] mx-auto transition-transform hover:scale-[1.02] duration-300">
+                                                    {renderLabelContent(activeData, true, true)}
+                                                </div>
+                                            </div>
+
+                                            <div className="w-full max-w-[210mm] no-print mb-2"><span className="text-sm font-bold text-slate-500">▼ 인쇄 미리보기 (A4 용지 내 20장 배치)</span></div>
+                                            
+                                            <div className="print-page w-[210mm] h-[297mm] flex flex-wrap content-start text-black box-border shadow-2xl bg-white shrink-0 print:w-full print:h-[297mm] print:shadow-none print:border-none print:m-0 print:p-0">
+                                                {Array.from({ length: 20 }).map((_, i) => (
+                                                    <div key={i} className="w-[25%] h-[20%] box-border p-[0.5mm]">
+                                                        {renderLabelContent(activeData, false, true)}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <div className="w-full max-w-[210mm] aspect-[1/1.4] flex flex-col items-center justify-center bg-white border shadow-xl text-slate-400 space-y-4"><IconAlertTriangle size={48} className="opacity-30" /><p className="text-base font-medium">선택된 파일이 없습니다.</p></div>
                                     )}
                                 </div>
                             )}
@@ -612,23 +888,23 @@
                                     </div>
                                     
                                     <div className="print-page w-[210mm] h-[297mm] flex flex-col text-black border shadow-2xl box-border overflow-hidden bg-white shrink-0 print:w-full print:h-[297mm] print:shadow-none print:border-none print:m-0 print:p-0">
-                                        {extractedData ? (
+                                        {activeData ? (
                                             <div className="flex flex-col h-full w-full p-[8mm] pb-[4mm]">
                                                 <div className="flex flex-col h-full w-full border-[2px] border-black">
                                                     
                                                     <div className="flex border-b-[2px] border-black shrink-0 h-[32px]">
                                                         <div className="border-r-[2px] border-black px-2 font-bold text-[13px] w-[25%] flex items-center whitespace-nowrap overflow-hidden">
-                                                            공정명 : <input type="text" value={extractedData.processName} onChange={(e) => setExtractedData({...extractedData, processName: e.target.value})} className="ml-1 font-bold w-full bg-transparent border-b border-dashed border-blue-400 focus:outline-none truncate"/>
+                                                            공정명 : <input type="text" value={activeData.processName} onChange={(e) => updateActiveFileData({ processName: e.target.value })} className="ml-1 font-bold w-full bg-transparent border-b border-dashed border-blue-400 focus:outline-none truncate"/>
                                                         </div>
                                                         <div className="border-r-[2px] border-black px-2 text-center text-[19px] font-black tracking-tight w-[50%] flex items-center justify-center">유해화학물질 작업공정별 관리 요령</div>
                                                         <div className="px-2 font-bold text-[13px] w-[25%] flex items-center justify-start whitespace-nowrap">
-                                                            개정 : <input type="text" value={extractedData.revisionDate} onChange={(e) => setExtractedData({...extractedData, revisionDate: e.target.value})} className="ml-1 font-bold w-[75px] text-left bg-transparent border-b border-dashed border-blue-400 focus:outline-none"/>
+                                                            개정 : <input type="text" value={activeData.revisionDate} onChange={(e) => updateActiveFileData({ revisionDate: e.target.value })} className="ml-1 font-bold w-[75px] text-left bg-transparent border-b border-dashed border-blue-400 focus:outline-none"/>
                                                         </div>
                                                     </div>
                                                     <div className="flex border-b-[2px] border-black shrink-0 h-[36px]">
                                                         <div className="border-r-[2px] border-black px-2 text-center text-[15px] font-bold bg-slate-100 flex items-center justify-center w-[25%]">제품명</div>
                                                         <div className="px-2 flex items-center justify-center w-[75%]">
-                                                            <textarea value={extractedData.productName} onChange={(e) => setExtractedData({...extractedData, productName: e.target.value})} className="w-full h-full text-center bg-transparent focus:outline-none font-extrabold text-[15.5px] text-black resize-none pt-1" rows="1"/>
+                                                            <textarea value={activeData.productName} onChange={(e) => updateActiveFileData({ productName: e.target.value })} className="w-full h-full text-center bg-transparent focus:outline-none font-extrabold text-[15.5px] text-black resize-none pt-1" rows="1"/>
                                                         </div>
                                                     </div>
 
@@ -637,12 +913,12 @@
                                                             <span className="text-[#c00000] font-bold text-[13px] tracking-tight">1. 그림문자</span>
                                                             <div className="flex items-center gap-2">
                                                                 <span className="font-bold text-[12px]">신호어 :</span>
-                                                                <span className={`px-2 py-0.5 font-extrabold rounded text-[12px] border ${extractedData.signalWord === '위험' ? 'border-red-200 text-[#c00000] bg-red-50' : extractedData.signalWord === '경고' ? 'border-orange-200 text-orange-600 bg-orange-50' : 'border-slate-200 text-slate-600 bg-slate-50'}`}>{extractedData.signalWord}</span>
+                                                                <span className={`px-2 py-0.5 font-extrabold rounded text-[12px] border ${activeData.signalWord === '위험' ? 'border-red-200 text-[#c00000] bg-red-50' : activeData.signalWord === '경고' ? 'border-orange-200 text-orange-600 bg-orange-50' : 'border-slate-200 text-slate-600 bg-slate-50'}`}>{activeData.signalWord}</span>
                                                             </div>
                                                         </div>
                                                         <div className="flex justify-center items-center py-0.5 flex-wrap gap-2 min-h-[40px]">
-                                                            {extractedData.pictograms.length > 0 ? (
-                                                                extractedData.pictograms.map((picType, idx) => (
+                                                            {activeData.pictograms.length > 0 ? (
+                                                                activeData.pictograms.map((picType, idx) => (
                                                                     <div key={idx} className="w-[42px] h-[42px]">
                                                                         {renderGHS(picType)}
                                                                     </div>
@@ -651,7 +927,7 @@
                                                         </div>
                                                         <div className="flex justify-center flex-wrap gap-1 mt-1 p-1 bg-slate-50 border border-slate-200 rounded-lg no-print">
                                                             {['bomb', 'flame', 'flame_over_circle', 'gas_cylinder', 'corrosion', 'skull', 'exclamation', 'health_hazard', 'environment'].map(type => (
-                                                                <button key={type} onClick={() => togglePictogram(type)} className={`px-1.5 py-0.5 text-[11px] rounded transition-all font-semibold ${extractedData.pictograms.includes(type) ? 'bg-[#c00000] text-white' : 'bg-white border text-slate-600'}`}>
+                                                                <button key={type} onClick={() => togglePictogram(type)} className={`px-1.5 py-0.5 text-[11px] rounded transition-all font-semibold ${activeData.pictograms.includes(type) ? 'bg-[#c00000] text-white' : 'bg-white border text-slate-600'}`}>
                                                                     {type === 'bomb' ? '폭발' : type === 'flame' ? '인화' : type === 'flame_over_circle' ? '산화' : type === 'gas_cylinder' ? '가스' : type === 'corrosion' ? '부식' : type === 'skull' ? '독성' : type === 'exclamation' ? '경고' : type === 'health_hazard' ? '심각' : '환경'}
                                                                 </button>
                                                             ))}
@@ -664,11 +940,11 @@
                                                             <div
                                                                 contentEditable
                                                                 suppressContentEditableWarning
-                                                                onBlur={(e) => setExtractedData({...extractedData, hazardsText: e.target.innerText})}
+                                                                onBlur={(e) => updateActiveFileData({ hazardsText: e.target.innerText })}
                                                                 className="w-full h-auto p-0.5 text-[11px] leading-[1.3] font-medium text-black bg-transparent outline-none cursor-text break-words"
                                                                 style={{ columnCount: 2, columnGap: '1rem', columnRule: '1px dashed #94a3b8', whiteSpace: 'pre-wrap', columnFill: 'balance' }}
                                                             >
-                                                                {extractedData.hazardsText}
+                                                                {activeData.hazardsText}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -679,11 +955,11 @@
                                                             <div
                                                                 contentEditable
                                                                 suppressContentEditableWarning
-                                                                onBlur={(e) => setExtractedData({...extractedData, handlingText: e.target.innerText})}
+                                                                onBlur={(e) => updateActiveFileData({ handlingText: e.target.innerText })}
                                                                 className="w-full h-auto p-0.5 text-[11px] leading-[1.3] font-medium text-black bg-transparent outline-none cursor-text break-words"
                                                                 style={{ columnCount: 2, columnGap: '1rem', columnRule: '1px dashed #94a3b8', whiteSpace: 'pre-wrap', columnFill: 'balance' }}
                                                             >
-                                                                {extractedData.handlingText}
+                                                                {activeData.handlingText}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -691,8 +967,8 @@
                                                     <div className="border-b-[2px] border-black p-1 shrink-0 h-auto">
                                                         <div className="text-[#c00000] font-bold text-[13px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-1 w-max shrink-0">4. 적절한 보호구</div>
                                                         <div className="flex justify-center items-center gap-4 py-0.5 flex-wrap min-h-[50px]">
-                                                            {selectedPPE.length > 0 ? (
-                                                                selectedPPE.map(ppeId => (
+                                                            {activeData.selectedPPE && activeData.selectedPPE.length > 0 ? (
+                                                                activeData.selectedPPE.map(ppeId => (
                                                                     <div key={ppeId} className="flex flex-col items-center gap-0.5">
                                                                         <div className="w-[42px] h-[42px]">{renderPPE(ppeId)}</div>
                                                                         <span className="font-bold text-[11px] text-center leading-tight whitespace-pre-wrap">{PPE_ICONS[ppeId].name.replace(' ', '\n')}</span>
@@ -702,7 +978,7 @@
                                                         </div>
                                                         <div className="flex justify-center flex-wrap gap-1 mt-1 p-1 bg-slate-50 border border-slate-200 rounded-lg no-print">
                                                             {Object.keys(PPE_ICONS).map(id => (
-                                                                <button key={id} onClick={() => togglePPE(id)} className={`px-1.5 py-0.5 text-[10px] rounded transition-all font-semibold ${selectedPPE.includes(id) ? 'bg-[#0052cc] text-white shadow-sm' : 'bg-white border text-slate-600'}`}>
+                                                                <button key={id} onClick={() => togglePPE(id)} className={`px-1.5 py-0.5 text-[10px] rounded transition-all font-semibold ${activeData.selectedPPE?.includes(id) ? 'bg-[#0052cc] text-white shadow-sm' : 'bg-white border text-slate-600'}`}>
                                                                     {PPE_ICONS[id].name}
                                                                 </button>
                                                             ))}
@@ -714,23 +990,23 @@
                                                         <div className="flex flex-col flex-1 text-[11px] font-medium text-black border border-slate-300 min-h-0">
                                                             <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">가. 눈에 들어갔을 때</div>
-                                                                <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.eye || ''} onChange={(e) => updateFirstAid('eye', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.eye || ''} onChange={(e) => updateFirstAid('eye', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
                                                             </div>
                                                             <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">나. 피부에 접촉했을 때</div>
-                                                                <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.skin || ''} onChange={(e) => updateFirstAid('skin', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.skin || ''} onChange={(e) => updateFirstAid('skin', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
                                                             </div>
                                                             <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">다. 흡입했을 때</div>
-                                                                <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.inhale || ''} onChange={(e) => updateFirstAid('inhale', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.inhale || ''} onChange={(e) => updateFirstAid('inhale', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
                                                             </div>
                                                             <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">라. 먹었을 때</div>
-                                                                <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.ingest || ''} onChange={(e) => updateFirstAid('ingest', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.ingest || ''} onChange={(e) => updateFirstAid('ingest', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
                                                             </div>
                                                             <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">마. 기타 의사 주의사항</div>
-                                                                <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.doctor || ''} onChange={(e) => updateFirstAid('doctor', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.doctor || ''} onChange={(e) => updateFirstAid('doctor', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
                                                             </div>
                                                             
                                                             <div className="flex flex-[1.5] min-h-0">
@@ -738,11 +1014,11 @@
                                                                 <div className="w-[80%] p-1 flex flex-col h-full overflow-hidden justify-center">
                                                                     <div className="flex gap-1 w-full flex-1 min-h-0">
                                                                         <span className="font-bold text-slate-800 shrink-0 mt-1 ml-1">-</span>
-                                                                        <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.extinguish || ''} onChange={(e) => updateFirstAid('extinguish', e.target.value)} className="w-full h-full p-0.5 bg-transparent resize-none leading-[1.3] font-semibold text-black overflow-hidden" />
+                                                                        <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.extinguish || ''} onChange={(e) => updateFirstAid('extinguish', e.target.value)} className="w-full h-full p-0.5 bg-transparent resize-none leading-[1.3] font-semibold text-black overflow-hidden" />
                                                                     </div>
                                                                     <div className="flex gap-1 w-full flex-1 min-h-0">
                                                                         <span className="font-bold text-slate-800 shrink-0 mt-1 ml-1">-</span>
-                                                                        <textarea style={{ wordBreak: 'keep-all' }} value={extractedData.firstAidData?.leakResponse || ''} onChange={(e) => updateFirstAid('leakResponse', e.target.value)} className="w-full h-full p-0.5 bg-transparent resize-none leading-[1.3] font-semibold text-black overflow-hidden" />
+                                                                        <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.leakResponse || ''} onChange={(e) => updateFirstAid('leakResponse', e.target.value)} className="w-full h-full p-0.5 bg-transparent resize-none leading-[1.3] font-semibold text-black overflow-hidden" />
                                                                     </div>
                                                                     <div className="flex gap-1 w-full shrink-0 h-[18px]">
                                                                         <span className="w-full h-full px-1 leading-none font-bold text-black">- 즉시 119 및 관계기관에 신고할 것</span>
@@ -769,7 +1045,7 @@
                                                 </div>
                                             </div>
                                         ) : (
-                                            <div className="h-[297mm] flex flex-col items-center justify-center text-slate-400 space-y-4"><IconFileText size={48} className="opacity-30" /><p className="text-base font-medium">문서 데이터가 없습니다. 파일을 업로드해주세요.</p></div>
+                                            <div className="h-[297mm] flex flex-col items-center justify-center text-slate-400 space-y-4"><IconFileText size={48} className="opacity-30" /><p className="text-base font-medium">선택된 파일이 없습니다.</p></div>
                                         )}
                                     </div>
                                 </div>
