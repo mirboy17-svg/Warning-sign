@@ -1,26 +1,36 @@
 import streamlit as st
 import streamlit.components.v1 as components
-import os
 
-st.set_page_config(page_title="MSDS Auto-Generator Platform", layout="wide", initial_sidebar_state="collapsed")
+# 1. 페이지 전체 모드 설정 (Wide mode)
+st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 
-hide_streamlit_style = """
-<style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
-    .block-container { padding: 0rem !important; max-width: 100% !important; }
-    iframe { width: 100vw !important; height: 100vh !important; border: none !important; }
-</style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+# 2. Streamlit 기본 여백 및 흰색 배경 제거 CSS 주입
+st.markdown("""
+    <style>
+        /* 상단 헤더, 햄버거 메뉴 숨기기 */
+        header {visibility: hidden;}
+        
+        /* 메인 컨테이너 상하좌우 여백 0으로 설정 */
+        .block-container {
+            padding: 0rem !important;
+            max-width: 100% !important;
+        }
+        
+        /* 외부 기본 스크롤바 숨기기 및 배경색을 좌측 사이드바 색상과 일치 */
+        body, .stApp {
+            overflow: hidden !important;
+            background-color: #0f172a !important; 
+        }
+        
+        /* iframe 크기를 화면 높이에 강제 고정하여 흰 여백 차단 */
+        iframe[title="streamlit_components.v1.components.html"] {
+            height: 100vh !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-html_file_path = os.path.join(current_dir, "index.html")
+# 3. index.html 파일 읽어서 화면에 렌더링
+with open("index.html", "r", encoding="utf-8") as f:
+    html_data = f.read()
 
-if os.path.exists(html_file_path):
-    with open(html_file_path, "r", encoding="utf-8") as f:
-        html_content = f.read()
-    components.html(html_content, height=1200, scrolling=True)
-else:
-    st.error("⚠️ index.html 파일을 찾을 수 없습니다. GitHub 최상위 폴더에 파일이름이 정확한지 확인해주세요.")
+components.html(html_data, height=1000)
