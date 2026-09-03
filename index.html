@@ -42,8 +42,8 @@
         }
     </style>
 </head>
-<body>
-    <div id="root" class="w-full h-full relative"></div>
+<body class="overflow-hidden bg-[#0f172a] m-0 p-0">
+    <div id="root" class="w-full h-full"></div>
 
     <script type="text/babel">
         const { useState, useRef, useEffect } = React;
@@ -618,30 +618,30 @@
             };
 
             return (
-                <div className="flex w-full h-full absolute inset-0 bg-slate-100 text-slate-800 overflow-hidden">
-                    <aside className="w-72 bg-slate-900 text-slate-300 flex flex-col h-full shadow-2xl z-10 no-print shrink-0">
-                        <div className="p-6 border-b border-slate-800">
-                            <h2 className="text-xl font-bold text-white flex items-center gap-2"><IconAlertTriangle className="text-blue-500" /> <span>MSDS AI Center</span></h2>
-                            <p className="text-xs text-slate-500 mt-2">산업안전보건법 제114조 및 제115조 이행사항 </p>
+                <div className="flex fixed inset-0 w-full h-full bg-slate-100 text-slate-800 overflow-hidden">
+                    <aside className="w-72 bg-white text-slate-600 border-r border-slate-200 flex flex-col h-full shadow-sm z-10 no-print shrink-0 transition-colors duration-300">
+                        <div className="p-6 border-b border-slate-100 bg-slate-50/50">
+                            <h2 className="text-xl font-black text-slate-800 flex items-center gap-2"><IconAlertTriangle className="text-blue-600" /> <span>MSDS AI Center</span></h2>
+                            <p className="text-xs text-slate-500 mt-2 font-medium">고용노동부고시 제2026-26호 표준 탑재</p>
                         </div>
-                        <nav className="flex-1 py-6 px-3 space-y-1">
-                            <button onClick={() => setActiveMenu('dashboard')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all ${activeMenu === 'dashboard' ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-white'}`}>
+                        <nav className="flex-1 py-6 px-3 space-y-1.5">
+                            <button onClick={() => setActiveMenu('dashboard')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-300 ${activeMenu === 'dashboard' ? 'bg-blue-50 text-blue-700 font-bold border border-blue-100 shadow-sm' : 'hover:bg-slate-50 hover:text-slate-900 text-slate-500 font-medium'}`}>
                                 <div className="flex items-center gap-3"><IconUploadCloud /><span className="font-medium">1. 파일 업로드 (홈)</span></div>
                             </button>
-                            <button onClick={() => setActiveMenu('management')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all ${activeMenu === 'management' ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-white'}`}>
+                            <button onClick={() => setActiveMenu('management')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-300 ${activeMenu === 'management' ? 'bg-blue-50 text-blue-700 font-bold border border-blue-100 shadow-sm' : 'hover:bg-slate-50 hover:text-slate-900 text-slate-500 font-medium'}`}>
                                 <div className="flex items-center gap-3"><IconFileText /><span className="font-medium">2. 공정별 관리요령 작성</span></div>
                             </button>
-                            <button onClick={() => setActiveMenu('label_large')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all ${activeMenu === 'label_large' ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-white'}`}>
+                            <button onClick={() => setActiveMenu('label_large')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-300 ${activeMenu === 'label_large' ? 'bg-blue-50 text-blue-700 font-bold border border-blue-100 shadow-sm' : 'hover:bg-slate-50 hover:text-slate-900 text-slate-500 font-medium'}`}>
                                 <div className="flex items-center gap-3"><IconLayout size={20} /><span className="font-medium">3. 경고표지 작성</span></div>
                             </button>
-                            <button onClick={() => setActiveMenu('label_small')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all ${activeMenu === 'label_small' ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-white'}`}>
+                            <button onClick={() => setActiveMenu('label_small')} className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-300 ${activeMenu === 'label_small' ? 'bg-blue-50 text-blue-700 font-bold border border-blue-100 shadow-sm' : 'hover:bg-slate-50 hover:text-slate-900 text-slate-500 font-medium'}`}>
                                 <div className="flex items-center gap-3"><IconLayout size={20} /><span className="font-medium">4. 경고표지 작성(소형)</span></div>
                             </button>
                         </nav>
                     </aside>
 
                     <main className="flex-1 flex flex-col h-full overflow-hidden relative">
-                        <header className="h-16 bg-white border-b border-slate-200 flex flex-col justify-center px-8 no-print shrink-0 relative">
+                        <header className="h-16 bg-white/80 backdrop-blur-md border-b border-slate-200 flex flex-col justify-center px-8 no-print shrink-0 relative z-10 transition-colors duration-300">
                             <h1 className="text-lg font-bold">
                                 {activeMenu === 'dashboard' && '화학물질(MSDS) 공정별 관리요령 및 경고표지 자동 생성 플랫폼'}
                                 {activeMenu === 'management' && '2. 공정별 관리요령 작성 (A4 자동맞춤)'}
