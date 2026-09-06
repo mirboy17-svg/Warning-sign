@@ -21,7 +21,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
         html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; font-family: 'Noto Sans KR', sans-serif; background-color: #f1f5f9; }
         
-        /* 인쇄 시 여백 제거 및 A4 강제 맞춤 */
+        /* 인쇄 시 여백 제거 및 A4 강제 맞춤 (내용이 길어도 한 페이지로 압축) */
         @media print {
             body, html { width: 100%; height: auto !important; overflow: visible !important; margin: 0; padding: 0; background: white !important; }
             .no-print { display: none !important; }
@@ -29,7 +29,10 @@
                 box-shadow: none !important; 
                 border: none !important; 
                 margin: 0 !important;
-                padding: 0 !important;
+                padding: 4mm !important;
+                height: 289mm !important;
+                max-height: 289mm !important;
+                overflow: hidden !important;
                 page-break-after: avoid; 
                 page-break-before: avoid;
             }
@@ -58,13 +61,14 @@
         const IconPrinter = ({size=16}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>;
         const IconSettings = ({size=16, className=""}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>;
         const IconLayout = ({size=16}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>;
+        const IconX = ({size=14, className=""}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>;
+        const IconRefreshCcw = ({size=14, className=""}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>;
         
-        /* 새로운 인포그래픽용 아이콘 추가 */
         const IconArrowRight = ({size=24, className=""}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>;
         const IconCpu = ({size=32, className=""}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>;
 
         const GHS_SVG = {
-            bomb: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M43.7 51.5c-4.6-2.5-8.2-1.7-8.2-1.7.3-1.6 3.1-4 3.1-4s-3.7-.6-5.8 2c0 0 1.2-3.1 3.7-4.3 0 0-4.6 0-6.1 4-1.2 5.5 1.5 8.9 1.5 8.9s-3.1-1.2-5.5-4C21.5 45.4 20 38 20 38s1.5 4.6 6.1 8c0 0-2.8-.6-6.1-5.2-1.2-1.8-1.5-2.8-1.5-2.8s1.2 2.8 5.2 6.1c0 0-4-1.2-7.1-4-1.5-1.5-2.1-1.8-2.1-1.8s1.5 1.8 6.4 4.9c4 2.8 7.4 3.7 7.4 3.7s-3.7-.3-8-3.1C18.1 42 16 38.6 16 38.6s2.5 4 7.1 8c3.1 2.5 6.4 2.8 6.4 2.8s-3.4-1.2-6.1-4c-2.1-2.1-2.8-3.4-2.8-3.4s2.5 3.4 6.7 6.4c5.2 3.4 10.4 4.3 10.4 4.3s-4.6-1.5-8.6-5.8c-2.8-3.1-4-5.5-4-5.5s3.4 4 8.6 7.7c4 2.8 8.6 3.4 8.6 3.4s-3.7-1.5-7.4-4.6c0 0 3.7 2.1 8 4.3 0 0-4.3-3.4-4.9-8-.3-2.5.3-5.2.3-5.2s-1.8 3.7-1.2 7.4c0 0-1.8-3.7-1.2-8.3.6-4.6 2.5-6.7 2.5-6.7s-1.5 4-.6 8.3c1.2 5.8 3.7 6.7 3.7 6.7s-1.5-3.4-1.2-6.7c.3-2.8 2.1-4.9 2.1-4.9s-2.1 4-1.5 8c.6 3.1 2.5 5.2 2.5 5.2s-2.1-4-1.2-7.4c.6-2.5 2.1-4.3 2.1-4.3s-1.8 3.4-1.2 6.7c.6 3.4 2.8 4.9 2.8 4.9s-1.5-2.8-1.2-5.5c.3-1.8 1.5-3.4 1.5-3.4s-1.2 2.8-.6 5.5c.6 3.4 2.1 4.6 2.1 4.6l-2.1-4.6c-.6-2.1 0-3.7 0-3.7s-.6 2.1 0 4.6c.3 1.8 1.2 3.1 1.2 3.1s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4v-4.6c0-1.8.6-2.8.6-2.8s-.6 1.8-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4zM47.7 57.3c2.5-3.4 10.4-3.1 10.4-3.1-3.4.6-5.8 4-5.8 4s2.8-1.5 6.1-.6c0 0-4.6 1.8-4.9 6.4 4.3-3.4 8.6-4.6 8.6-4.6s-3.7 2.1-4.9 6.1C60.6 69.9 65.5 66.8 65.5 66.8s-4 4.3-5.2 8.3c0 0 5.2-1.5 8.9-6.4-1.8 2.8-2.5 4.3-2.5 4.3s2.8-1.2 6.1-4.3c0 0-1.8 2.8-2.1 5.8 3.4-3.4 4.3-5.2 4.3-5.2s-1.8 3.7-1.5 7.4c0 0 3.4-1.2 5.5-2.8-.3 1.5-.6 2.5-.6 2.5s2.5-1.5 5.2-3.7c0 0-2.1 2.8-3.1 6.1 2.5-1.8 3.4-2.8 3.4-2.8s-1.5 2.5-2.5 5.5c0 0 3.1-.6 4.9-1.8-.3 1.5-.6 2.1-.6 2.1s2.1-1.2 4-2.5c0 0-1.2 2.5-2.1 4.6 1.8-1.2 2.8-1.8 2.8-1.8s-.6 2.1-1.5 4.3c0 0 2.5-.3 3.7-1.2-.3 1.2-.3 1.5-.3 1.5s1.5-.6 2.8-1.5c0 0-.6 1.8-1.2 3.1 1.2-.6 1.5-.6 1.5-.6s-.3 1.2-.6 2.8c0 0 1.5-.3 2.1-.6-.3.6-.3.6-.3.6s.6-.3 1.5-.6l-.6 1.5 1.5-.6s-.3.6-.6 1.5c0 0 .6-.3 1.2-.3-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2z"/></svg>,
+            bomb: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M43.7 51.5c-4.6-2.5-8.2-1.7-8.2-1.7.3-1.6 3.1-4 3.1-4s-3.7-.6-5.8 2c0 0 1.2-3.1 3.7-4.3 0 0-4.6 0-6.1 4-1.2 5.5 1.5 8.9 1.5 8.9s-3.1-1.2-5.5-4C21.5 45.4 20 38 20 38s1.5 4.6 6.1 8c0 0-2.8-.6-6.1-5.2-1.2-1.8-1.5-2.8-1.5-2.8s1.2 2.8 5.2 6.1c0 0-4-1.2-7.1-4-1.5-1.5-2.1-1.8-2.1-1.8s1.5 1.8 6.4 4.9c4 2.8 7.4 3.7 7.4 3.7s-3.7-.3-8-3.1C18.1 42 16 38.6 16 38.6s2.5 4 7.1 8c3.1 2.5 6.4 2.8 6.4 2.8s-3.4-1.2-6.1-4c-2.1-2.1-2.8-3.4-2.8-3.4s2.5 3.4 6.7 6.4c5.2 3.4 10.4 4.3 10.4 4.3s-4.6-1.5-8.6-5.8c-2.8-3.1-4-5.5-4-5.5s3.4 4 8.6 7.7c4 2.8 8.6 3.4 8.6 3.4s-3.7-1.5-7.4-4.6c0 0 3.7 2.1 8 4.3 0 0-4.3-3.4-4.9-8-.3-2.5.3-5.2.3-5.2s-1.8 3.7-1.2 7.4c0 0-1.8-3.7-1.2-8.3.6-4.6 2.5-6.7 2.5-6.7s-1.5 4-.6 8.3c1.2 5.8 3.7 6.7 3.7 6.7s-1.5-3.4-1.2-6.7c.3-2.8 2.1-4.9 2.1-4.9s-2.1 4-1.5 8c.6 3.1 2.5 5.2 2.5 5.2s-2.1-4-1.2-7.4c.6-2.5 2.1-4.3 2.1-4.3s-1.8 3.4-1.2 6.7c.6 3.4 2.8 4.9 2.8 4.9s-1.5-2.8-1.2-5.5c.3-1.8 1.5-3.4 1.5-3.4s-1.2 2.8-.6 5.5c.6 3.4 2.1 4.6 2.1 4.6l-2.1-4.6c-.6-2.1 0-3.7 0-3.7s-.6 2.1 0 4.6c.3 1.8 1.2 3.1 1.2 3.1s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4v-4.6c0-1.8.6-2.8.6-2.8s-.6 1.8-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4.3c.3 2.1 1.5 3.4 1.5 3.4s-.6-2.1-.3-4c.3-1.8 1.2-2.8 1.2-2.8s-.6 2.1-.3 4c.3 2.1 1.5 3.4 1.5 3.4zM47.7 57.3c2.5-3.4 10.4-3.1 10.4-3.1-3.4.6-5.8 4-5.8 4s2.8-1.5 6.1-.6c0 0-4.6 1.8-4.9 6.4 4.3-3.4 8.6-4.6 8.6-4.6s-3.7 2.1-4.9 6.1C60.6 69.9 65.5 66.8 65.5 66.8s-4 4.3-5.2 8.3c0 0 5.2-1.5 8.9-6.4-1.8 2.8-2.5 4.3-2.5 4.3s2.8-1.2 6.1-4.3c0 0-1.8 2.8-2.1 5.8 3.4-3.4 4.3-5.2 4.3-5.2s-1.8 3.7-1.5 7.4c0 0 3.4-1.2 5.5-2.8-.3 1.5-.6 2.5-.6 2.5s2.5-1.5 5.2-3.7c0 0-2.1 2.8-3.1 6.1 2.5-1.8 3.4-2.8 3.4-2.8s-1.5 2.5-2.5 5.5c0 0 3.1-.6 4.9-1.8-.3 1.5-.6 2.1-.6 2.1s2.1-1.2 4-2.5c0 0-1.2 2.5-2.1 4.6 1.8-1.2 2.8-1.8 2.8-1.8s-.6 2.1-1.5 4.3c0 0 2.5-.3 3.7-1.2-.3 1.2-.3 1.5-.3 1.5s1.5-.6 2.8-1.5c0 0-.6 1.8-1.2 3.1 1.2-.6 1.5-.6 1.5-.6s-.3 1.2-.6 2.8c0 0 1.5-.3 2.1-.6-.3.6-.3.6-.3.6s.6-.3 1.5-.6l-.6 1.5 1.5-.6s-.3.6-.6 1.5c0 0 .6-.3 1.2-.3-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2s.6-.3 1.2-.3c-.3.6-.3.6-.3.6s.6-.3.6-.6l-.3 1.2z"/></svg>,
             flame: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M50 16.5c-4 5.5-7.7 13.8-9.8 21.2-1.5 5.5-2.1 11.4-1.2 17.2-2.8-5.8-2.5-12.9 1.5-18.1C35.5 41.7 30 50.3 30 58.3c0 11.7 8.9 21.2 20 21.2s20-9.5 20-21.2c0-8-5.5-16.6-10.4-21.5 4 5.2 4.3 12.3 1.5 18.1.9-5.8.3-11.7-1.2-17.2-2.1-7.4-5.8-15.7-9.8-21.2zM28.8 79.5v5.5h42.4v-5.5H28.8z"/></svg>,
             flame_over_circle: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M50 44c6.1 0 11.4 4.9 11.4 11s-5.2 11-11.4 11c-6.1 0-11.4-4.9-11.4-11s5.2-11 11.4-11zm0 6.4c-2.5 0-4.6 2.1-4.6 4.6s2.1 4.6 4.6 4.6 4.6-2.1 4.6-4.6-2.1-4.6-4.6-4.6zm-17.8-8c1.5-4 4-8.3 4-8.3S33.4 38 31.8 43s1.2 8.3 1.2 8.3-2.5-4-3.1-6.1c-.6-2.1-1.2-5.5-.3-8.6 1.2-4.3 3.4-7.4 3.4-7.4S31.2 32.5 33 37.1c1.8 4.6 5.8 6.4 5.8 6.4s-2.1-3.4-1.8-6.1c.3-2.8 1.5-6.1 4.3-9.5 2.8-3.4 6.1-5.5 6.1-5.5s-2.8 4.9-2.1 8.9c.6 4 3.1 6.7 3.1 6.7s0-3.4.6-6.4c.6-3.1 3.4-6.4 3.4-6.4s-1.8 3.1-1.2 6.1c.6 3.1 2.8 5.8 4 7.4 1.2 1.5 2.1 3.4 2.1 3.4s-.3-2.8 0-4.6c.3-1.8 2.1-3.7 2.1-3.7s-1.2 2.5-.9 4c.3 1.5 1.5 3.4 2.8 4.9 1.2 1.5 2.5 3.7 2.5 3.7s-1.5-2.8-1.5-4c0-1.2.6-2.5.6-2.5s-1.2 1.5-1.2 2.8c0 1.2.6 3.1 2.1 4.3 1.5 1.2 3.1 3.1 3.4 5.5.3 2.5.3 5.5-.6 8.3-.9 2.8-1.8 4-1.8 4s1.2-2.1 1.2-4c0-1.8-.3-4-1.8-6.1-1.5-2.1-3.4-3.1-3.4-3.1s1.5 2.5 1.5 5.2c0 2.8-1.5 6.1-2.8 7.4-1.2 1.2-2.8 2.8-4.9 3.7 2.5-1.5 4.3-3.7 5.5-6.1s.6-4.9-.3-6.7c-.9-1.8-2.5-3.4-3.4-4-1.2-.6-2.5-1.8-2.5-1.8s1.5 1.5 1.5 3.1c0 1.5-1.2 4-2.8 5.8-1.5 1.8-4 3.7-4 3.7s2.5-1.5 3.7-4.3c1.2-2.8 0-6.1-1.2-8.3-1.2-2.1-3.1-3.4-3.1-3.4s1.5 2.1 1.8 4.3c.3 2.1-.3 4.3-.9 5.8-.6 1.5-2.5 3.7-2.5 3.7s1.8-1.8 2.1-4c.3-2.1-.6-4.6-1.5-6.1-.9-1.5-2.8-2.5-2.8-2.5s.9 1.8 1.2 3.4c.3 1.5 0 3.7-.9 4.9-.9 1.2-2.8 2.8-2.8 2.8s1.5-1.2 1.8-2.8c.3-1.5 0-3.4-.6-4.9s-2.1-2.5-2.1-2.5.9 1.5.9 2.8c0 1.2-1.2 3.1-2.1 4.6-1.2 1.5-2.8 2.8-2.8 2.8s1.2-1.2 1.5-3.1c.3-1.8-.3-4.3-.9-5.5-.6-1.2-2.5-2.5-2.5-2.5s.9 1.5.9 3.1c0 1.5-.6 3.1-1.5 4.6-1.2 1.5-3.1 3.4-3.1 3.4s1.8-1.8 2.1-4.3c.3-2.5-1.2-5.5-1.8-6.7-.6-1.2-2.1-2.1-2.1-2.1s1.2 1.8 1.5 3.7c.3 1.8 0 4-1.2 5.8s-3.7 3.7-3.7 3.7 2.1-1.8 2.8-4c.6-2.1.3-4.6-.3-5.8zM28.8 79.5v5.5h42.4v-5.5H28.8z"/></svg>,
             gas_cylinder: <svg viewBox="0 0 100 100" className="w-full h-full"><path fill="#fff" d="M0 0h100v100H0z"/><path fill="#c00000" d="M50 0L0 50l50 50 50-50L50 0zm0 8.5L8.5 50 50 91.5 91.5 50 50 8.5z"/><path d="M72.1 42.6L29.1 55.5s-2.5 1.5-3.7 0c-1.2-1.5-1.8-3.4-1.8-3.4l1.8-4.9 39.9-12s1.5-2.8 3.7-3.4c2.1-.6 4 .9 4 .9l4 10s1.8 1.2 2.8.9c.9-.3 2.1-1.2 2.1-1.2L83.1 45s1.2.9.6 1.8c-.6.9-2.1.6-2.1.6l-5.2-1.5s-1.8 2.5-4.3 3.4v-6.7z"/></svg>,
@@ -196,7 +200,7 @@
             }
             
             const H_KEYWORDS = {
-                'H220': '극인화성가스', 'H224': '극인화성액체', 'H225': '고인화성액체', 'H226': '인화성액체', 
+                'H220': '극인화성가с', 'H224': '극인화성액체', 'H225': '고인화성액체', 'H226': '인화성액체', 
                 'H290': '금속을부식시킬수있음', 'H300': '삼키면치명적', 'H301': '삼키면유독함', 'H302': '삼키면유해함', 
                 'H304': '삼켜서기도로유입되면치명적', 'H310': '피부와접촉하면치명적', 'H311': '피부와접촉하면유독함', 
                 'H314': '피부에심한화상', 'H315': '피부에자극', 'H317': '알레르기성피부반응', 'H318': '눈에심한손상', 
@@ -304,7 +308,6 @@
             const [dragActive, setDragActive] = useState(false);
             const fileInputRef = useRef(null);
             
-            // 다중 파일 관리를 위한 상태 정의 (activeFileId 에러 해결 부분)
             const [fileDataMap, setFileDataMap] = useState({});
             const [activeFileId, setActiveFileId] = useState(null);
             
@@ -313,8 +316,14 @@
 
             const [modalConfig, setModalConfig] = useState({ isOpen: false, type: '', title: '', content: '' });
 
-            // 현재 선택된 탭의 파일 데이터
             const activeData = fileDataMap[activeFileId] || null;
+
+            useEffect(() => {
+                // 업로드된 파일이 모두 지워지면 자동으로 대시보드로 이동합니다.
+                if (uploadedFiles.length === 0 && activeMenu !== 'dashboard') {
+                    setActiveMenu('dashboard');
+                }
+            }, [uploadedFiles.length, activeMenu]);
 
             const handleFiles = async (files) => {
                 if (!files || files.length === 0) return;
@@ -356,7 +365,7 @@
                             extractedText = await file.text();
                         }
                         const parsed = parseTextToMSDS(extractedText, file.name);
-                        parsed.selectedPPE = ['301', '302', '309', '308']; // 기본 보호구 세팅
+                        parsed.selectedPPE = ['301', '302', '309', '308'];
 
                         setFileDataMap(prev => ({
                             ...prev,
@@ -391,6 +400,13 @@
                     delete newMap[id];
                     return newMap;
                 });
+            };
+
+            const resetAllFiles = () => {
+                setUploadedFiles([]);
+                setFileDataMap({});
+                setActiveFileId(null);
+                setCompanyLogo(null);
             };
 
             const updateActiveFileData = (newData) => {
@@ -448,177 +464,174 @@
             };
 
             const formatTruncatedText = (text, limit = 6) => {
-                if (!text) return '';
-                const lines = text.split('\n').filter(l => l.trim() !== '');
-                if (lines.length > limit) return lines.slice(0, limit).join('\n') + '\n... (이하 생략)';
-                return lines.join('\n');
-            };
+            if (!text) return '';
+            const lines = text.split('\n').filter(l => l.trim() !== '');
+            if (lines.length > limit) return lines.slice(0, limit).join('\n') + '\n... (이하 생략)';
+            return lines.join('\n');
+        };
 
-            const renderLabelContent = (data, isMaster = false, isSmall = false) => {
-                const pics = data.pictograms.slice(0, 4);
-                
-                if (isSmall) {
-                    return (
-                        <div className={`w-full h-full border-[1.5px] border-black flex flex-col bg-white overflow-hidden ${isMaster ? 'shadow-sm rounded-md' : ''}`}>
-                            {/* 1. 명칭 및 신호어 영역 (상하 배치로 변경하여 가로 폭 잘림 원천 방지) */}
-                            <div className="flex flex-col h-[34%] shrink-0">
-                                <div className="h-[55%] border-b-[1.5px] border-black flex flex-col items-center justify-center relative px-1 bg-white">
-                                    <span className="absolute left-1 top-0.5 text-[5px] font-bold text-slate-600">(명 칭)</span>
-                                    {isMaster ? (
-                                        <input type="text" value={data.productName} onChange={e => updateActiveFileData({ productName: e.target.value })} className="w-[90%] text-center text-[11px] font-extrabold bg-transparent outline-none border-b border-dashed border-blue-400 mt-2" />
-                                    ) : (
-                                        <span className="text-[10px] font-extrabold truncate w-[95%] text-center tracking-tight leading-none mt-2">{data.productName}</span>
-                                    )}
-                                </div>
-                                <div className="h-[45%] border-b-[1.5px] border-black flex flex-col items-center justify-center relative px-1 bg-white">
-                                    <span className="absolute left-1 top-0.5 text-[5px] font-bold text-slate-600">(신호어)</span>
-                                    {isMaster ? (
-                                        <input type="text" value={data.signalWord} onChange={e => updateActiveFileData({ signalWord: e.target.value })} className="w-[90%] text-center text-[#c00000] font-black text-[11px] bg-transparent outline-none border-b border-dashed border-red-400 mt-1.5" />
-                                    ) : (
-                                        <span className="text-[#c00000] font-black text-[11px] leading-none mt-1.5">{data.signalWord}</span>
-                                    )}
-                                </div>
-                            </div>
-                            
-                            {/* 2. 그림문자 영역 (간격 및 크기 최대화) */}
-                            <div className="flex-1 border-b-[1.5px] border-black flex flex-col items-center justify-center shrink-0 p-1 relative bg-white min-h-0">
-                                <span className="absolute top-0.5 left-1 text-[5px] font-bold text-slate-600">(그림문자)</span>
-                                
-                                <div className="w-[90%] h-[85%] mt-3 grid grid-cols-2 grid-rows-2 gap-[2px] place-items-center">
-                                    {pics.map((pic, idx) => (
-                                        <div key={idx} className="w-full h-full flex items-center justify-center p-[1px]">
-                                            {renderGHS(pic)}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                            
-                            {/* 3. 공급자 정보 영역 */}
-                            <div className="h-[20%] w-full flex flex-row items-center justify-between relative px-1.5 shrink-0 bg-white">
-                                <span className="absolute left-1 top-0.5 text-[5px] font-bold text-slate-600 z-10">(공급자 정보)</span>
-                                <div className="flex-1 flex justify-center items-center h-full pt-1.5 overflow-hidden">
-                                    {isMaster ? (
-                                        <input type="text" value={data.supplierInfo} onChange={e => updateActiveFileData({ supplierInfo: e.target.value })} className="w-full text-center text-[7.5px] font-bold bg-transparent outline-none border-b border-dashed border-blue-400" />
-                                    ) : (
-                                        <span className="text-[7.5px] font-bold leading-tight text-center text-slate-800 overflow-hidden text-ellipsis whitespace-nowrap w-full">{data.supplierInfo}</span>
-                                    )}
-                                </div>
-                                {companyLogo && (
-                                    <div className="h-[60%] shrink-0 ml-1 pt-1.5 flex justify-end">
-                                        <img src={companyLogo} alt="logo" className="h-full max-w-[25px] object-contain object-right" />
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    );
-                }
-
+        const renderLabelContent = (data, isMaster = false, isSmall = false) => {
+            const pics = data.pictograms.slice(0, 4);
+            
+            if (isSmall) {
                 return (
                     <div className={`w-full h-full border-[1.5px] border-black flex flex-col bg-white overflow-hidden ${isMaster ? 'shadow-sm rounded-md' : ''}`}>
-                        <div className="h-[18%] border-b-[1.5px] border-black flex bg-slate-50 shrink-0">
-                            <div className="flex-1 border-r-[1.5px] border-black flex flex-col items-center justify-center relative px-1">
-                                <span className="absolute left-1 top-0.5 text-[6px] font-bold text-slate-500">(명 칭)</span>
+                        <div className="flex flex-col h-[34%] shrink-0">
+                            <div className="h-[55%] border-b-[1.5px] border-black flex flex-col items-center justify-center relative px-1 bg-white">
+                                <span className="absolute left-1 top-0.5 text-[5px] font-bold text-slate-600">(명 칭)</span>
                                 {isMaster ? (
-                                    <input type="text" value={data.productName} onChange={e => updateActiveFileData({ productName: e.target.value })} className="w-[90%] text-center text-[14px] font-extrabold bg-transparent outline-none border-b border-dashed border-blue-400 mt-2" />
+                                    <input type="text" value={data.productName} onChange={e => updateActiveFileData({ productName: e.target.value })} className="w-[90%] text-center text-[11px] font-extrabold bg-transparent outline-none border-b border-dashed border-blue-400 mt-2" />
                                 ) : (
-                                    <span className="text-[13px] font-extrabold truncate w-[90%] text-center tracking-tight leading-none mt-1">{data.productName}</span>
+                                    <span className="text-[10px] font-extrabold truncate w-[95%] text-center tracking-tight leading-none mt-2">{data.productName}</span>
                                 )}
                             </div>
-                            
-                            <div className="w-[28%] flex flex-col items-center justify-center relative px-1 bg-white">
-                                <span className="absolute left-1 top-0.5 text-[6px] font-bold text-slate-500">(신호어)</span>
+                            <div className="h-[45%] border-b-[1.5px] border-black flex flex-col items-center justify-center relative px-1 bg-white">
+                                <span className="absolute left-1 top-0.5 text-[5px] font-bold text-slate-600">(신호어)</span>
                                 {isMaster ? (
-                                    <input type="text" value={data.signalWord} onChange={e => updateActiveFileData({ signalWord: e.target.value })} className="w-[90%] text-center text-[#c00000] font-black text-[13px] bg-transparent outline-none border-b border-dashed border-red-400 mt-2" />
+                                    <input type="text" value={data.signalWord} onChange={e => updateActiveFileData({ signalWord: e.target.value })} className="w-[90%] text-center text-[#c00000] font-black text-[11px] bg-transparent outline-none border-b border-dashed border-red-400 mt-1.5" />
                                 ) : (
-                                    <span className="text-[#c00000] font-black text-[13px] leading-none mt-1">{data.signalWord}</span>
+                                    <span className="text-[#c00000] font-black text-[11px] leading-none mt-1.5">{data.signalWord}</span>
+                                )}
+                                {companyLogo && (
+                                    <div className="absolute right-1 top-0 bottom-0 flex justify-end items-center h-full pb-0.5 z-10">
+                                        <img src={companyLogo} alt="logo" className="h-[90%] max-w-[40px] object-contain object-right" />
+                                    </div>
                                 )}
                             </div>
                         </div>
                         
-                        <div className="flex flex-1 min-h-0 flex-row">
-                            <div className="w-[30%] border-r-[1.5px] border-black flex flex-col items-center justify-center shrink-0 p-1 relative bg-white">
-                                <span className="absolute top-0.5 left-0.5 text-[6px] font-bold text-slate-500">(그림문자)</span>
-                                <div className="flex flex-col justify-center items-center w-full h-full flex-1 min-h-0 mt-2 gap-[1px]">
-                                    {pics.length === 2 ? (
-                                        <>
-                                            <div className="flex justify-center gap-[2px] w-full">
-                                                <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[0])}</div>
-                                                <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[1])}</div>
-                                            </div>
-                                            <div className="w-[45%] aspect-square opacity-0"></div>
-                                        </>
-                                    ) : pics.length === 3 ? (
-                                        <>
-                                            <div className="flex justify-center gap-[2px] w-full">
-                                                <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[0])}</div>
-                                                <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[1])}</div>
-                                            </div>
-                                            <div className="flex justify-center w-full">
-                                                <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[2])}</div>
-                                            </div>
-                                        </>
-                                    ) : pics.length === 1 ? (
-                                        <div className="flex justify-center w-full">
-                                            <div className="w-[60%] aspect-square flex items-center justify-center">{renderGHS(pics[0])}</div>
-                                        </div>
-                                    ) : (
-                                        <div className="grid grid-cols-2 gap-[1px] w-full place-items-center">
-                                            {pics.map((pic, idx) => (
-                                                <div key={idx} className="w-[85%] aspect-square flex items-center justify-center">{renderGHS(pic)}</div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
+                        <div className="flex-1 border-b-[1.5px] border-black flex flex-col items-center justify-center shrink-0 p-1 relative bg-white min-h-0">
+                            <span className="absolute top-0.5 left-1 text-[5px] font-bold text-slate-600">(그림문자)</span>
                             
-                            <div className="w-[70%] p-1.5 flex flex-col gap-1 overflow-hidden bg-white">
-                                <div className="flex-1 overflow-hidden flex min-h-0 gap-1 group relative rounded border border-transparent hover:border-slate-200 transition-colors pt-1">
-                                    <div className="text-[8.5px] font-extrabold shrink-0 w-16 text-slate-800">유해·위험 문구:</div>
-                                    <div className="overflow-hidden flex-1 text-[7.5px] font-semibold leading-[1.2] whitespace-pre-wrap break-keep text-slate-700">
-                                        {formatTruncatedText(data.labelHazards, 6)}
+                            <div className="w-[90%] h-[85%] mt-3 grid grid-cols-2 grid-rows-2 gap-[2px] place-items-center">
+                                {pics.map((pic, idx) => (
+                                    <div key={idx} className="w-full h-full flex items-center justify-center p-[1px]">
+                                        {renderGHS(pic)}
                                     </div>
-                                    {isMaster && (
-                                        <button onClick={() => openModal('hazards', '유해·위험 문구 편집', data.labelHazards)} className="absolute top-0 right-0 bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 text-[9px] rounded font-bold shadow-sm z-10 flex items-center gap-1 cursor-pointer hover:bg-blue-100 transition-colors">
-                                            <IconLayout size={10}/> 자세히 보기/편집
-                                        </button>
-                                    )}
-                                </div>
-
-                                <div className="flex-1 overflow-hidden flex min-h-0 gap-1 group relative rounded border border-transparent hover:border-slate-200 transition-colors pt-1">
-                                    <div className="text-[8.5px] font-extrabold shrink-0 w-16 text-slate-800">예방조치 문구:</div>
-                                    <div className="overflow-hidden flex-1 text-[7.5px] font-semibold leading-[1.2] whitespace-pre-wrap break-keep text-slate-700">
-                                        {formatTruncatedText(data.labelPrevention, 6)}
-                                    </div>
-                                    {isMaster && (
-                                        <button onClick={() => openModal('prevention', '예방조치 문구 편집', data.labelPrevention)} className="absolute top-0 right-0 bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 text-[9px] rounded font-bold shadow-sm z-10 flex items-center gap-1 cursor-pointer hover:bg-blue-100 transition-colors">
-                                            <IconLayout size={10}/> 자세히 보기/편집
-                                        </button>
-                                    )}
-                                </div>
+                                ))}
                             </div>
                         </div>
                         
-                        <div className="h-[14%] border-t-[1.5px] border-black flex items-center justify-between px-1.5 shrink-0 gap-1 bg-slate-50 w-full overflow-hidden">
-                            <div className="flex items-center gap-1 flex-1 overflow-hidden h-full">
-                                <div className="text-[8.5px] font-extrabold shrink-0 text-slate-800">공급자 정보:</div>
+                        <div className="h-[20%] w-full flex flex-row items-center justify-between relative px-1.5 shrink-0 bg-white">
+                            <span className="absolute left-1 top-0.5 text-[5px] font-bold text-slate-600 z-10">(공급자 정보)</span>
+                            <div className="flex-1 flex justify-center items-center h-full pt-1.5 overflow-hidden">
                                 {isMaster ? (
-                                    <input type="text" value={data.supplierInfo} onChange={e => updateActiveFileData({ supplierInfo: e.target.value })} className="w-full text-[8px] font-bold bg-transparent outline-none border-b border-dashed border-blue-400 whitespace-nowrap" />
+                                    <input type="text" value={data.supplierInfo} onChange={e => updateActiveFileData({ supplierInfo: e.target.value })} className="w-full text-center text-[7.5px] font-bold bg-transparent outline-none border-b border-dashed border-blue-400" />
                                 ) : (
-                                    <span className="text-[8px] font-bold leading-none whitespace-nowrap overflow-hidden text-ellipsis w-full text-left text-slate-700">{data.supplierInfo}</span>
+                                    <span className="text-[7.5px] font-bold leading-tight text-center text-slate-800 overflow-hidden text-ellipsis whitespace-nowrap w-full">{data.supplierInfo}</span>
                                 )}
                             </div>
-                            {companyLogo && (
-                                <div className="h-[75%] shrink-0 ml-2 flex items-center justify-end">
-                                    <img src={companyLogo} alt="logo" className="h-full max-w-[40px] object-contain object-right" />
-                                </div>
-                            )}
                         </div>
                     </div>
                 );
-            };
+            }
 
             return (
-                <div className="flex fixed inset-0 w-full h-full bg-slate-100 text-slate-800 overflow-hidden">
+                <div className={`w-full h-full border-[1.5px] border-black flex flex-col bg-white overflow-hidden ${isMaster ? 'shadow-sm rounded-md' : ''}`}>
+                    <div className="h-[18%] border-b-[1.5px] border-black flex bg-slate-50 shrink-0">
+                        <div className="flex-1 border-r-[1.5px] border-black flex flex-col items-center justify-center relative px-1">
+                            <span className="absolute left-1 top-0.5 text-[6px] font-bold text-slate-500">(명 칭)</span>
+                            {isMaster ? (
+                                <input type="text" value={data.productName} onChange={e => updateActiveFileData({ productName: e.target.value })} className="w-[90%] text-center text-[14px] font-extrabold bg-transparent outline-none border-b border-dashed border-blue-400 mt-2" />
+                            ) : (
+                                <span className="text-[13px] font-extrabold truncate w-[90%] text-center tracking-tight leading-none mt-1">{data.productName}</span>
+                            )}
+                        </div>
+                        
+                        <div className="w-[28%] flex flex-col items-center justify-center relative px-1 bg-white">
+                            <span className="absolute left-1 top-0.5 text-[6px] font-bold text-slate-500">(신호어)</span>
+                            {isMaster ? (
+                                <input type="text" value={data.signalWord} onChange={e => updateActiveFileData({ signalWord: e.target.value })} className="w-[90%] text-center text-[#c00000] font-black text-[13px] bg-transparent outline-none border-b border-dashed border-red-400 mt-2" />
+                            ) : (
+                                <span className="text-[#c00000] font-black text-[13px] leading-none mt-1">{data.signalWord}</span>
+                            )}
+                        </div>
+                    </div>
+                    
+                    <div className="flex flex-1 min-h-0 flex-row">
+                        <div className="w-[30%] border-r-[1.5px] border-black flex flex-col items-center justify-center shrink-0 p-1 relative bg-white">
+                            <span className="absolute top-0.5 left-0.5 text-[6px] font-bold text-slate-500">(그림문자)</span>
+                            <div className="flex flex-col justify-center items-center w-full h-full flex-1 min-h-0 mt-2 gap-[1px]">
+                                {pics.length === 2 ? (
+                                    <>
+                                        <div className="flex justify-center gap-[2px] w-full">
+                                            <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[0])}</div>
+                                            <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[1])}</div>
+                                        </div>
+                                        <div className="w-[45%] aspect-square opacity-0"></div>
+                                    </>
+                                ) : pics.length === 3 ? (
+                                    <>
+                                        <div className="flex justify-center gap-[2px] w-full">
+                                            <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[0])}</div>
+                                            <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[1])}</div>
+                                        </div>
+                                        <div className="flex justify-center w-full">
+                                            <div className="w-[45%] aspect-square flex items-center justify-center">{renderGHS(pics[2])}</div>
+                                        </div>
+                                    </>
+                                ) : pics.length === 1 ? (
+                                    <div className="flex justify-center w-full">
+                                        <div className="w-[60%] aspect-square flex items-center justify-center">{renderGHS(pics[0])}</div>
+                                    </div>
+                                ) : (
+                                    <div className="grid grid-cols-2 gap-[1px] w-full place-items-center">
+                                        {pics.map((pic, idx) => (
+                                            <div key={idx} className="w-[85%] aspect-square flex items-center justify-center">{renderGHS(pic)}</div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                        
+                        <div className="w-[70%] p-1.5 flex flex-col gap-1 overflow-hidden bg-white">
+                            <div className="flex-1 overflow-hidden flex min-h-0 gap-1 group relative rounded border border-transparent hover:border-slate-200 transition-colors pt-1">
+                                <div className="text-[8.5px] font-extrabold shrink-0 w-16 text-slate-800">유해·위험 문구:</div>
+                                <div className="overflow-hidden flex-1 text-[7.5px] font-semibold leading-[1.2] whitespace-pre-wrap break-keep text-slate-700">
+                                    {formatTruncatedText(data.labelHazards, 6)}
+                                </div>
+                                {isMaster && (
+                                    <button onClick={() => openModal('hazards', '유해·위험 문구 편집', data.labelHazards)} className="absolute top-0 right-0 bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 text-[9px] rounded font-bold shadow-sm z-10 flex items-center gap-1 cursor-pointer hover:bg-blue-100 transition-colors">
+                                        <IconLayout size={10}/> 자세히 보기/편집
+                                    </button>
+                                )}
+                            </div>
+
+                            <div className="flex-1 overflow-hidden flex min-h-0 gap-1 group relative rounded border border-transparent hover:border-slate-200 transition-colors pt-1">
+                                <div className="text-[8.5px] font-extrabold shrink-0 w-16 text-slate-800">예방조치 문구:</div>
+                                <div className="overflow-hidden flex-1 text-[7.5px] font-semibold leading-[1.2] whitespace-pre-wrap break-keep text-slate-700">
+                                    {formatTruncatedText(data.labelPrevention, 6)}
+                                </div>
+                                {isMaster && (
+                                    <button onClick={() => openModal('prevention', '예방조치 문구 편집', data.labelPrevention)} className="absolute top-0 right-0 bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 text-[9px] rounded font-bold shadow-sm z-10 flex items-center gap-1 cursor-pointer hover:bg-blue-100 transition-colors">
+                                        <IconLayout size={10}/> 자세히 보기/편집
+                                    </button>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div className="h-[14%] border-t-[1.5px] border-black flex items-center justify-between px-1.5 shrink-0 gap-1 bg-slate-50 w-full overflow-hidden">
+                        <div className="flex items-center gap-1 flex-1 overflow-hidden h-full">
+                            <div className="text-[8.5px] font-extrabold shrink-0 text-slate-800">공급자 정보:</div>
+                            {isMaster ? (
+                                <input type="text" value={data.supplierInfo} onChange={e => updateActiveFileData({ supplierInfo: e.target.value })} className="w-full text-[8px] font-bold bg-transparent outline-none border-b border-dashed border-blue-400 whitespace-nowrap" />
+                            ) : (
+                                <span className="text-[8px] font-bold leading-none whitespace-nowrap overflow-hidden text-ellipsis w-full text-left text-slate-700">{data.supplierInfo}</span>
+                            )}
+                        </div>
+                        {companyLogo && (
+                            <div className="h-[90%] shrink-0 ml-2 flex items-center justify-end">
+                                <img src={companyLogo} alt="logo" className="h-full max-w-[70px] object-contain object-right" />
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        };
+
+        return (
+            <div className="flex fixed inset-0 w-full h-full bg-slate-100 text-slate-800 overflow-hidden">
                     <aside className="w-72 bg-white text-slate-600 border-r border-slate-200 flex flex-col h-full shadow-sm z-10 no-print shrink-0 transition-colors duration-300">
                         <div className="p-6 border-b border-slate-100 bg-slate-50/50">
                             <h2 className="text-xl font-black text-slate-800 flex items-center gap-2"><IconAlertTriangle className="text-blue-600" /> <span>MSDS AI Center</span></h2>
@@ -650,18 +663,30 @@
                             </h1>
                         </header>
 
-                        {/* 상단 탭: 업로드된 파일 이동기 */}
                         {uploadedFiles.length > 0 && activeMenu !== 'dashboard' && (
                             <div className="w-full bg-slate-50 border-b border-slate-200 px-6 py-2.5 flex gap-2 overflow-x-auto no-print shrink-0 items-center shadow-sm z-10 custom-scrollbar">
-                                <span className="text-xs font-bold text-slate-500 shrink-0 mr-2 flex items-center gap-1"><IconFileText size={14}/> 편집 중인 파일:</span>
-                                {uploadedFiles.map(file => (
-                                    <button 
-                                        key={file.id} 
-                                        onClick={() => setActiveFileId(file.id)}
-                                        className={`px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap transition-all shadow-sm border ${activeFileId === file.id ? 'bg-blue-600 text-white border-blue-700' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100'}`}
-                                    >
-                                        {file.name} {file.status === 'pending' && <IconLoader2 size={12} className="inline ml-1" />}
+                                <div className="flex items-center gap-2 mr-2 shrink-0">
+                                    <span className="text-xs font-bold text-slate-500 flex items-center gap-1"><IconFileText size={14}/> 편집 중인 파일:</span>
+                                    <button onClick={resetAllFiles} className="text-[11px] font-bold text-slate-500 hover:text-red-600 bg-white hover:bg-red-50 px-2 py-1 rounded flex items-center gap-1 border border-slate-200 hover:border-red-200 transition-colors shadow-sm">
+                                        <IconRefreshCcw size={12}/> 전체 초기화
                                     </button>
+                                </div>
+                                {uploadedFiles.map(file => (
+                                    <div 
+                                        key={file.id}
+                                        className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm font-bold whitespace-nowrap transition-all shadow-sm border group cursor-pointer ${activeFileId === file.id ? 'bg-blue-600 text-white border-blue-700' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100'}`}
+                                        onClick={() => setActiveFileId(file.id)}
+                                    >
+                                        <span>{file.name}</span>
+                                        {file.status === 'pending' && <IconLoader2 size={12} className="inline ml-1" />}
+                                        <button 
+                                            onClick={(e) => { e.stopPropagation(); removeFile(file.id); }}
+                                            className={`ml-1 p-0.5 rounded-full transition-colors ${activeFileId === file.id ? 'text-blue-200 hover:text-white hover:bg-blue-500' : 'text-slate-400 hover:text-red-500 hover:bg-red-50'}`}
+                                            title="이 파일 삭제하기"
+                                        >
+                                            <IconX size={14} />
+                                        </button>
+                                    </div>
                                 ))}
                             </div>
                         )}
@@ -670,7 +695,6 @@
                             
                             {activeMenu === 'dashboard' && (
                                 <div className="max-w-5xl w-full flex flex-col gap-8">
-                                    {/* 인포그래픽 설명 영역 */}
                                     <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 pt-10">
                                         <div className="text-center mb-8">
                                             <h2 className="text-2xl font-extrabold text-slate-800 mb-2">단 하나의 파일로, 완벽한 법적 서류 자동화</h2>
@@ -678,8 +702,6 @@
                                         </div>
                                         
                                         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 bg-slate-50 py-10 px-6 rounded-2xl border border-slate-100 relative">
-                                            
-                                            {/* Step 1: Upload */}
                                             <div className="flex flex-col items-center bg-white p-6 rounded-2xl shadow-sm border border-slate-200 w-[220px] text-center z-10">
                                                 <div className="w-14 h-14 bg-blue-100 text-blue-600 flex justify-center items-center rounded-xl mb-4">
                                                     <IconFileUp size={28}/>
@@ -688,7 +710,6 @@
                                                 <p className="text-xs text-slate-500">PDF 또는 Excel 형태의<br/>물질안전보건자료 업로드 (최대 10개)</p>
                                             </div>
 
-                                            {/* AI Processing Arrow */}
                                             <div className="flex flex-col items-center justify-center text-blue-500 px-2 md:rotate-0 rotate-90">
                                                 <div className="bg-blue-100 rounded-full p-2 mb-1 animate-pulse">
                                                     <IconCpu size={24} className="text-blue-600"/>
@@ -697,9 +718,7 @@
                                                 <IconArrowRight size={28}/>
                                             </div>
 
-                                            {/* Step 2: Outputs */}
                                             <div className="flex flex-col gap-4 z-10 w-[260px]">
-                                                {/* Output 1 */}
                                                 <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-blue-200 border-l-4 border-l-blue-500">
                                                     <div className="bg-blue-50 p-2.5 rounded-lg text-blue-600">
                                                         <IconFileText size={20}/>
@@ -709,7 +728,6 @@
                                                         <p className="text-[11px] text-slate-500">A4 세로형 자동 서식 맞춤</p>
                                                     </div>
                                                 </div>
-                                                {/* Output 2 */}
                                                 <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-orange-200 border-l-4 border-l-orange-500">
                                                     <div className="bg-orange-50 p-2.5 rounded-lg text-orange-600">
                                                         <IconLayout size={20}/>
@@ -723,7 +741,6 @@
                                         </div>
                                     </div>
 
-                                    {/* 파일 업로드 존 */}
                                     <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8">
                                         <div className="flex items-center justify-between mb-8 mt-2 max-w-2xl mx-auto px-4">
                                             <h3 className="text-2xl font-black text-slate-800">MSDS 파일 업로드하세요</h3>
@@ -745,7 +762,6 @@
                                         </div>
                                     </div>
 
-                                    {/* 업로드된 파일 리스트 */}
                                     {uploadedFiles.length > 0 && (
                                         <div className="bg-white rounded-2xl shadow-sm border p-6">
                                             <div className="text-sm font-bold text-slate-600 mb-4 flex items-center justify-between">
@@ -763,7 +779,6 @@
                                         </div>
                                     )}
 
-                                    {/* 이용 안내 및 주의사항 */}
                                     <div className="bg-amber-50 rounded-2xl shadow-sm border border-amber-200 p-7 flex gap-4 mt-2 mb-8">
                                         <div className="text-amber-500 shrink-0 mt-0.5">
                                             <IconAlertTriangle size={26} />
@@ -845,7 +860,7 @@
                             {activeMenu === 'label_small' && (
                                 <div className="flex flex-col items-center w-full pb-20">
                                     <div className="w-full max-w-[210mm] flex justify-between items-center mb-4 no-print">
-                                        <span className="text-sm font-bold text-slate-600">소형 경고표지 (A4 1/20 크기 절반형 - 20장 배치)</span>
+                                        <span className="text-sm font-bold text-slate-600">초소형 경고표지 (A4 1/40 크기 - 40장 배치)</span>
                                         <button onClick={() => window.print()} className="flex items-center gap-2 px-6 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-bold shadow-md"><IconPrinter /> 인쇄 및 PDF 저장</button>
                                     </div>
 
@@ -855,21 +870,21 @@
                                                 <div className="absolute -top-3 -left-3 bg-blue-600 text-white px-4 py-1.5 rounded-lg text-xs font-bold shadow-md flex items-center gap-2"><IconSettings size={14}/> 마스터 편집 모드</div>
                                                 <div className="flex justify-between items-start mb-6">
                                                     <div>
-                                                        <h3 className="text-xl font-bold text-slate-800 mb-2">소형 경고표지 (100ml 미만 용기용)</h3>
-                                                        <p className="text-sm text-slate-500">규정에 따라 명칭, 그림문자, 신호어, 공급자 정보 4가지 필수 요소만 포함됩니다.</p>
+                                                        <h3 className="text-xl font-bold text-slate-800 mb-2">초소형 경고표지 (100ml 이하 소분용기용)</h3>
+                                                        <p className="text-sm text-slate-500">용기 크기가 100ml 이하일 경우 규정에 따라 명칭, 그림문자, 신호어, 공급자 정보 4가지 요소만 표기합니다.</p>
                                                     </div>
                                                 </div>
                                                 
-                                                <div className="w-full max-w-[75mm] h-[75mm] mx-auto transition-transform hover:scale-[1.02] duration-300">
+                                                <div className="w-full max-w-[50mm] h-[42mm] mx-auto transition-transform hover:scale-[1.05] duration-300">
                                                     {renderLabelContent(activeData, true, true)}
                                                 </div>
                                             </div>
 
-                                            <div className="w-full max-w-[210mm] no-print mb-2"><span className="text-sm font-bold text-slate-500">▼ 인쇄 미리보기 (A4 용지 내 20장 배치)</span></div>
+                                            <div className="w-full max-w-[210mm] no-print mb-2"><span className="text-sm font-bold text-slate-500">▼ 인쇄 미리보기 (A4 용지 내 40장 배치 - 가로 4.2cm x 세로 3.7cm)</span></div>
                                             
                                             <div className="print-page w-[210mm] h-[297mm] flex flex-wrap content-start text-black box-border shadow-2xl bg-white shrink-0 print:w-full print:h-[297mm] print:shadow-none print:border-none print:m-0 print:p-0">
-                                                {Array.from({ length: 20 }).map((_, i) => (
-                                                    <div key={i} className="w-[25%] h-[20%] box-border p-[0.5mm]">
+                                                {Array.from({ length: 40 }).map((_, i) => (
+                                                    <div key={i} className="w-[20%] h-[12.5%] box-border p-[0.5mm]">
                                                         {renderLabelContent(activeData, false, true)}
                                                     </div>
                                                 ))}
@@ -887,140 +902,140 @@
                                         <button onClick={() => window.print()} className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-bold shadow-md hover:bg-blue-700"><IconPrinter /> 인쇄 및 PDF 저장</button>
                                     </div>
                                     
-                                    <div className="print-page w-[210mm] min-h-[297mm] h-auto flex flex-col text-black border shadow-2xl box-border bg-white shrink-0 print:w-full print:min-h-[290mm] print:h-auto print:shadow-none print:border-none print:m-0 print:p-0">
+                                    <div className="print-page w-[210mm] h-[297mm] flex flex-col text-black border shadow-2xl box-border overflow-hidden bg-white shrink-0 print:w-full print:h-[297mm] print:shadow-none print:border-none print:m-0 print:p-0">
                                         {activeData ? (
-                                            <div className="flex flex-col h-full min-h-full w-full p-[8mm] pb-[4mm] print:p-[6mm] print:pb-[3mm] flex-1">
-                                                <div className="flex flex-col h-full min-h-full w-full border-[2px] border-black flex-1">
+                                            <div className="flex flex-col h-full w-full p-[6mm] pb-[3mm] print:p-[4mm] print:pb-[2mm]">
+                                                <div className="flex flex-col h-full w-full border-[2px] border-black">
                                                     
-                                                    <div className="flex border-b-[2px] border-black shrink-0 h-[32px]">
-                                                        <div className="border-r-[2px] border-black px-2 font-bold text-[13px] w-[25%] flex items-center whitespace-nowrap overflow-hidden">
+                                                    <div className="flex border-b-[2px] border-black shrink-0 h-[28px]">
+                                                        <div className="border-r-[2px] border-black px-2 font-bold text-[12px] w-[25%] flex items-center whitespace-nowrap overflow-hidden">
                                                             공정명 : <input type="text" value={activeData.processName} onChange={(e) => updateActiveFileData({ processName: e.target.value })} className="ml-1 font-bold w-full bg-transparent border-b border-dashed border-blue-400 focus:outline-none truncate"/>
                                                         </div>
-                                                        <div className="border-r-[2px] border-black px-2 text-center text-[19px] font-black tracking-tight w-[50%] flex items-center justify-center">유해화학물질 작업공정별 관리 요령</div>
-                                                        <div className="px-2 font-bold text-[13px] w-[25%] flex items-center justify-start whitespace-nowrap">
+                                                        <div className="border-r-[2px] border-black px-2 text-center text-[17px] font-black tracking-tight w-[50%] flex items-center justify-center">유해화학물질 작업공정별 관리 요령</div>
+                                                        <div className="px-2 font-bold text-[12px] w-[25%] flex items-center justify-start whitespace-nowrap">
                                                             개정 : <input type="text" value={activeData.revisionDate} onChange={(e) => updateActiveFileData({ revisionDate: e.target.value })} className="ml-1 font-bold w-[75px] text-left bg-transparent border-b border-dashed border-blue-400 focus:outline-none"/>
                                                         </div>
                                                     </div>
-                                                    <div className="flex border-b-[2px] border-black shrink-0 h-[36px]">
-                                                        <div className="border-r-[2px] border-black px-2 text-center text-[15px] font-bold bg-slate-100 flex items-center justify-center w-[25%]">제품명</div>
+                                                    <div className="flex border-b-[2px] border-black shrink-0 h-[30px]">
+                                                        <div className="border-r-[2px] border-black px-2 text-center text-[14px] font-bold bg-slate-100 flex items-center justify-center w-[25%]">제품명</div>
                                                         <div className="px-2 flex items-center justify-center w-[75%]">
-                                                            <textarea value={activeData.productName} onChange={(e) => updateActiveFileData({ productName: e.target.value })} className="w-full h-full text-center bg-transparent focus:outline-none font-extrabold text-[15.5px] text-black resize-none pt-1" rows="1"/>
+                                                            <textarea value={activeData.productName} onChange={(e) => updateActiveFileData({ productName: e.target.value })} className="w-full h-full text-center bg-transparent focus:outline-none font-extrabold text-[14px] text-black resize-none pt-1" rows="1"/>
                                                         </div>
                                                     </div>
 
-                                                    <div className="border-b-[2px] border-black p-1 shrink-0 h-auto">
-                                                        <div className="flex justify-between items-end border-b-[1.5px] border-[#c00000] pb-0.5 mb-1">
-                                                            <span className="text-[#c00000] font-bold text-[13px] tracking-tight">1. 그림문자</span>
+                                                    <div className="border-b-[2px] border-black p-0.5 shrink-0 h-auto">
+                                                        <div className="flex justify-between items-end border-b-[1.5px] border-[#c00000] pb-0.5 mb-0.5">
+                                                            <span className="text-[#c00000] font-bold text-[12px] tracking-tight">1. 그림문자</span>
                                                             <div className="flex items-center gap-2">
-                                                                <span className="font-bold text-[12px]">신호어 :</span>
-                                                                <span className={`px-2 py-0.5 font-extrabold rounded text-[12px] border ${activeData.signalWord === '위험' ? 'border-red-200 text-[#c00000] bg-red-50' : activeData.signalWord === '경고' ? 'border-orange-200 text-orange-600 bg-orange-50' : 'border-slate-200 text-slate-600 bg-slate-50'}`}>{activeData.signalWord}</span>
+                                                                <span className="font-bold text-[11px]">신호어 :</span>
+                                                                <span className={`px-2 py-0.5 font-extrabold rounded text-[11px] border ${activeData.signalWord === '위험' ? 'border-red-200 text-[#c00000] bg-red-50' : activeData.signalWord === '경고' ? 'border-orange-200 text-orange-600 bg-orange-50' : 'border-slate-200 text-slate-600 bg-slate-50'}`}>{activeData.signalWord}</span>
                                                             </div>
                                                         </div>
-                                                        <div className="flex justify-center items-center py-0.5 flex-wrap gap-2 min-h-[40px]">
+                                                        <div className="flex justify-center items-center py-0.5 flex-wrap gap-2 min-h-[36px]">
                                                             {activeData.pictograms.length > 0 ? (
                                                                 activeData.pictograms.map((picType, idx) => (
-                                                                    <div key={idx} className="w-[42px] h-[42px]">
+                                                                    <div key={idx} className="w-[36px] h-[36px]">
                                                                         {renderGHS(picType)}
                                                                     </div>
                                                                 ))
-                                                            ) : <span className="text-[11px] text-slate-400 font-bold">표시할 그림문자가 없습니다.</span>}
+                                                            ) : <span className="text-[10px] text-slate-400 font-bold">표시할 그림문자가 없습니다.</span>}
                                                         </div>
-                                                        <div className="flex justify-center flex-wrap gap-1 mt-1 p-1 bg-slate-50 border border-slate-200 rounded-lg no-print">
+                                                        <div className="flex justify-center flex-wrap gap-1 mt-0.5 p-0.5 bg-slate-50 border border-slate-200 rounded-lg no-print">
                                                             {['bomb', 'flame', 'flame_over_circle', 'gas_cylinder', 'corrosion', 'skull', 'exclamation', 'health_hazard', 'environment'].map(type => (
-                                                                <button key={type} onClick={() => togglePictogram(type)} className={`px-1.5 py-0.5 text-[11px] rounded transition-all font-semibold ${activeData.pictograms.includes(type) ? 'bg-[#c00000] text-white' : 'bg-white border text-slate-600'}`}>
+                                                                <button key={type} onClick={() => togglePictogram(type)} className={`px-1.5 py-0.5 text-[10px] rounded transition-all font-semibold ${activeData.pictograms.includes(type) ? 'bg-[#c00000] text-white' : 'bg-white border text-slate-600'}`}>
                                                                     {type === 'bomb' ? '폭발' : type === 'flame' ? '인화' : type === 'flame_over_circle' ? '산화' : type === 'gas_cylinder' ? '가스' : type === 'corrosion' ? '부식' : type === 'skull' ? '독성' : type === 'exclamation' ? '경고' : type === 'health_hazard' ? '심각' : '환경'}
                                                                 </button>
                                                             ))}
                                                         </div>
                                                     </div>
 
-                                                    <div className="border-b-[2px] border-black p-1 flex flex-col flex-grow-[0.9]">
-                                                        <div className="text-[#c00000] font-bold text-[13px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-1 w-max shrink-0">2. 건강 및 환경에 대한 유해성·물리적 위험성</div>
-                                                        <div className="w-full flex-grow h-auto">
+                                                    <div className="border-b-[2px] border-black p-0.5 flex flex-col flex-grow-[0.9] min-h-0 basis-0">
+                                                        <div className="text-[#c00000] font-bold text-[12px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-0.5 w-max shrink-0">2. 건강 및 환경에 대한 유해성·물리적 위험성</div>
+                                                        <div className="w-full flex-grow min-h-0 overflow-hidden">
                                                             <div
                                                                 contentEditable
                                                                 suppressContentEditableWarning
                                                                 onBlur={(e) => updateActiveFileData({ hazardsText: e.target.innerText })}
-                                                                className="w-full h-auto p-0.5 text-[11px] leading-[1.3] font-medium text-black bg-transparent outline-none cursor-text break-words"
-                                                                style={{ columnCount: 2, columnGap: '1rem', columnRule: '1px dashed #94a3b8', whiteSpace: 'pre-wrap', columnFill: 'balance' }}
+                                                                className="w-full h-auto p-0.5 text-[10px] leading-[1.15] tracking-tight font-medium text-black bg-transparent outline-none cursor-text break-words"
+                                                                style={{ columnCount: 2, columnGap: '0.8rem', columnRule: '1px dashed #94a3b8', whiteSpace: 'pre-wrap', columnFill: 'balance' }}
                                                             >
                                                                 {activeData.hazardsText}
                                                             </div>
                                                         </div>
                                                     </div>
 
-                                                    <div className="border-b-[2px] border-black p-1 flex flex-col flex-grow-[1.3]">
-                                                        <div className="text-[#c00000] font-bold text-[13px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-1 w-max shrink-0">3. 안전 및 보건상의 취급주의 사항</div>
-                                                        <div className="w-full flex-grow h-auto">
+                                                    <div className="border-b-[2px] border-black p-0.5 flex flex-col flex-grow-[1.3] min-h-0 basis-0">
+                                                        <div className="text-[#c00000] font-bold text-[12px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-0.5 w-max shrink-0">3. 안전 및 보건상의 취급주의 사항</div>
+                                                        <div className="w-full flex-grow min-h-0 overflow-hidden">
                                                             <div
                                                                 contentEditable
                                                                 suppressContentEditableWarning
                                                                 onBlur={(e) => updateActiveFileData({ handlingText: e.target.innerText })}
-                                                                className="w-full h-auto p-0.5 text-[11px] leading-[1.3] font-medium text-black bg-transparent outline-none cursor-text break-words"
-                                                                style={{ columnCount: 2, columnGap: '1rem', columnRule: '1px dashed #94a3b8', whiteSpace: 'pre-wrap', columnFill: 'balance' }}
+                                                                className="w-full h-auto p-0.5 text-[10px] leading-[1.15] tracking-tight font-medium text-black bg-transparent outline-none cursor-text break-words"
+                                                                style={{ columnCount: 2, columnGap: '0.8rem', columnRule: '1px dashed #94a3b8', whiteSpace: 'pre-wrap', columnFill: 'balance' }}
                                                             >
                                                                 {activeData.handlingText}
                                                             </div>
                                                         </div>
                                                     </div>
 
-                                                    <div className="border-b-[2px] border-black p-1 shrink-0 h-auto">
-                                                        <div className="text-[#c00000] font-bold text-[13px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-1 w-max shrink-0">4. 적절한 보호구</div>
-                                                        <div className="flex justify-center items-center gap-4 py-0.5 flex-wrap min-h-[50px]">
+                                                    <div className="border-b-[2px] border-black p-0.5 shrink-0 h-auto">
+                                                        <div className="text-[#c00000] font-bold text-[12px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-0.5 w-max shrink-0">4. 적절한 보호구</div>
+                                                        <div className="flex justify-center items-center gap-4 py-0.5 flex-wrap min-h-[42px]">
                                                             {activeData.selectedPPE && activeData.selectedPPE.length > 0 ? (
                                                                 activeData.selectedPPE.map(ppeId => (
                                                                     <div key={ppeId} className="flex flex-col items-center gap-0.5">
-                                                                        <div className="w-[42px] h-[42px]">{renderPPE(ppeId)}</div>
-                                                                        <span className="font-bold text-[11px] text-center leading-tight whitespace-pre-wrap">{PPE_ICONS[ppeId].name.replace(' ', '\n')}</span>
+                                                                        <div className="w-[36px] h-[36px]">{renderPPE(ppeId)}</div>
+                                                                        <span className="font-bold text-[10px] text-center leading-tight whitespace-pre-wrap">{PPE_ICONS[ppeId].name.replace(' ', '\n')}</span>
                                                                     </div>
                                                                 ))
-                                                            ) : <span className="text-[11px] text-slate-400 font-bold">표시할 보호구 지시표지가 없습니다.</span>}
+                                                            ) : <span className="text-[10px] text-slate-400 font-bold">표시할 보호구 지시표지가 없습니다.</span>}
                                                         </div>
-                                                        <div className="flex justify-center flex-wrap gap-1 mt-1 p-1 bg-slate-50 border border-slate-200 rounded-lg no-print">
+                                                        <div className="flex justify-center flex-wrap gap-1 mt-0.5 p-0.5 bg-slate-50 border border-slate-200 rounded-lg no-print">
                                                             {Object.keys(PPE_ICONS).map(id => (
-                                                                <button key={id} onClick={() => togglePPE(id)} className={`px-1.5 py-0.5 text-[10px] rounded transition-all font-semibold ${activeData.selectedPPE?.includes(id) ? 'bg-[#0052cc] text-white shadow-sm' : 'bg-white border text-slate-600'}`}>
+                                                                <button key={id} onClick={() => togglePPE(id)} className={`px-1.5 py-0.5 text-[9px] rounded transition-all font-semibold ${activeData.selectedPPE?.includes(id) ? 'bg-[#0052cc] text-white shadow-sm' : 'bg-white border text-slate-600'}`}>
                                                                     {PPE_ICONS[id].name}
                                                                 </button>
                                                             ))}
                                                         </div>
                                                     </div>
 
-                                                    <div className="p-1 flex flex-col flex-grow-[2.2]">
-                                                        <div className="text-[#c00000] font-bold text-[13px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-1 w-max shrink-0">5. 응급조치 요령 및 사고 시 대처방법</div>
-                                                        <div className="flex flex-col flex-1 text-[11px] font-medium text-black border border-slate-300 h-auto">
-                                                            <div className="flex flex-1 border-b border-slate-200">
+                                                    <div className="p-0.5 flex flex-col flex-grow-[2.2] min-h-0 basis-0">
+                                                        <div className="text-[#c00000] font-bold text-[12px] border-b-[1.5px] border-[#c00000] pb-0.5 mb-0.5 w-max shrink-0">5. 응급조치 요령 및 사고 시 대처방법</div>
+                                                        <div className="flex flex-col flex-1 text-[10px] font-medium text-black border border-slate-300 min-h-0">
+                                                            <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">가. 눈에 들어갔을 때</div>
-                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.eye || ''} onChange={(e) => updateFirstAid('eye', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.eye || ''} onChange={(e) => updateFirstAid('eye', e.target.value)} className="flex-1 h-full p-1 bg-transparent resize-none overflow-hidden leading-[1.25]" />
                                                             </div>
-                                                            <div className="flex flex-1 border-b border-slate-200">
+                                                            <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">나. 피부에 접촉했을 때</div>
-                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.skin || ''} onChange={(e) => updateFirstAid('skin', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.skin || ''} onChange={(e) => updateFirstAid('skin', e.target.value)} className="flex-1 h-full p-1 bg-transparent resize-none overflow-hidden leading-[1.25]" />
                                                             </div>
-                                                            <div className="flex flex-1 border-b border-slate-200">
+                                                            <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">다. 흡입했을 때</div>
-                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.inhale || ''} onChange={(e) => updateFirstAid('inhale', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.inhale || ''} onChange={(e) => updateFirstAid('inhale', e.target.value)} className="flex-1 h-full p-1 bg-transparent resize-none overflow-hidden leading-[1.25]" />
                                                             </div>
-                                                            <div className="flex flex-1 border-b border-slate-200">
+                                                            <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">라. 먹었을 때</div>
-                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.ingest || ''} onChange={(e) => updateFirstAid('ingest', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.ingest || ''} onChange={(e) => updateFirstAid('ingest', e.target.value)} className="flex-1 h-full p-1 bg-transparent resize-none overflow-hidden leading-[1.25]" />
                                                             </div>
-                                                            <div className="flex flex-1 border-b border-slate-200">
+                                                            <div className="flex flex-1 border-b border-slate-200 min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">마. 기타 의사 주의사항</div>
-                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.doctor || ''} onChange={(e) => updateFirstAid('doctor', e.target.value)} className="flex-1 h-full p-1.5 bg-transparent resize-none overflow-hidden leading-[1.4]" />
+                                                                <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.doctor || ''} onChange={(e) => updateFirstAid('doctor', e.target.value)} className="flex-1 h-full p-1 bg-transparent resize-none overflow-hidden leading-[1.25]" />
                                                             </div>
                                                             
-                                                            <div className="flex flex-[1.5]">
+                                                            <div className="flex flex-[1.5] min-h-0">
                                                                 <div className="w-[20%] bg-slate-100 p-0.5 font-bold flex items-center justify-center text-center border-r border-slate-200 shrink-0">바. 사고 시 대처방법</div>
-                                                                <div className="w-[80%] p-1 flex flex-col h-full justify-center">
-                                                                    <div className="flex gap-1 w-full flex-1">
-                                                                        <span className="font-bold text-slate-800 shrink-0 mt-1 ml-1">-</span>
-                                                                        <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.extinguish || ''} onChange={(e) => updateFirstAid('extinguish', e.target.value)} className="w-full h-full p-0.5 bg-transparent resize-none leading-[1.3] font-semibold text-black overflow-hidden" />
+                                                                <div className="w-[80%] p-0.5 flex flex-col h-full overflow-hidden justify-center">
+                                                                    <div className="flex gap-1 w-full flex-1 min-h-0">
+                                                                        <span className="font-bold text-slate-800 shrink-0 mt-0.5 ml-0.5">-</span>
+                                                                        <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.extinguish || ''} onChange={(e) => updateFirstAid('extinguish', e.target.value)} className="w-full h-full p-0.5 bg-transparent resize-none leading-[1.2] font-semibold text-black overflow-hidden" />
                                                                     </div>
-                                                                    <div className="flex gap-1 w-full flex-1">
-                                                                        <span className="font-bold text-slate-800 shrink-0 mt-1 ml-1">-</span>
-                                                                        <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.leakResponse || ''} onChange={(e) => updateFirstAid('leakResponse', e.target.value)} className="w-full h-full p-0.5 bg-transparent resize-none leading-[1.3] font-semibold text-black overflow-hidden" />
+                                                                    <div className="flex gap-1 w-full flex-1 min-h-0">
+                                                                        <span className="font-bold text-slate-800 shrink-0 mt-0.5 ml-0.5">-</span>
+                                                                        <textarea style={{ wordBreak: 'keep-all' }} value={activeData.firstAidData?.leakResponse || ''} onChange={(e) => updateFirstAid('leakResponse', e.target.value)} className="w-full h-full p-0.5 bg-transparent resize-none leading-[1.2] font-semibold text-black overflow-hidden" />
                                                                     </div>
-                                                                    <div className="flex gap-1 w-full shrink-0 h-[18px]">
+                                                                    <div className="flex gap-1 w-full shrink-0 h-[16px]">
                                                                         <span className="w-full h-full px-1 leading-none font-bold text-black">- 즉시 119 및 관계기관에 신고할 것</span>
                                                                     </div>
                                                                 </div>
@@ -1030,9 +1045,8 @@
 
                                                 </div>
                                                 
-                                                {/* 회사 로고 업로드 및 렌더링 영역 */}
                                                 <div 
-                                                    className="w-full text-center mt-1.5 font-black text-[13px] tracking-widest text-slate-700 shrink-0 h-[28px] flex items-center justify-center cursor-pointer relative group border border-dashed border-transparent hover:border-slate-300 transition-colors print:break-inside-avoid"
+                                                    className="w-full text-center mt-1 font-black text-[12px] tracking-widest text-slate-700 shrink-0 h-[24px] flex items-center justify-center cursor-pointer relative group border border-dashed border-transparent hover:border-slate-300 transition-colors print:break-inside-avoid"
                                                     onClick={() => logoInputRef.current.click()}
                                                     title="클릭하여 회사 로고 이미지를 업로드하세요"
                                                 >
