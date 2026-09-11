@@ -320,6 +320,9 @@
             if (fullText.match(/모래|흙/i)) leakResponse = "적절한 보호구를 착용하고, 누출물을 건조한 모래나 흙으로 덮어 수거할 것";
 
             return {
+                headerLeft: "공정명 : ",
+                headerCenter: "유해화학물질 작업공정별 관리 요령",
+                headerRight: `개정 : ${revisionDate}`,
                 processName: "", 
                 revisionDate, productName, signalWord, pictograms, 
                 hazardsText, handlingText,
@@ -906,19 +909,37 @@
                                                 <div className="flex flex-col h-full w-full p-[6mm]">
                                                     <div className="flex flex-col h-full w-full border-[2px] border-black">
                                                         
-                                                        <div className="flex border-b-[2px] border-black shrink-0 h-[32px]">
-                                                            <div className="border-r-[2px] border-black px-2 font-bold text-[13px] w-[25%] flex items-center whitespace-nowrap overflow-hidden">
-                                                                공정명 : <input type="text" value={activeData.processName} onChange={(e) => updateActiveFileData({ processName: e.target.value })} className="ml-1 font-bold w-full bg-transparent border-b border-dashed border-blue-400 focus:outline-none truncate"/>
+                                                        <div className="flex border-b-[2px] border-black shrink-0 h-auto min-h-[32px]">
+                                                            <div className="border-r-[2px] border-black p-1.5 w-[25%] flex flex-col justify-center">
+                                                                <div
+                                                                    contentEditable suppressContentEditableWarning
+                                                                    onBlur={(e) => updateActiveFileData({ headerLeft: e.target.innerText })}
+                                                                    className="w-full outline-none font-bold text-[13px] break-words whitespace-pre-wrap text-left"
+                                                                >{activeData.headerLeft !== undefined ? activeData.headerLeft : "공정명 : " + (activeData.processName || "")}</div>
                                                             </div>
-                                                            <div className="border-r-[2px] border-black px-2 text-center text-[19px] font-black tracking-tight w-[50%] flex items-center justify-center">유해화학물질 작업공정별 관리 요령</div>
-                                                            <div className="px-2 font-bold text-[13px] w-[25%] flex items-center justify-start whitespace-nowrap">
-                                                                <input type="text" value={activeData.revisionDate} onChange={(e) => updateActiveFileData({ revisionDate: e.target.value })} className="font-bold w-full text-left bg-transparent border-b border-dashed border-blue-400 focus:outline-none"/>
+                                                            <div className="border-r-[2px] border-black p-1.5 w-[50%] flex flex-col justify-center items-center text-center">
+                                                                <div
+                                                                    contentEditable suppressContentEditableWarning
+                                                                    onBlur={(e) => updateActiveFileData({ headerCenter: e.target.innerText })}
+                                                                    className="w-full outline-none text-[19px] font-black tracking-tight break-words whitespace-pre-wrap text-center"
+                                                                >{activeData.headerCenter !== undefined ? activeData.headerCenter : "유해화학물질 작업공정별 관리 요령"}</div>
+                                                            </div>
+                                                            <div className="p-1.5 w-[25%] flex flex-col justify-center">
+                                                                <div
+                                                                    contentEditable suppressContentEditableWarning
+                                                                    onBlur={(e) => updateActiveFileData({ headerRight: e.target.innerText })}
+                                                                    className="w-full outline-none font-bold text-[13px] break-words whitespace-pre-wrap text-left"
+                                                                >{activeData.headerRight !== undefined ? activeData.headerRight : `개정 : ${activeData.revisionDate}`}</div>
                                                             </div>
                                                         </div>
-                                                        <div className="flex border-b-[2px] border-black shrink-0 h-[36px]">
+                                                        <div className="flex border-b-[2px] border-black shrink-0 h-auto min-h-[36px]">
                                                             <div className="border-r-[2px] border-black px-2 text-center text-[15px] font-bold bg-slate-100 flex items-center justify-center w-[25%]">제품명</div>
-                                                            <div className="px-2 flex items-center justify-center w-[75%]">
-                                                                <textarea value={activeData.productName} onChange={(e) => updateActiveFileData({ productName: e.target.value })} className="w-full h-full text-center bg-transparent focus:outline-none font-extrabold text-[15.5px] text-black resize-none pt-1" rows="1"/>
+                                                            <div className="px-2 flex items-center justify-center w-[75%] py-1.5">
+                                                                <div 
+                                                                    contentEditable suppressContentEditableWarning
+                                                                    onBlur={(e) => updateActiveFileData({ productName: e.target.innerText })}
+                                                                    className="w-full text-center bg-transparent focus:outline-none font-extrabold text-[15.5px] text-black whitespace-pre-wrap break-words min-h-[24px]"
+                                                                >{activeData.productName}</div>
                                                             </div>
                                                         </div>
 
